@@ -1,0 +1,77 @@
+class PriceListComponent {
+    constructor(params) {
+        this.params = params;
+        this.page = 1;
+        this.pageCount = params.countPage;
+        this.direction = null;
+        this.searchText = null;
+        this.$root = $(params.componentID);
+        this.searchTimer = null;
+
+        $(params.componentID).on('click', '.js-show-more', () => {
+            this.page++;
+            this.loadItems();
+            return false;
+        });
+
+        $('.js-direction').on('change', (event) => {
+            this.page = 1;
+            this.direction = $(event.target).val();
+            this.loadItems();
+            return false;
+        });
+
+        $('.js-search-input').on('input', (event) => {
+            clearTimeout(this.searchTimer);
+            this.page = 1;
+            this.searchTimer = setTimeout(() => {
+                this.searchText = $(event.target).val();
+                this.loadItems();
+            }, 1000);
+            return false;
+        });
+
+        $("#searchclear").on('click', (event) => {
+            this.page = 1;
+            this.searchText = null;
+            this.loadItems();
+            return false;
+        });
+    }
+
+    loadItems() {
+        let postData = {
+            action: 'load_more',
+            mode: 'ajax'
+        };
+
+        let urlParams = {};
+        postData[this.params.pagen] = this.page;
+        if (this.direction) {
+            postData['direction'] = this.direction;
+            urlParams['direction'] = this.direction;
+        }
+
+        if (this.searchText) {
+            postData['q'] = this.searchText;
+            urlParams['q'] = this.searchText;
+        }
+
+        if(urlParams){
+            history.replaceState({}, '', '?' + (new URLSearchParams(urlParams)).toString());
+        }
+        $.post('', postData, (response) => {
+            if (this.page > 1) {
+                this.$root.find('.js-items').append(response.list);
+            } else {
+                this.$root.find('.js-items').html(response.list);
+            }
+            this.pageCount = response.page_count;
+            if (this.pageCount > this.page) {
+                this.$root.find('.btn-box-more').show();
+            } else {
+                this.$root.find('.btn-box-more').hide();
+            }
+        }, 'json');
+    }
+}

@@ -1,0 +1,26 @@
+class SymptomsComponent {
+    constructor(params) {
+        this.params = params;
+        this.page = 1;
+        let self = this;
+
+        $(params.componentID).on('click', '.js-show-more', function () {
+            self.showMore(this);
+            return false;
+        })
+    }
+
+    showMore(el){
+        let self = this;
+        self.page++;
+        let postData = {action: 'load_more', 'PAGEN_1': self.page, mode: 'ajax', hash: self.params.hash};
+        $(el).addClass('btn-preload');
+        $.getJSON('/local/ajax/', postData, response => {
+            $(this.params.componentID).find('.js-items').append(response.list);
+            $(el).removeClass('btn-preload');
+        });
+        if (this.params.countPage === this.page) {
+            $(this.params.componentID).find('.btn-box-more').remove();
+        }
+    }
+}

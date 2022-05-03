@@ -1,0 +1,25 @@
+let timer = null;
+$(document).ready(function () {
+    $('.js-filter').on('submit', function (){
+        let term = $(this).find('.js-search').val();
+        let direction = $(this).find('select[name="direction"]').val();
+        history.replaceState({}, '', '?'+(new URLSearchParams({q: term, direction: direction})).toString());
+        $.get('', {action: 'search', mode: 'ajax', q: term, direction: direction}, function (response) {
+            $('.js-items').html(response);
+        })
+        return false;
+    });
+
+    $('select[name="direction"]').on('change', function (){
+        $(this).closest('.js-filter').submit();
+    });
+
+    $('.js-search').on('input', function () {
+        let term = $(this).val();
+        clearTimeout(timer);
+        timer = setTimeout(()=> {
+            $(this).closest('.js-filter').submit();
+        }, 1000);
+
+    })
+});

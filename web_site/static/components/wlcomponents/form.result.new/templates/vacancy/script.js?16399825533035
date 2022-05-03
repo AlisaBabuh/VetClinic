@@ -1,0 +1,77 @@
+class vacancyFormComponent {
+    constructor(params) {
+        this.params = params;
+        this.container = $('#' + params.componentID);
+        this.init();
+    }
+
+    init() {
+        let self = this;
+        this.container.on('submit', 'form', function (event) {
+            let formSubmitButton  = $(self.container).find('form').find('[type=submit]');
+            $(formSubmitButton).addClass('disabled');
+
+            let formData = new FormData($(this)[0]);
+            formData.append('action', 'save');
+            formData.append('mode', 'ajax');
+            formData.append('hash', self.params.hash);
+            self.container.find('.error').hide();
+            var maxSize = 26214400; //25 Mb
+            var fileInput = $('.js-upload-file-vacancy')[0];
+
+            if(fileInput.files.length) {
+                var fileSize = fileInput.files[0].size; // in bytes
+                if(fileSize > maxSize){
+                    self.container.find('.error').html("Размер файла превышает допустимые 25 Мб.").show();
+
+                    $(formSubmitButton).removeClass('disabled');
+                    return false;
+                }
+            }
+            $.ajax({
+                url: self.params.ajax_path,
+                data: formData,
+                processData: false,
+                contentType: false,
+                type: 'POST',
+                dataType: 'JSON',
+                success: function (response) {
+                    if (response.success) {
+                        self.container.find('.modal-content').html(response.html);
+                    } else {
+                        self.container.find('.error').html(response.error).show();
+                    }
+                },
+                complete: function() {
+                    $(formSubmitButton).removeClass('disabled');
+                }
+            });
+            return false;
+        });
+
+        $('.js-show-vacancy-form').on('click', function () {
+            self.container.find('.modal').modal('show');
+            let vacancy = $(this).data('vacancy');
+            $.getJSON(self.params.ajax_path, {action: 'load', hash: self.params.hash, mode: 'ajax'}, function (response) {
+                self.container.find('.modal-content').html(response.html);
+                self.container.find('.js-vacancy-name-input').val(vacancy);
+            });
+            return false;
+        });
+
+        self.container.on('change', '.js-upload-file-vacancy', function () {
+            let parent = $(this).closest('.upload-file-btn')
+                .removeClass('btn-blue')
+                .addClass('btn-green')
+                .addClass('w-200px');
+
+            parent.find('.icon-button')
+                .removeClass('icon-button-upload')
+                .addClass('icon-button-loaded');
+
+            let btnText = parent.find('.upload-file__text');
+            btnText.text(btnText.data('upload-text'))
+        });
+    }
+}
+

@@ -1,0 +1,87 @@
+class callbackModalComponent {
+    constructor(params) {
+        this.params = params;
+        this.$root = $('#' + params.componentID);
+
+        $('body').on('click', '.js-btn-callback', () => {
+            this.showModal();
+
+            try {
+                var _tmr = window._tmr || (window._tmr = []);
+                _tmr.push({ id: '3237231', type: 'reachGoal', goal: 'callback_form_opened' });
+                VK.Retargeting.Event('callback_form_opened');
+            } catch (e) {
+                console.log(e);
+            }
+            return false;
+        })
+
+        $('.js-calltouch-form').on('submit', () => {
+            let phone = this.$root.find('.js-phone').val();
+            let name = this.$root.find('.js-name').val();
+            this.sendForm(phone.replace(/[ \-+]/g, ''), name);
+            return false;
+        });
+    }
+
+    showModal() {
+        this.$root.find('.js-error').hide();
+        this.$root.find('.js-callback-modal').modal('show');
+        console.log(this.$root.find('.js-callback-modal'));
+    }
+
+    sendForm(phone, name) {
+        let self = this;
+
+        try {
+            window.ctw.createRequest(
+                this.params.form_id,
+                phone,
+                [
+                    {"name": "Имя", "value": name},
+                ],
+                function (success, data) {
+                    if(success) {
+                        self.showSuccessModal();
+                        $.post('/ajax/calltouchadd.php', {phone: phone, name: name});
+
+                        try {
+                            var _tmr = window._tmr || (window._tmr = []);
+                            _tmr.push({ id: '3237231', type: 'reachGoal', goal: 'callback_form_sent' });
+                            VK.Goal('conversion');
+                            VK.Retargeting.Event('callback_form_sent');
+                        } catch(e) {
+                            console.log(e);
+                        }
+                    }
+                    else {
+                        try {
+                            if(data.message == "Ошибка валидации") {
+                                self.$root.find('.js-error').text("Введён некорректный формат телефонного номера").show();
+                            } else {
+                                self.$root.find('.js-error').text(data.message + '. ' + data['details']['fields'][0]['errors'][0]['message']).show();
+                            }
+                            
+                            console.error('Во время выполнения запроса произошла ошибка: ' + data['details']['fields'][0]['errors'][0]['message']);
+                        } catch(e) {
+                            self.$root.find('.js-error').text('Не удалось отправить заявку.').show();
+
+                            console.error('Во время выполнения запроса произошла ошибка: ' + data.message + '. ' + e);
+                        }
+                        
+                        
+                    }
+                },
+                moment().format('YYYY-MM-DD HH:mm:ss'),
+            );
+        } catch (e) {
+            console.error(e);
+        }
+    }
+
+    showSuccessModal() {
+        this.$root.find('.js-callback-modal').modal('hide');
+        this.$root.find('.js-callback-success-modal').modal('show');
+    }
+}
+

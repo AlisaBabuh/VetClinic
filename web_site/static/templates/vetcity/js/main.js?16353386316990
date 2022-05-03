@@ -1,0 +1,259 @@
+$(function() {
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll > 0) {
+      $("#fixed-menu").addClass("active");
+    } else {
+      $("#fixed-menu").removeClass("active");
+    }
+  });
+
+  $(".hamburger").click(function() {
+    $("body").toggleClass("nav-visible");
+    $('.main-nav').click();
+  });
+  $(".closed").click(function() {
+    $("body").removeClass("nav-visible");
+  });
+
+  $('.owl-carousel').each(function() {
+    $(this).owlCarousel({
+      items: 1,
+      nav: $(this).data('nav') ?? true,
+      smartSpeed: 1000,
+      responsive: JSON.parse($(this).attr('data-responsive') || '{}'),
+      margin: $(this).data('margin') ?? 0,
+    });
+  });
+
+  $('.slider-control-item').click(function() {
+    var $this = $(this);
+    if ($(this).hasClass('active')) {
+      return;
+    }
+    $this.siblings('.slider-control-item').removeClass('active');
+    $this.addClass('active');
+    var $backdrop = $(this).siblings('.checkbox-toggle');
+    $backdrop.css({
+      left: ($(this).offset().left - $(this).parent().offset().left) + 'px'
+    });
+
+    $('.checkup-cards-whole > div').not($($this.attr('data-show'))).fadeOut(500);
+    $($this.attr('data-show')).fadeIn(500);
+    
+    $('.checkup-animal').not($(".checkup-" + $this.attr('data-animal'))).fadeOut(500);
+    $(".checkup-" + $this.attr('data-animal')).css("display", "flex").hide().fadeIn(500);
+
+  });
+
+  // // Input placeholders
+  new Inputmask("+7 999 999-99-99", {"clearIncomplete": true}).mask(document.querySelectorAll(".js-phone"));
+
+  new Inputmask("a{*}", {
+    showMaskOnHover: false
+  }).mask(document.querySelectorAll("input[name='username']"));
+
+  $("input[name='username']").on('blur', function() {
+    var val = $(this).val();
+    var placeholder = $(this).attr('data-placeholder');
+    var $this = $(this);
+    requestAnimationFrame(function() {
+      if (val === '') {
+        $this.attr('placeholder', placeholder);
+      }
+    });
+  });
+
+  $(".boostrap-select").selectpicker('refresh');
+
+  // Clear input
+  $("#searchinput").keyup(function(){
+      $("#searchclear").toggle(Boolean($(this).val()));
+  });
+  $("#searchclear").toggle(Boolean($("#searchinput").val()));
+  $("#searchclear").click(function(){
+      $("#searchinput").val('').focus();
+      $("#searchinput").parents('form').submit();
+      $(this).hide();
+  });
+
+  // Clear select
+  $('.dropdown-select select').on('change', function() {
+    var $rm = $(this).parents('.dropdown-select').find('.remove-input');
+    if (!this.value) {
+      $rm.hide();
+    } else {
+      $rm.show();
+    }
+  });
+  $('.dropdown-select .remove-input').click(function() {
+    var $sel = $(this).parents('.dropdown-select').find('.dropdown-menu a:eq(0)');
+    if ($sel && $sel.length) {
+      $sel.click();
+    }
+  });
+
+  // Subscribe
+  $('.footer-subscribe input').on('input', function() {
+    var l = $(this).val().length;
+    var $btn = $('.footer-subscribe button');
+    $btn.prop('disabled', l <= 0);
+  });
+
+  // Animations
+  window.sr = ScrollReveal({ reset: false });
+  var animate = [
+    {
+      origin: 'left',
+      selectors: [
+        '.deals',
+        '.booking-title',
+        '.footer-menu > ul > li',
+        '.founder-1',
+        '.internship-in',
+        '.our-mission',
+        '.contacts-phone',
+        '.parking'
+      ]
+    },
+    {
+      origin: 'right',
+      selectors: [
+        '.team',
+        '.booking-form',
+        '.about-us-in',
+        '.founder-2',
+        '.about-doctors',
+        '.contacts-address',
+        '.social-links-contacts',
+        '.deals.black-carousel'
+        
+      ]
+    },
+    {
+      origin: 'bottom',
+      selectors: [
+        //'.services-card, .services-card-text',
+        '.about-principles-item',
+        '.document-item',
+        '.card-doc',
+        '.knowledge-item',
+        '.promo-item',
+        '.card-with-border',
+        '#seek-help .checkup-card'
+      ]
+    },
+    {
+      selectors: [
+      ]
+    }
+  ];
+  var defaultAnimationParams = {
+    distance: '50%',
+    scale : 1,
+    duration: 750
+  };
+  var animationDelay = 0;
+  animate.forEach(function(itemAnim){
+    itemAnim.selectors.forEach(function(item){
+      if($(item).length){
+        $(item).each(function(i){
+          var params = Object.assign(defaultAnimationParams, {
+            origin: itemAnim.origin,
+            delay: animationDelay * i
+          });
+          if (!itemAnim.origin) {
+            params.distance = '0';
+          }
+          sr.reveal(this, params);
+        });
+      }
+    });
+  });
+
+  $(".flatpickr-monthDropdown-months").on('change', function() {
+      $(this).resizeselect(); 
+  });
+
+  $(".flatpickr-next-month, .flatpickr-prev-month").on('click', function() {
+    setTimeout(
+      function() {
+        $('.flatpickr-monthDropdown-months').change();
+      }, 1
+    );
+  });
+
+  let currentMonthShift = 0;
+  $('.flatpickr-prev-month').addClass('disabled');
+  $('.flatpickr-next-month').on('click', function() {
+    currentMonthShift++;
+    $('.flatpickr-prev-month').removeClass('disabled');
+  });
+  $('.flatpickr-prev-month').on('click', function() {
+    if(currentMonthShift > 1) {
+      currentMonthShift--;
+    } else {
+      currentMonthShift--;
+      $('.flatpickr-prev-month').addClass('disabled');
+    }
+  });
+});
+
+
+function startFocus() {
+  $(".navbar .form-inline").addClass('active');
+}
+
+function stopFocus() {
+  setTimeout(
+    function() {
+      var isFocused = (document.activeElement === $("#title-search-input")[0]);
+      if(!isFocused) {
+        $(".navbar .form-inline").removeClass('active');
+      }
+  }, 1500);
+}
+
+(function($, window){
+  $(function() {
+    let arrowWidth = 0;
+
+    $.fn.resizeselect = function(settings) {  
+      return this.each(function() { 
+
+        $(this).change(function(){
+          let $this = $(this);
+
+          // get font-weight, font-size, and font-family
+          let style = window.getComputedStyle(this)
+          let { fontWeight, fontSize, fontFamily } = style
+
+          // create test element
+          let text = $this.find("option:selected").text();
+          let $test = $("<span>").html(text).css({
+            "font-size": fontSize, 
+            "font-weight": fontWeight, 
+            "font-family": fontFamily,
+            "visibility": "hidden",
+            "position": "absolute",
+            // prevents FOUC
+          });
+
+          // add to body, get width, and get out
+          $test.appendTo($this.parent());
+          let width = $test.width();
+          $test.remove();
+
+          // set select width
+          $this.width(width + arrowWidth);
+
+          // run on start
+        });
+
+      });
+    };
+
+    // run by default
+    $(".flatpickr-monthDropdown-months").resizeselect();                       
+  })
+})(jQuery, window);

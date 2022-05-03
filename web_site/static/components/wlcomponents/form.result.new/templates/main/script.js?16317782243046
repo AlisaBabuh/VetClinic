@@ -1,0 +1,73 @@
+class MainPageFormComponent {
+    constructor(params) {
+        this.params = params;
+        this.container = $('#' + params.componentID);
+        this.init();
+    }
+
+    init() {
+        let self = this;
+        this.container.on('submit', 'form', function (event) {
+            let formData = new FormData($(this)[0]);
+            formData.append('action', 'send');
+            formData.append('mode', 'ajax');
+            formData.append('hash', self.params.hash);
+            self.container.find('.error').hide();
+            $.ajax({
+                url: self.params.ajax_path,
+                data: formData,
+                processData: false,
+                contentType: false,
+                type: 'POST',
+                dataType: 'JSON',
+                success: function (response) {
+                    if (response.success) {
+                       self.sendCallTouch();
+                    } else {
+                        self.container.find('.error').html(response.error).show();
+                    }
+                }
+            });
+            return false;
+        });
+    }
+
+    sendCallTouch(){
+        let self = this;
+        let name = this.container.find('#SIMPLE_QUESTION_552').val();
+        let phone = this.container.find('.js-phone').val().replace(/[ \-+]/g, '');
+        try {
+            window.ctw.createRequest(
+                this.params.form_id,
+                phone,
+                [
+                    {"name": "Имя", "value": name},
+                ],
+                function (success, data) {
+                    if(success) {
+                        self.container.find('.js-form-content').html(self.params.msg.success_msg);
+                    }
+                    else {
+                        try {
+                            if(data.message == "Ошибка валидации") {
+                                self.container.find('.error').text("Введён некорректный формат телефонного номера").show();
+                            } else {
+                                self.container.find('.error').text(data.message + '. ' + data['details']['fields'][0]['errors'][0]['message']).show();
+                            }
+                            console.error('Во время выполнения запроса произошла ошибка: ' + data['details']['fields'][0]['errors'][0]['message']);
+                        } catch(e) {
+                            self.container.find('.error').text(data.message).show();
+                            console.error('Во время выполнения запроса произошла ошибка: ' + data.message);
+                        }
+
+
+                    }
+                },
+                moment().format('YYYY-MM-DD HH:mm:ss'),
+            )
+        } catch (e) {
+            this.container.find('.error').html('Не удалось отправить заявку.').show();
+        }
+    }
+}
+

@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#1B1B29" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1B1B29" media="(prefers-color-scheme: dark)">
+
+    <title>ПЦР Болезнь Ауески для кошек и собак в ветеринарной клинике vet.city</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="услуги ветеринара" />
+    <meta name="description"
+        content="Мы предоставляем своим клиентам весь спектр услуг ветеринара. Наши врачи тщательно соблюдают стандарты цивилизованной ветеринарии, строго следуют регламентам и в любой ситуации ставят интересы пациента на первое место. Наш выбор — современная доказательная медицина, основанная на научном знании." />
+
+
+
+    <link href="{% static '../../../local/templates/vetcity/css/jquery.fancybox.min.css%3F162694166212795.css' %}" type="text/css"
+        data-template-style="true" rel="stylesheet" />
+    <link href="{% static '../../../local/templates/vetcity/css/bootstrap.min.css%3F1626941662161415.css' %}" type="text/css"
+        data-template-style="true" rel="stylesheet" />
+    <link href="{% static '../../../local/templates/vetcity/css/owl.carousel.min.css%3F16269416623356.css' %}" type="text/css"
+        data-template-style="true" rel="stylesheet" />
+    <link href="{% static '../../../local/templates/vetcity/css/owl.theme.default.min.css%3F16269416621018.css' %}" type="text/css"
+        data-template-style="true" rel="stylesheet" />
+    <link href="{% static '../../../local/templates/vetcity/css/main.css%3F1634548032121224.css' %}" type="text/css"
+        data-template-style="true" rel="stylesheet" />
+    <link href="{% static '../../../local/templates/vetcity/css/bootstrap-select.min.css%3F162694166211832.css' %}" type="text/css"
+        data-template-style="true" rel="stylesheet" />
+    <link href="{% static '../../../local/templates/vetcity/css/modal-window.css%3F16317782243928.css' %}" type="text/css"
+        data-template-style="true" rel="stylesheet" />
+    <link href="{% static '../../../local/templates/vetcity/css/style_secondary.css%3F163177822419507.css' %}" type="text/css"
+        data-template-style="true" rel="stylesheet" />
+    <link href="{% static '../../../local/templates/vetcity/css/custom.css%3F164845239236922.css' %}" type="text/css"
+        data-template-style="true" rel="stylesheet" />
+    <link href="{% static '../../../local/templates/.default/components/bitrix/menu/top/style.css%3F1628592705625.css' %}"
+        type="text/css" data-template-style="true" rel="stylesheet" />
+    <link
+        href="{% static '../../../local/templates/.default/components/bitrix/search.title/.default/style.css%3F16285927052108.css' %}"
+        type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="{% static '../../../local/templates/.default/components/bitrix/menu/footer/style.css%3F1628592705625.css' %}"
+        type="text/css" data-template-style="true" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="{% static 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap' %}" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{% static '../../../local/templates/vetcity/img/favicon.png' %}" />
+</head>
+
+<body class="fixed-logos">
+    <div class="has-overflow-hidden">
+        <div class="main-nav">
+            <!-- START .main-nav-->
+            <div class="nav-container d-xl-flex flex-xl-column">
+                <div class="nav-in order-xl-2 navbar-list">
+                    <a href="../../../index.html" class="logo"></a>
+                    <div class="d-none d-xl-block head-navbar">Меню</div>
+                    <div class="main-nav-items">
+
+                        <ul class="list-unstyled">
+                            <div class="navbar-social-links">
+
+                                <a target="_blank" href="https://vk.com/public188120292" class="footer-vk"></a>
+                                <a target="_blank" href="https://t.me/vetcityclinic" class="footer-tg"></a>
+                            </div>
+                            <li class="item-left-outside"><a href="../../../index.html">Главная</a></li>
+                            <li><a href="../../../about/index.html">О нас</a></li>
+                            <li><a href="../../index.html" class="selected">Услуги</a></li>
+                            <li><a href="../../../doctors/index.html">Наши врачи</a></li>
+                            <li><a href="../../spetspredlozheniya/index.html">Спецпредложения</a></li>
+                            <li><a href="../../../knowledge-base/index.html">База знаний</a></li>
+                            <li><a href="../../../vacancy/index.html">Вакансии</a></li>
+                            <li><a href="../../../contacts/index.html">Контакты</a></li>
+                        </ul>
+                    </div> <!-- END .main-nav-items -->
+                </div> <!-- END .nav-in -->
+                <div class="order-xl-1 navbar-contacts d-xl-flex">
+                    <div class="nav-in">
+                        <a href="tel:+74951268290" class="main-nav-contact">
+                            +7 495 126-82-90 </a>
+                    </div>
+                    <div class="nav-in">
+                        <a href="index.html#" class="main-nav-address">
+                            Москва, Зубарев пер., д. 7 </a>
+                    </div>
+                </div>
+                <div class="nav-in-bottom">
+                    <div class="main-nav-booking backgr-blue text-white d-flex justify-content-between flex-xl-column">
+                        <div class="logo-in d-none d-xl-block"></div>
+                        <div>Широкий спектр<br>
+                            ветеринарных услуг<br>
+                            и специалистов<br>
+                            круглосуточно
+                        </div> <a href="index.html#calltouch"
+                            class="btn btn-white align-self-end align-self-xl-start js-btn-callback">Записаться</a>
+                    </div> <!-- END .main-nav-booking -->
+                </div> <!-- END .nav-in-bottom -->
+            </div> <!-- END .container -->
+        </div> <!-- END .main-nav-->
+
+        <div class="navbar" id="fixed-menu">
+            <!-- START .navbar -->
+            <div class="container navbar-container">
+                <div class="d-flex justify-content-between navbar-in">
+
+                    <div id="title-search" class="d-flex justify-content-between">
+                        <form action="https://vet.city/search/" class="form-inline position-relative">
+                            <input id="title-search-input" class="form-control" name="q" type="text" autocomplete="off"
+                                placeholder="Поиск" aria-label="Search" onfocus="startFocus()" onblur="stopFocus()">
+                            <button type="submit" class="submit"></button>
+                        </form>
+                        <input name="s" type="hidden" value="Поиск" />
+
+                        <a class="btn btn-nav-book text-white js-btn-callback" href="index.html#">Запись</a>
+                    </div>
+
+
+                    <div class="d-block d-xl-none">
+                        <a href="tel:+7 495 126-82-90" class="btn btn-blue btn-mob-call">позвонить</a>
+                    </div>
+                    <div class="d-none d-xl-block text-white d-xl-flex align-items-xl-center">
+                        <div class="nav-non-stop">
+                            Круглосуточно </div>
+                        <div><a href="tel:+74951268290" class="nav-phone">
+                                +7 495 126-82-90 </a></div>
+                        <div><a href="../../../contacts/index.html" class="nav-address">
+                                Москва, Зубарев пер., д. 7 </a></div>
+                    </div>
+                </div> <!-- END .navbar-in -->
+            </div> <!-- END.container -->
+        </div> <!-- END .navbar -->
+
+        <div class="main-body">
+            <!-- START .main-body -->
+            <div class="container backgr-white roundy">
+                <div class="main-body-header for-inner-page">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column flex-md-row justify-content-between w-100">
+                            <a href="../../../index.html" class="logo-main"></a>
+                            <nav aria-label="breadcrumb" class="d-none d-xl-block mx-auto">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="../../../index.html">Главная</a></li>
+                                    <li class="breadcrumb-item"><a href="../../index.html">Услуги</a></li>
+                                    <li class="breadcrumb-item"><a href="../../laboratoriya/index.html">Лаборатория</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="../../laboratoriya/index.html">Анализы
+                                            лабораторий партнеров</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">ПЦР Болезнь Ауески</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <a href="javascript:void(0);" class="hamburger"></a>
+                    </div>
+
+
+
+
+
+
+                    <h1 class="text-center smaller-header">ПЦР Болезнь Ауески</h1>
+
+                    <div class="search-select-box d-xl-flex justify-content-between">
+                        <div
+                            class="align-self-xl-end costs d-flex justify-content-between flex-lg-row align-items-center">
+                            <div class="price-service">1 800 ₽</div>
+                            <a href="index.html#calltouch" class="btn btn-blue js-btn-callback">Записаться</a>
+                        </div>
+                    </div> <!-- END .search-select-box  -->
+                </div> <!-- END .main-body-header  -->
+
+            </div> <!-- END .container  -->
+        </div> <!-- END .main-main-body-->
+
+
+        <div class="block-with-docs" id="cmp625c431770a04">
+            <!-- START .block-with-docs -->
+            <div class="container backgr-white roundy">
+                <div class="block-bordered-btn">
+                    <div class="block-with-border-bottom">
+                        <h2 class="detail-info-heading text-center">Врачи</h2>
+                        <div class="body-inner">
+                            <div class="row row-cards js-items">
+
+                                <div class="card-doc d-flex flex-column col-6 col-md-4 col-lg-3 col-xl-card"
+                                    id="bx_3218110189_478">
+                                    <a href="../../../doctors/olga-anatolevna-glebova/index.html"
+                                        class="card-doc-in backgr-dgrey d-flex align-items-end"
+                                        style="background-image: url(../../../upload/resize_cache/iblock/d27/1000_1000_0/g0g02gos3grj3rklw4nav47m2funmb0m.jpg)">
+                                        <div class="card-doc-txt">
+                                            <h5>Глебова Ольга Анатольевна</h5>
+                                            <div class="card-doc-txt-in">Ветеринарный врач - цитолог</div>
+                                        </div>
+                                    </a> <!-- END .card-doc-in -->
+                                </div> <!-- END .card-doc -->
+
+
+                                <div class="card-doc d-flex flex-column col-6 col-md-4 col-lg-3 col-xl-card"
+                                    id="bx_3218110189_3144">
+                                    <a href="../../../doctors/ovcharenko-ekaterina-sergeevna/index.html"
+                                        class="card-doc-in backgr-dgrey d-flex align-items-end"
+                                        style="background-image: url(../../../upload/iblock/108/ffbjtij2x7iyyucb4shgv2ido3gkldtn.jpg)">
+                                        <div class="card-doc-txt">
+                                            <h5>Овчаренко Екатерина Сергеевна</h5>
+                                            <div class="card-doc-txt-in">Врач - лаборант</div>
+                                        </div>
+                                    </a> <!-- END .card-doc-in -->
+                                </div> <!-- END .card-doc -->
+
+
+                                <div class="card-doc d-flex flex-column col-6 col-md-4 col-lg-3 col-xl-card"
+                                    id="bx_3218110189_696">
+                                    <a href="../../../doctors/egorova-ekaterina-aleksandrovna/index.html"
+                                        class="card-doc-in backgr-dgrey d-flex align-items-end"
+                                        style="background-image: url(../../../upload/iblock/34d/lmu00zv36b5g1eevb0zcgm5e7641bgaz.jpg)">
+                                        <div class="card-doc-txt">
+                                            <h5>Егорова Екатерина Александровна</h5>
+                                            <div class="card-doc-txt-in">Врач - лаборант</div>
+                                        </div>
+                                    </a> <!-- END .card-doc-in -->
+                                </div> <!-- END .card-doc -->
+
+
+                                <div class="card-doc d-flex flex-column col-6 col-md-4 col-lg-3 col-xl-card"
+                                    id="bx_3218110189_694">
+                                    <a href="../../../doctors/filchenko-sofya-dmitrievna/index.html"
+                                        class="card-doc-in backgr-dgrey d-flex align-items-end"
+                                        style="background-image: url(../../../upload/iblock/7c8/jz756sm3e04e4nxzwjxtilxc9bi1udu3.jpg)">
+                                        <div class="card-doc-txt">
+                                            <h5>Фильченко Софья Дмитриевна</h5>
+                                            <div class="card-doc-txt-in">Врач - лаборант</div>
+                                        </div>
+                                    </a> <!-- END .card-doc-in -->
+                                </div> <!-- END .card-doc -->
+
+                                <div class="card-doc d-flex flex-column col-12 col-md-4 col-lg-3 col-xl-card">
+                                    <div class="doctors-blue-enroll">
+                                        <img src="{% static '../../../local/templates/vetcity/img/vetcity-heart-white.svg' %}"
+                                            loading="lazy" />
+                                        <p>Ветеринарный<br>госпиталь с широким спектром услуг<br>и специалистов</p>
+                                        <a href="index.html#calltouch"
+                                            class="btn btn-small js-btn-callback">Записаться</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- END .body-inner -->
+                    </div> <!-- END .block-with-border-bottom -->
+                    <div class="btn-box-more">
+                        <div class="btn btn-white js-show-more">Показать еще</div>
+                    </div> <!-- END .btn-box-more-->
+                </div> <!-- END .for-doctors -->
+            </div> <!-- END .container -->
+        </div> <!-- END .block-with-docs -->
+
+
+
+
+        <div class="articles-block">
+            <!-- START .articles-block -->
+            <div class="container backgr-white roundy">
+                <div class="block-bordered-btn">
+                    <div class="block-with-border-bottom">
+                        <div class="articles">
+                            <h2 class="detail-info-heading text-center">Статьи</h2>
+                            <div class="knowledge-wrap">
+                                <div class="row js-items">
+                                    <div class="knowledge-item col-6 col-sm-4 col-md-3 col-xl-card" id="bx_651765591_">
+                                        <a href="../../../knowledge-base/articles/aktivnaya-sobaka-/index.html"
+                                            class="knowledge-item-in">
+                                            <div class="knowledge-item-picture"
+                                                style="background-image: url('../../../upload/resize_cache/iblock/ffe/570_340_0/00u8ph71vsr4ytio1fvyrb58ujdvznj4.jpg');">
+                                            </div>
+                                            <div class="knowledge-item-text">Активная собака</div>
+                                        </a>
+                                    </div> <!-- END .knowledge-item -->
+                                    <div class="knowledge-item col-6 col-sm-4 col-md-3 col-xl-card" id="bx_651765591_">
+                                        <a href="../../../knowledge-base/articles/sobaka-boitsya-vody/index.html"
+                                            class="knowledge-item-in">
+                                            <div class="knowledge-item-picture"
+                                                style="background-image: url('../../../upload/resize_cache/iblock/00b/570_340_0/om78uhjzjbv70oqug4kupbz30zr1ilon.jpg');">
+                                            </div>
+                                            <div class="knowledge-item-text">Собака боится воды</div>
+                                        </a>
+                                    </div> <!-- END .knowledge-item -->
+                                    <div class="knowledge-item col-6 col-sm-4 col-md-3 col-xl-card" id="bx_651765591_">
+                                        <a href="../../../knowledge-base/articles/obuchenie/index.html"
+                                            class="knowledge-item-in">
+                                            <div class="knowledge-item-picture"
+                                                style="background-image: url('../../../upload/resize_cache/iblock/5e2/570_340_0/0fdgcxg0w8oe4w93ki6291wvheta72xw.webp');">
+                                            </div>
+                                            <div class="knowledge-item-text">Обучение щенков</div>
+                                        </a>
+                                    </div> <!-- END .knowledge-item -->
+                                    <div class="knowledge-item col-6 col-sm-4 col-md-3 col-xl-card" id="bx_651765591_">
+                                        <a href="../../../knowledge-base/articles/lizhetsya/index.html"
+                                            class="knowledge-item-in">
+                                            <div class="knowledge-item-picture"
+                                                style="background-image: url('../../../upload/resize_cache/iblock/246/570_340_0/ugk1d1ny88v2ovjoqpe9xfb1cv9lo2hb.jpg');">
+                                            </div>
+                                            <div class="knowledge-item-text">Почему мой питомец лижется?</div>
+                                        </a>
+                                    </div> <!-- END .knowledge-item -->
+                                    <a href="../../../knowledge-base/articles/index.html"
+                                        class="knowledge-item col-12 col-sm-8 col-md-6 col-xl-card knowledge-item-picture">
+                                        <div class="blue-border show-more-articles">
+                                            <p>Все<br>материалы<br>базы<br>знаний</p>
+                                            <span class="btn-show"></span>
+                                        </div>
+                                    </a>
+                                </div> <!-- END .row  -->
+                            </div> <!-- END .knowledge-wrap  -->
+                        </div> <!-- END .articles  -->
+                    </div> <!-- END .block-with-border-bottom -->
+                </div> <!-- END .block-bordered-btn -->
+            </div> <!-- END .container.backgr-white.roundy-->
+        </div> <!-- END .articles-block  -->
+
+        <footer>
+            <!-- START footer -->
+            <div class="container smaller-container text-white">
+                <div class="footer-top">
+                    <div class="row">
+                        <div class="col-12 col-xl-7">
+                            <div class="row">
+                                <div class="footer-menu col-12 col-md-6 order-md-2">
+
+                                    <ul class="list-unstyled">
+
+                                        <li class="text-center text-md-left"><a href="../../../index.html">
+                                                <h4>Главная</h4>
+                                            </a></li>
+
+                                        <li class="text-center text-md-left"><a href="../../../about/index.html">
+                                                <h4>О нас</h4>
+                                            </a></li>
+
+                                        <li class="text-center text-md-left"><a href="../../index.html"
+                                                class="selected">
+                                                <h4>Услуги</h4>
+                                            </a></li>
+
+                                        <li class="text-center text-md-left"><a href="../../../doctors/index.html">
+                                                <h4>Наши врачи</h4>
+                                            </a></li>
+
+                                        <li class="text-center text-md-left"><a
+                                                href="../../spetspredlozheniya/index.html">
+                                                <h4>Спецпредложения</h4>
+                                            </a></li>
+
+                                        <li class="text-center text-md-left"><a
+                                                href="../../../knowledge-base/index.html">
+                                                <h4>База знаний</h4>
+                                            </a></li>
+
+                                        <li class="text-center text-md-left"><a href="../../../vacancy/index.html">
+                                                <h4>Вакансии</h4>
+                                            </a></li>
+
+                                        <li class="text-center text-md-left"><a href="../../../contacts/index.html">
+                                                <h4>Контакты</h4>
+                                            </a></li>
+
+
+                                    </ul>
+                                </div>
+                                <div class="footer-contacts col-12 col-md-6 order-md-1">
+                                    <div class="footer-heart d-none d-md-block"></div>
+                                    <div class="footer-address">
+                                        <div class="row footer-contact">
+                                            <div class="col-6 col-md-12">
+                                                <div class="text-grey">Адрес:</div>
+                                                <div>
+                                                    <a href="../../../contacts/index.html">Москва, Зубарев<br>
+                                                        переулок, д. 7</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-12">
+                                                <div class="text-grey">Телефон:</div>
+                                                <div><a href="tel:+74951268290">
+                                                        +7 495 126-82-90</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center">
+                                            <div class="non-stop"></div>
+                                            <div>
+                                                Работаем<br>
+                                                Круглосуточно
+                                            </div>
+                                        </div>
+                                    </div> <!-- END .footer-address -->
+                                </div> <!-- END .footer-contacts -->
+                            </div> <!-- END .row -->
+                        </div> <!-- END .col-12.col-xl-7 -->
+                        <div
+                            class="footer-connect col-12 col-xl-5 d-xl-flex justify-content-xl-between align-items-xl-end flex-xl-column">
+                            <div class="footer-subscribe">
+                                <div class="form-subscribe">
+                                    <div class="form-subscribe js-subscribe-container">
+                                        <h4 class="text-black">Подпишитесь на нашу<br> рассылку:</h4>
+                                        <form class="js-subscribe-form" action='https://vet.city/ajax/subscribe.php'>
+                                            <input type="hidden" name="action" value="subscribe">
+                                            <input type="hidden" name="mailingListId" value="1" />
+                                            <div class="form-group d-flex">
+                                                <input type="email" name="email" value="" class="form-control"
+                                                    placeholder="Ваш email" required>
+                                                <span class="form-group-btn">
+                                                    <button class="btn btn-blue" name="OK" type="submit"
+                                                        value="">Подписаться</button>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-social d-flex justify-content-between align-items-center">
+                                <div class="footer-heart d-block d-md-none"></div>
+                                <div class="footer-social-links">
+
+                                    <a href="https://vk.com/public188120292" target="_blank" class="footer-vk"></a>
+                                    <a href="https://t.me/vetcityclinic" target="_blank" class="footer-tg"></a>
+                                </div>
+                            </div> <!-- END .footer-social -->
+                        </div> <!-- END .footer-connect -->
+                    </div> <!-- END .row -->
+                </div> <!-- END .footer-top -->
+                <div class="footer-bottom d-flex flex-column flex-lg-row justify-content-lg-between">
+                    <a href="https://skam.team" target="_blank"
+                        class="design text-uppercase text-right order-lg-2">designed by</a>
+                    <div class="copyright text-center text-lg-left order-lg-1">
+                        2022&nbsp;© ООО «Вет Сити Центр» </div>
+                </div> <!-- END .footer-bottom -->
+            </div> <!-- END .container.smaller-container -->
+        </footer> <!-- END footer -->
+    </div>
+    <!-- To detect which environment we are in -->
+    <div id="environment-xs" class="d-sm-none"></div>
+    <div id="environment-sm" class="d-none d-sm-block d-md-none"></div>
+    <div id="environment-md" class="d-none d-md-block d-lg-none"></div>
+    <div id="environment-lg" class="d-none d-lg-block d-xl-none"></div>
+    <div id="environment-xl" class="d-none d-xl-block"></div>
+
+
+    <div id="c625c431772da5">
+        <div class="modal fade js-callback-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form action="index.html" class="text-left needs-validation js-calltouch-form" novalidate>
+                        <div class="modal-header">
+                            <div class="modal-title">Форма обратного звонка</div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger js-error" style="display: none;"></div>
+                            <div class="input-mb">
+                                <div class="form-group position-relative">
+                                    <label>Телефон</label>
+                                    <input type="tel" class="form-control js-phone" placeholder="Телефон" required>
+                                </div>
+                            </div>
+                            <div class="input-mb">
+                                <div class="form-group position-relative">
+                                    <label>Ваше имя</label>
+                                    <input type="text" class="form-control js-name" placeholder="Ваше имя" required>
+                                </div>
+                            </div>
+                            <div class="form-check check-accept">
+                                <input class="form-check-input" type="checkbox" name="ACCEPT_CALLTOUCH" value="Y"
+                                    id="ACCEPT_CALLTOUCH" required="required">
+                                <label class="form-check-label" for="ACCEPT_CALLTOUCH">Я согласен с <a
+                                        href="../../../upload/iblock/1bf/hb7nrqz69iwrbs22pmo7r7tjpkpp8n5t.pdf"
+                                        target="_blank">условиями обработки персональных данных</a>, <a
+                                        href="../../../upload/iblock/f3c/zav8cy135l7bzg11beyg7w33wpr1rxkg.pdf"
+                                        target="_blank">правилами оказания онлайн-консультирования</a> и <a
+                                        href="../../../upload/iblock/9b6/judzjq4rc3gtsyh6q6ghaccggl3nusq7.pdf"
+                                        target="_blank">условиями договора-оферты на оказание услуг</a></label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button type="submit" class="btn btn-modal btn-blue">Заказать звонок</button>
+                            <i class="icon icon-heart"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade show js-callback-success-modal" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="text-left needs-validation">
+                        <div class="modal-header">
+                            <div class="modal-title">Спасибо!</div>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="../../../index.html" class="btn btn-modal btn-blue">Перейти на главную</a>
+                            <i class="icon icon-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript"
+        src="{% static '../../../local/templates/vetcity/js/jquery-3.6.0.min.js%3F162694166289503' %}"></script>
+    <script type="text/javascript" src="{% static '../../../local/templates/vetcity/js/popper.min.js%3F162694166221009' %}"></script>
+    <script type="text/javascript"
+        src="{% static '../../../local/templates/vetcity/js/bootstrap.bundle.min.js%3F162694166284384' %}"></script>
+    <script type="text/javascript" src="{% static '../../../local/templates/vetcity/js/scrollreveal.js%3F162694166246205' %}"></script>
+    <script type="text/javascript"
+        src="{% static '../../../local/templates/vetcity/js/jquery.fancybox.min.js%3F162694166268265' %}"></script>
+    <script type="text/javascript"
+        src="{% static '../../../local/templates/vetcity/js/owl.carousel.min.js%3F162694166244348' %}"></script>
+    <script type="text/javascript"
+        src="{% static '../../../local/templates/vetcity/js/bootstrap-select.min.js%3F162694166257752' %}"></script>
+    <script type="text/javascript"
+        src="{% static '../../../local/templates/vetcity/js/jquery.inputmask.min.js%3F162694166293838' %}"></script>
+    <script type="text/javascript" src="{% static '../../../local/templates/vetcity/js/moment.min.js%3F162869081858862' %}"></script>
+    <script type="text/javascript"
+        src="{% static '../../../local/templates/vetcity/js/jquery.validate.min.js%3F163177822424430' %}"></script>
+    <script type="text/javascript"
+        src="{% static '../../../local/templates/vetcity/js/jquery.highlight.js%3F16345471064079' %}"></script>
+    <script type="text/javascript" src="{% static '../../../local/templates/vetcity/js/main.js%3F16353386316990' %}"></script>
+    <script type="text/javascript"
+        src="{% static 'https://vet.city/bitrix/components/bitrix/search.title/script.js?16267702349847' %}"></script>
+    <script type="text/javascript"
+        src="{% static '../../../local/components/wlcomponents/subscribe/templates/.default/script.js%3F1626941662299' %}"></script>
+    <script type="text/javascript"
+        src="{% static '../../../local/components/wlcomponents/calltouch/templates/.default/script.js%3F16484523923457' %}"></script>
+    <script type="text/javascript"
+        src="{% static '../../../local/templates/.default/components/bitrix/news/services/script.js%3F1629726021922' %}"></script>
+    <script type="text/javascript"
+        src="{% static '../../../local/templates/.default/components/bitrix/news.list/services-doctors/script.js%3F1631781320868' %}"></script>
+    <script type="text/javascript"
+        src="{% static '../../../local/templates/.default/components/bitrix/news.list/services-articles/script.js%3F1628592705756' %}"></script>
+
+</body>
+
+</html>

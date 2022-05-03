@@ -1,0 +1,23 @@
+class ServiceDoctorsComponent {
+    constructor(params) {
+        this.params = params;
+        this.page = 1;
+        let self = this;
+
+        $(params.componentID).on('click', '.js-show-more', function () {
+            let postData = {action: 'load_more', mode: 'ajax', hash: self.params.hash, excludeID: params.exclude_ids};
+            postData[self.params.pagen] = self.page;
+            $.getJSON('', postData, response => {
+                $(params.componentID).find('.js-items').append(response.list);
+                self.params.countPage = response.pages;
+                self.page++;
+
+                if (self.params.countPage + 1 <= self.page) {
+                    $(params.componentID + ' .btn-box-more').remove();
+                    $(this).remove();
+                }
+            });
+            return false;
+        })
+    }
+}
