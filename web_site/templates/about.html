@@ -1,126 +1,27 @@
+{% extends 'base.html' %}
 {% load static %}
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#1B1B29" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1B1B29" media="(prefers-color-scheme: dark)">
-
-    <title>О ветеринарном центре vet.city</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="keywords" content="ветеринарная клиника, vet.city, вет сити" />
-<meta name="description" content="Vet.city — современная ветеринарная клиника для лечения и поддержки животных. Мы работаем, чтобы повышать качество жизни животных. Мы мечтаем, чтобы все были здоровы и у каждого был дом." />
-
-<link href="{% static '/templates/vetcity/css/jquery.fancybox.min.css%3F162694166212795.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '/templates/vetcity/css/bootstrap.min.css%3F1626941662161415.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '/templates/vetcity/css/owl.carousel.min.css%3F16269416623356.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '/templates/vetcity/css/owl.theme.default.min.css%3F16269416621018.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '/templates/vetcity/css/main.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '/templates/vetcity/css/bootstrap-select.min.css%3F162694166211832.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '/templates/vetcity/css/modal-window.css%3F16317782243928.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '/templates/vetcity/css/style_secondary.css%3F163177822419507.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '/templates/vetcity/css/custom.css%3F164845239236922.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '/templates/.default/components/bitrix/menu/top/style.css%3F1628592705625.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '/templates/.default/components/bitrix/search.title/.default/style.css%3F16285927052108.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '/templates/.default/components/bitrix/menu/footer/style.css%3F1628592705625.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-
-
-
-
-        <div class="has-overflow-hidden">
-            <div class="main-nav"> <!-- START .main-nav-->
-                <div class="nav-container d-xl-flex flex-xl-column">
-                    <div class="nav-in order-xl-2 navbar-list">
-                        <a href="/" class="logo"></a>
-                        <div class="d-none d-xl-block head-navbar">Меню</div>
-                        <div class="main-nav-items">
-                            
-    <ul class="list-unstyled">
-        <div class="navbar-social-links">
-            
-            <a target="_blank" href="https://vk.com/public188120292" class="footer-vk"></a>
-            <a target="_blank" href="https://t.me/vetcityclinic" class="footer-tg"></a>
-        </div>
-                                                                    <li class="item-left-outside"><a href="../index.html">Главная</a></li>
-                                                                                                <li><a href="index.html" class="selected">О нас</a></li>
-                                                                                                <li><a href="../services/index.html">Услуги</a></li>
-                                                                                                <li><a href="../doctors/index.html">Наши врачи</a></li>
-                                                                                                <li><a href="../services/spetspredlozheniya/index.html">Спецпредложения</a></li>
-                                                                                                <li><a href="../knowledge-base/index.html">База знаний</a></li>
-                                                                                                <li><a href="../vacancy/index.html">Вакансии</a></li>
-                                                                                                <li><a href="../contacts/index.html">Контакты</a></li>
-                                        </ul>
-                        </div> <!-- END .main-nav-items -->
-                    </div> <!-- END .nav-in -->
-                    <div class="order-xl-1 navbar-contacts d-xl-flex">
-                        <div class="nav-in">
-                            <a href="tel:+74951268290" class="main-nav-contact">
-                                +7 495 126-82-90                            </a>
-                        </div>
-                        <div class="nav-in">
-                            <a href="index.html#" class="main-nav-address">
-                                Москва, Зубарев пер., д. 7                            </a>
-                        </div>
-                    </div>
-                    <div class="nav-in-bottom">
-                        <div class="main-nav-booking backgr-blue text-white d-flex justify-content-between flex-xl-column">
-                            <div class="logo-in d-none d-xl-block"></div>
-                            <div>Широкий спектр<br>
-    ветеринарных услуг<br>
-    и специалистов<br>
-    круглосуточно
-</div>                            <a href="{index.html#calltouch" class="btn btn-white align-self-end align-self-xl-start js-btn-callback">Записаться</a>
-                        </div>  <!-- END .main-nav-booking -->
-                    </div>  <!-- END .nav-in-bottom -->
-                </div>  <!-- END .container -->
-            </div> <!-- END .main-nav-->
-
-            <div class="navbar" id="fixed-menu">  <!-- START .navbar -->
-                <div class="container navbar-container">
-                    <div class="d-flex justify-content-between navbar-in">
-                        
-<div id="title-search" class="d-flex justify-content-between">
-    <form action="https://vet.city/search/" class="form-inline position-relative">
-        <input id="title-search-input" class="form-control" name="q" type="text" autocomplete="off" placeholder="Поиск" aria-label="Search" onfocus="startFocus()" onblur="stopFocus()">
-		<button type="submit" class="submit"></button>
-    </form>
-    <input name="s" type="hidden" value="Поиск" />
-	
-	<a class="btn btn-nav-book text-white js-btn-callback" href="index.html#">Запись</a>
-</div>
-
-
-                        <div class="d-block d-xl-none">
-                            <a href="tel:+7 495 126-82-90" class="btn btn-blue btn-mob-call">позвонить</a>
-                        </div>
-                        <div class="d-none d-xl-block text-white d-xl-flex align-items-xl-center">
-                            <div class="nav-non-stop">
-                                Круглосуточно                            </div>
-                            <div><a href="tel:+74951268290" class="nav-phone">
-                                +7 495 126-82-90                            </a></div>
-                            <div><a href="../contacts/index.html" class="nav-address">
-                                Москва, Зубарев пер., д. 7                            </a></div>
-                        </div>
-                    </div>   <!-- END .navbar-in -->
-                </div>  <!-- END.container -->
-            </div>  <!-- END .navbar -->
-    
-<div class="main-body">
-    <!-- START .main-body -->
-    <div class="container backgr-white roundy">
-        <div class="main-body-header no-border">
-            <div class="d-flex justify-content-between">
-                <div class="d-flex flex-column flex-md-row justify-content-between w-100">
-                    <a href="../index.html" class="logo-main"></a>
-                    <nav aria-label="breadcrumb" class="d-none d-xl-block mx-auto"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="/">Главная</a></li><li class="breadcrumb-item active" aria-current="page">О нас</li></ol></nav>                </div>
-                <a href="javascript:void(0);" class="hamburger"></a>
+{% block content %}
+<!-- START .main-body -->
+<div class="container backgr-white roundy">
+    <div class="main-body-header no-border">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex flex-column flex-md-row justify-content-between w-100">
+                <a href="/" class="logo-main"></a>
+                <nav aria-label="breadcrumb" class="d-none d-xl-block mx-auto">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">О нас</li>
+                    </ol>
+                </nav>
             </div>
-            <h1 class="text-center">О ветеринарной<br>клинике</h1>
-            <div class="sub-txt text-center">
-                Мы — современный многопрофильный ветеринарный госпиталь с полным спектром услуг:<br>от диагностики и лечения до медицинского сопровождения домашних питомцев разного вида,<br>веса и возраста.            </div>
-        </div> <!-- END .main-body-header  -->
-    </div> <!-- .container -->
+            <a href="javascript:void(0);" class="hamburger"></a>
+        </div>
+        <h1 class="text-center">О ветеринарной<br>клинике</h1>
+        <div class="sub-txt text-center">
+            Мы — современный многопрофильный ветеринарный госпиталь с полным спектром услуг:<br>от диагностики и лечения
+            до медицинского сопровождения домашних питомцев разного вида,<br>веса и возраста. </div>
+    </div> <!-- END .main-body-header  -->
+</div> <!-- .container -->
 </div> <!-- .main-body -->
 
 <div class="about-mission">
@@ -128,20 +29,30 @@
     <div class="container container-for-mob d-md-flex justify-content-between">
         <div class="deals text-white d-md-flex flex-md-row">
             <div class="owl-carousel owl-theme">
-            <div class="deals-owl-slider roundy d-xl-flex flex-xl-column justify-content-between" style="background-image: url({% static '/upload/resize_cache/iblock/9c7/1000_1000_0/p62sohmgag9fuv2jbkytsik4i2lr0b8f.webp' %});"></div>
-            <div class="deals-owl-slider roundy d-xl-flex flex-xl-column justify-content-between" style="background-image: url(../upload/resize_cache/iblock/400/1000_1000_0/f3ijnoab736kzt57no1ngdtu1dfnp178.webp);"></div>
-            <div class="deals-owl-slider roundy d-xl-flex flex-xl-column justify-content-between" style="background-image: url(../upload/resize_cache/iblock/c5c/1000_1000_0/24rht9fouteiwkb060xlk8b8osz0i0tn.webp);"></div>
-            <div class="deals-owl-slider roundy d-xl-flex flex-xl-column justify-content-between" style="background-image: url(../upload/resize_cache/iblock/9d3/1000_1000_0/6c05qvyo66lfl2rv1fan5z7mbl5iw4m0.webp);"></div>
-    </div>        </div>
-        <div class="team about-mission-wrap roundy d-xl-flex flex-xl-column justify-content-xl-stretch align-items-xl-stretch text-black d-xl-flex flex-xl-column justify-content-between">
+                <div class="deals-owl-slider roundy d-xl-flex flex-xl-column justify-content-between"
+                    style="background-image: url({% static '/upload/resize_cache/iblock/9c7/1000_1000_0/p62sohmgag9fuv2jbkytsik4i2lr0b8f.webp' %});">
+                </div>
+                <div class="deals-owl-slider roundy d-xl-flex flex-xl-column justify-content-between"
+                    style="background-image: url(/upload/resize_cache/iblock/400/1000_1000_0/f3ijnoab736kzt57no1ngdtu1dfnp178.webp);">
+                </div>
+                <div class="deals-owl-slider roundy d-xl-flex flex-xl-column justify-content-between"
+                    style="background-image: url(/upload/resize_cache/iblock/c5c/1000_1000_0/24rht9fouteiwkb060xlk8b8osz0i0tn.webp);">
+                </div>
+                <div class="deals-owl-slider roundy d-xl-flex flex-xl-column justify-content-between"
+                    style="background-image: url(/upload/resize_cache/iblock/9d3/1000_1000_0/6c05qvyo66lfl2rv1fan5z7mbl5iw4m0.webp);">
+                </div>
+            </div>
+        </div>
+        <div
+            class="team about-mission-wrap roundy d-xl-flex flex-xl-column justify-content-xl-stretch align-items-xl-stretch text-black d-xl-flex flex-xl-column justify-content-between">
             <h4 class="text-center">Наша миссия</h4>
             <div class="about-mission-text">
                 Мы стремимся<br>
-обеспечивать<br>
-высокий уровень<br>
-профессиональной<br>
-ветеринарной<br>
-помощи <img src="{% static '/templates/vetcity/img/icons/vet_heart.svg' %}" alt="">            </div>
+                обеспечивать<br>
+                высокий уровень<br>
+                профессиональной<br>
+                ветеринарной<br>
+                помощи <img src="{% static '/templates/vetcity/img/icons/vet_heart.svg' %}" alt=""> </div>
         </div> <!-- END .about-mission-wrap -->
     </div> <!-- END .container.container-for-mob -->
 </div> <!-- END .about-mission -->
@@ -153,24 +64,29 @@
             <div class="about-principles-title col-12 col-md-6 col-xl-3">
                 <h4>Наши приципы</h4>
             </div> <!-- END .about-principles-title -->
-                <div class="about-principles-item col-12 col-md-6 col-xl-3">
-        <div class="about-principles-item-in d-flex flex-column justify-content-between">
-            <h4 class="text-nowrap text-truncate">Забота</h4>
-            <div class="about-principles-item-text">Мы внимательны к животным и людям и искренне хотим помочь. Мы считаем, что лечение должно проходить без лишнего стресса и создаем условия для того, чтобы всем было комфортно.</div>
-        </div> <!-- END .about-principles-item-in -->
-    </div> <!-- END .about-principles-item -->
-    <div class="about-principles-item col-12 col-md-6 col-xl-3">
-        <div class="about-principles-item-in d-flex flex-column justify-content-between">
-            <h4 class="text-nowrap text-truncate">Ответственность</h4>
-            <div class="about-principles-item-text">Мы принимаем взвешенные решения, учитывая потребности наших пациентов. Мы готовы к сложным ситуациям и нестандартным медицинским случаям. Мы отвечаем за каждую процедуру и рекомендацию.</div>
-        </div> <!-- END .about-principles-item-in -->
-    </div> <!-- END .about-principles-item -->
-    <div class="about-principles-item col-12 col-md-6 col-xl-3">
-        <div class="about-principles-item-in d-flex flex-column justify-content-between">
-            <h4 class="text-nowrap text-truncate">Профессионализм</h4>
-            <div class="about-principles-item-text">Наши сотрудники досконально знают свое дело, увлечены профессией и постоянно совершенствуются в ней.</div>
-        </div> <!-- END .about-principles-item-in -->
-    </div> <!-- END .about-principles-item -->
+            <div class="about-principles-item col-12 col-md-6 col-xl-3">
+                <div class="about-principles-item-in d-flex flex-column justify-content-between">
+                    <h4 class="text-nowrap text-truncate">Забота</h4>
+                    <div class="about-principles-item-text">Мы внимательны к животным и людям и искренне хотим помочь.
+                        Мы считаем, что лечение должно проходить без лишнего стресса и создаем условия для того, чтобы
+                        всем было комфортно.</div>
+                </div> <!-- END .about-principles-item-in -->
+            </div> <!-- END .about-principles-item -->
+            <div class="about-principles-item col-12 col-md-6 col-xl-3">
+                <div class="about-principles-item-in d-flex flex-column justify-content-between">
+                    <h4 class="text-nowrap text-truncate">Ответственность</h4>
+                    <div class="about-principles-item-text">Мы принимаем взвешенные решения, учитывая потребности наших
+                        пациентов. Мы готовы к сложным ситуациям и нестандартным медицинским случаям. Мы отвечаем за
+                        каждую процедуру и рекомендацию.</div>
+                </div> <!-- END .about-principles-item-in -->
+            </div> <!-- END .about-principles-item -->
+            <div class="about-principles-item col-12 col-md-6 col-xl-3">
+                <div class="about-principles-item-in d-flex flex-column justify-content-between">
+                    <h4 class="text-nowrap text-truncate">Профессионализм</h4>
+                    <div class="about-principles-item-text">Наши сотрудники досконально знают свое дело, увлечены
+                        профессией и постоянно совершенствуются в ней.</div>
+                </div> <!-- END .about-principles-item-in -->
+            </div> <!-- END .about-principles-item -->
         </div> <!--  END .row -->
     </div> <!-- END .container -->
 </div> <!-- END .about-principles -->
@@ -180,42 +96,48 @@
     <!-- START .about-equipment-wrap -->
     <div class="container container-for-mob d-md-flex">
         <div class="deals text-white d-md-flex flex-md-row">
-        <div class="owl-carousel owl-theme">
-            <div class="deals-owl-slider roundy d-flex flex-column justify-content-end" style="background-image: url(../upload/resize_cache/iblock/604/1000_1000_0/1zffs3mr8crdxcyh3nkdepb7q6wche5v.png);">
-            <div class="deals-white-container">
-                <div class="equipment-text-1">Новейшее оборудование</div>
-                <div class="equipment-text-2"> Компьютерный томограф GE Revolution ACT</div>
-                <div class="equipment-text-3"></div>
+            <div class="owl-carousel owl-theme">
+                <div class="deals-owl-slider roundy d-flex flex-column justify-content-end"
+                    style="background-image: url(/upload/resize_cache/iblock/604/1000_1000_0/1zffs3mr8crdxcyh3nkdepb7q6wche5v.png);">
+                    <div class="deals-white-container">
+                        <div class="equipment-text-1">Новейшее оборудование</div>
+                        <div class="equipment-text-2"> Компьютерный томограф GE Revolution ACT</div>
+                        <div class="equipment-text-3"></div>
+                    </div>
+                </div>
+                <div class="deals-owl-slider roundy d-flex flex-column justify-content-end"
+                    style="background-image: url(/upload/resize_cache/iblock/35e/1000_1000_0/k0whzkv7ivif8sks0t6y6e1wpfk7yzvr.png);">
+                    <div class="deals-white-container">
+                        <div class="equipment-text-1">Новейшее оборудование</div>
+                        <div class="equipment-text-2">Экспертная эхокардиография GE Vivid E90</div>
+                        <div class="equipment-text-3"></div>
+                    </div>
+                </div>
+                <div class="deals-owl-slider roundy d-flex flex-column justify-content-end"
+                    style="background-image: url(/upload/resize_cache/iblock/c51/1000_1000_0/1bdefyyr9jiufxah02zpcfkht15horeh.jpg);">
+                    <div class="deals-white-container">
+                        <div class="equipment-text-1">Новейшее оборудование</div>
+                        <div class="equipment-text-2"> Рентген аппарат Examion X-DR Static Classic</div>
+                        <div class="equipment-text-3"></div>
+                    </div>
+                </div>
+                <div class="deals-owl-slider roundy d-flex flex-column justify-content-end"
+                    style="background-image: url(/upload/resize_cache/iblock/5b2/1000_1000_0/o0zsydjnj0c55auvivk7m7b41xivsekj.jpg);">
+                    <div class="deals-white-container">
+                        <div class="equipment-text-1">Новейшее оборудование</div>
+                        <div class="equipment-text-2">С-дуга экспертного класса GE OEC Elite II </div>
+                        <div class="equipment-text-3"></div>
+                    </div>
+                </div>
             </div>
         </div>
-            <div class="deals-owl-slider roundy d-flex flex-column justify-content-end" style="background-image: url(../upload/resize_cache/iblock/35e/1000_1000_0/k0whzkv7ivif8sks0t6y6e1wpfk7yzvr.png);">
-            <div class="deals-white-container">
-                <div class="equipment-text-1">Новейшее оборудование</div>
-                <div class="equipment-text-2">Экспертная эхокардиография GE Vivid E90</div>
-                <div class="equipment-text-3"></div>
-            </div>
-        </div>
-            <div class="deals-owl-slider roundy d-flex flex-column justify-content-end" style="background-image: url(../upload/resize_cache/iblock/c51/1000_1000_0/1bdefyyr9jiufxah02zpcfkht15horeh.jpg);">
-            <div class="deals-white-container">
-                <div class="equipment-text-1">Новейшее оборудование</div>
-                <div class="equipment-text-2"> Рентген аппарат Examion X-DR Static Classic</div>
-                <div class="equipment-text-3"></div>
-            </div>
-        </div>
-            <div class="deals-owl-slider roundy d-flex flex-column justify-content-end" style="background-image: url(../upload/resize_cache/iblock/5b2/1000_1000_0/o0zsydjnj0c55auvivk7m7b41xivsekj.jpg);">
-            <div class="deals-white-container">
-                <div class="equipment-text-1">Новейшее оборудование</div>
-                <div class="equipment-text-2">С-дуга экспертного класса GE OEC Elite II </div>
-                <div class="equipment-text-3"></div>
-            </div>
-        </div>
-    </div>        </div>
         <div class="about-doctors roundy d-flex flex-column justify-content-end align-items-stretch">
             <div class="about-doctors-text">
                 <div class="about-doctors-text-1">Врачи и специалисты высочайшей квалификации</div>
                 <div class="d-flex justify-content-between align-items-center">
-                    <div class="about-doctors-text-2 d-none d-xl-block">Наши врачи готовы оказать пациентам качественную и своевременную помощь.</div>
-                    <a href="../doctors/index.html" class="btn-about-us backgr-blue text-white">Подробнее</a>
+                    <div class="about-doctors-text-2 d-none d-xl-block">Наши врачи готовы оказать пациентам качественную
+                        и своевременную помощь.</div>
+                    <a href="/services" class="btn-about-us backgr-blue text-white">Подробнее</a>
                 </div>
             </div> <!-- . -->
         </div> <!-- END .about-doctors -->
@@ -240,34 +162,47 @@
         <div class="heart-plus heart-top d-none d-xl-block text-white">+1</div>
         <div class="heart-plus heart-middle d-none d-xl-block text-white">+1</div>
         <div class="heart-plus heart-bottom text-white">+1</div>
-        <div class="our-mission-wrap owl-carousel" data-responsive='{"0":{"items":1},"500":{"items":2},"768":{"items":3},"1000":{"items":4},"1200":{"items":5}}' data-nav="false" data-margin="20">
+        <div class="our-mission-wrap owl-carousel"
+            data-responsive='{"0":{"items":1},"500":{"items":2},"768":{"items":3},"1000":{"items":4},"1200":{"items":5}}'
+            data-nav="false" data-margin="20">
             <div class="item-mission backgr-white d-flex flex-column justify-content-between">
-            <div class="item-mission-icon" style="background-image: url('../upload/resize_cache/iblock/74a/300_200_0/6t6p52huq5qp2phd5kd3okg3sbkmni03.png');"></div>
-            <div class="item-txt">
-                Одно из крупнейших хирургических отделений в Москве            </div>
-        </div>
+                <div class="item-mission-icon"
+                    style="background-image: url('/upload/resize_cache/iblock/74a/300_200_0/6t6p52huq5qp2phd5kd3okg3sbkmni03.png');">
+                </div>
+                <div class="item-txt">
+                    Одно из крупнейших хирургических отделений в Москве </div>
+            </div>
             <div class="item-mission backgr-white d-flex flex-column justify-content-between">
-            <div class="item-mission-icon" style="background-image: url('../upload/resize_cache/iblock/9b0/300_200_0/yqs5819ilouwzixdt6w2fpq0y9hmd8xv.png');"></div>
-            <div class="item-txt">
-                Приемное терапевтическое отделение            </div>
-        </div>
+                <div class="item-mission-icon"
+                    style="background-image: url('/upload/resize_cache/iblock/9b0/300_200_0/yqs5819ilouwzixdt6w2fpq0y9hmd8xv.png');">
+                </div>
+                <div class="item-txt">
+                    Приемное терапевтическое отделение </div>
+            </div>
             <div class="item-mission backgr-white d-flex flex-column justify-content-between">
-            <div class="item-mission-icon" style="background-image: url('../upload/resize_cache/iblock/d65/300_200_0/2fepgt50ejrluqqydamt7cpaa4ismoer.png');"></div>
-            <div class="item-txt">
-                Реанимационное отделение <br>
-и стационар            </div>
-        </div>
+                <div class="item-mission-icon"
+                    style="background-image: url('/upload/resize_cache/iblock/d65/300_200_0/2fepgt50ejrluqqydamt7cpaa4ismoer.png');">
+                </div>
+                <div class="item-txt">
+                    Реанимационное отделение <br>
+                    и стационар </div>
+            </div>
             <div class="item-mission backgr-white d-flex flex-column justify-content-between">
-            <div class="item-mission-icon" style="background-image: url('../upload/resize_cache/iblock/1d9/300_200_0/toq2c9gy30pa5hojqhpnvabjkdfqkall.png');"></div>
-            <div class="item-txt">
-                Круглосуточный<br> кабинет УЗИ, КТ<br> и рентген            </div>
-        </div>
+                <div class="item-mission-icon"
+                    style="background-image: url('/upload/resize_cache/iblock/1d9/300_200_0/toq2c9gy30pa5hojqhpnvabjkdfqkall.png');">
+                </div>
+                <div class="item-txt">
+                    Круглосуточный<br> кабинет УЗИ, КТ<br> и рентген </div>
+            </div>
             <div class="item-mission backgr-white d-flex flex-column justify-content-between">
-            <div class="item-mission-icon" style="background-image: url('../upload/resize_cache/iblock/2ed/300_200_0/tbdlmzl7vvzcsqumymwn3xsqyf2sssyt.png');"></div>
-            <div class="item-txt">
-                Работаем круглосуточно, без праздников и выходных            </div>
+                <div class="item-mission-icon"
+                    style="background-image: url('/upload/resize_cache/iblock/2ed/300_200_0/tbdlmzl7vvzcsqumymwn3xsqyf2sssyt.png');">
+                </div>
+                <div class="item-txt">
+                    Работаем круглосуточно, без праздников и выходных </div>
+            </div>
         </div>
-    </div>    </div> <!-- RND .container.backgr-blue-->
+    </div> <!-- RND .container.backgr-blue-->
 </div> <!-- RND .our-mission -->
 
 <div class="about-founders">
@@ -275,34 +210,40 @@
     <div class="container container-for-mob backgr-white roundy">
         <h4 class="text-center">Основатели</h4>
         <div class="d-md-flex justify-content-md-between">
-                <div class="founder-item founder-1">
-        <div class="founder-data">
-            <div class="founder-name"><span style="color: #262626;">Сергей</span><br>
- <span style="color: #262626;">
-Пономаренко</span><br></div>
-            <div class="founder-text"><span style="color: #000000;">Управляющий партнер</span><br>
- <span style="color: #000000;">
-и сооснователь Vetcity</span></div>
-        </div>
-        <div class="owl-carousel owl-theme">
-            <div class="deals-owl-slider white roundy d-flex flex-column justify-content-start" style="background-image: url('../upload/resize_cache/iblock/b7d/1000_1000_0/x98ibga1azu5tb2vgwmpclbrv31u2oo3.jpeg');">
-            </div>
+            <div class="founder-item founder-1">
+                <div class="founder-data">
+                    <div class="founder-name"><span style="color: #262626;">Сергей</span><br>
+                        <span style="color: #262626;">
+                            Пономаренко</span><br>
                     </div>
-    </div>
-    <div class="founder-item founder-1">
-        <div class="founder-data">
-            <div class="founder-name"><span style="color: #262626;">Линда</span><br>
- <span style="color: #262626;"> </span><span style="color: #262626;">
-Арсланова</span><br></div>
-            <div class="founder-text"><span style="color: #000000;">Управляющий партнер</span><br>
- <span style="color: #000000;">
-и сооснователь Vetcity</span></div>
-        </div>
-        <div class="owl-carousel owl-theme">
-            <div class="deals-owl-slider white roundy d-flex flex-column justify-content-start" style="background-image: url('../upload/resize_cache/iblock/354/1000_1000_0/44rd4vyhpo1h4q22lpfz10xi85pj27da.jpeg');">
-            </div>
+                    <div class="founder-text"><span style="color: #000000;">Управляющий партнер</span><br>
+                        <span style="color: #000000;">
+                            и сооснователь Vetcity</span>
                     </div>
-    </div>
+                </div>
+                <div class="owl-carousel owl-theme">
+                    <div class="deals-owl-slider white roundy d-flex flex-column justify-content-start"
+                        style="background-image: url('/upload/resize_cache/iblock/b7d/1000_1000_0/x98ibga1azu5tb2vgwmpclbrv31u2oo3.jpeg');">
+                    </div>
+                </div>
+            </div>
+            <div class="founder-item founder-1">
+                <div class="founder-data">
+                    <div class="founder-name"><span style="color: #262626;">Линда</span><br>
+                        <span style="color: #262626;"> </span><span style="color: #262626;">
+                            Арсланова</span><br>
+                    </div>
+                    <div class="founder-text"><span style="color: #000000;">Управляющий партнер</span><br>
+                        <span style="color: #000000;">
+                            и сооснователь Vetcity</span>
+                    </div>
+                </div>
+                <div class="owl-carousel owl-theme">
+                    <div class="deals-owl-slider white roundy d-flex flex-column justify-content-start"
+                        style="background-image: url('/upload/resize_cache/iblock/354/1000_1000_0/44rd4vyhpo1h4q22lpfz10xi85pj27da.jpeg');">
+                    </div>
+                </div>
+            </div>
         </div> <!-- END .d-md-flex -->
     </div> <!-- END .container -->
 </div> <!-- END .about-founders -->
@@ -312,242 +253,68 @@
     <div class="container container-for-mob backgr-white roundy">
         <h4 class="text-center">Документы</h4>
         <div class="row">
-                <div class="document-item document-downloaded col-xl-card d-xl-flex d-none d-xl-block"></div>
+            <div class="document-item document-downloaded col-xl-card d-xl-flex d-none d-xl-block"></div>
             <div class="document-item col-6 col-md-4 col-lg-3 col-xl-card d-flex">
-            <a download target="_blank" href="../upload/iblock/9b6/judzjq4rc3gtsyh6q6ghaccggl3nusq7.pdf" class="document-item-in d-flex flex-column justify-content-between">
-                <div class="document-title">Договор оказания платных ветеринарных услуг Vetcity</div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="document-size">0.34 Mb</div>
-                    <div class="download-icon"></div>
-                </div>
-                <div class="document-load"></div>
-            </a> <!-- END .document-item-in -->
-        </div> <!-- END .document-item -->
+                <a download target="_blank" href="/upload/iblock/9b6/judzjq4rc3gtsyh6q6ghaccggl3nusq7.pdf"
+                    class="document-item-in d-flex flex-column justify-content-between">
+                    <div class="document-title">Договор оказания платных ветеринарных услуг Vetcity</div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="document-size">0.34 Mb</div>
+                        <div class="download-icon"></div>
+                    </div>
+                    <div class="document-load"></div>
+                </a> <!-- END .document-item-in -->
+            </div> <!-- END .document-item -->
             <div class="document-item col-6 col-md-4 col-lg-3 col-xl-card d-flex">
-            <a download target="_blank" href="../upload/iblock/1bf/hb7nrqz69iwrbs22pmo7r7tjpkpp8n5t.pdf" class="document-item-in d-flex flex-column justify-content-between">
-                <div class="document-title">Условия обработки персональных данных в Vetcity</div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="document-size">0.23 Mb</div>
-                    <div class="download-icon"></div>
-                </div>
-                <div class="document-load"></div>
-            </a> <!-- END .document-item-in -->
-        </div> <!-- END .document-item -->
+                <a download target="_blank" href="/upload/iblock/1bf/hb7nrqz69iwrbs22pmo7r7tjpkpp8n5t.pdf"
+                    class="document-item-in d-flex flex-column justify-content-between">
+                    <div class="document-title">Условия обработки персональных данных в Vetcity</div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="document-size">0.23 Mb</div>
+                        <div class="download-icon"></div>
+                    </div>
+                    <div class="document-load"></div>
+                </a> <!-- END .document-item-in -->
+            </div> <!-- END .document-item -->
             <div class="document-item document-downloaded col-xl-card d-xl-flex d-none d-xl-block"></div>
             <div class="document-item document-downloaded col-xl-card d-xl-flex d-none d-xl-block"></div>
             <div class="document-item col-6 col-md-4 col-lg-3 col-xl-card d-flex">
-            <a download target="_blank" href="../upload/iblock/f3c/zav8cy135l7bzg11beyg7w33wpr1rxkg.pdf" class="document-item-in d-flex flex-column justify-content-between">
-                <div class="document-title">Правила оказания ветеринарных услуг Vetcity</div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="document-size">0.32 Mb</div>
-                    <div class="download-icon"></div>
-                </div>
-                <div class="document-load"></div>
-            </a> <!-- END .document-item-in -->
-        </div> <!-- END .document-item -->
+                <a download target="_blank" href="/upload/iblock/f3c/zav8cy135l7bzg11beyg7w33wpr1rxkg.pdf"
+                    class="document-item-in d-flex flex-column justify-content-between">
+                    <div class="document-title">Правила оказания ветеринарных услуг Vetcity</div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="document-size">0.32 Mb</div>
+                        <div class="download-icon"></div>
+                    </div>
+                    <div class="document-load"></div>
+                </a> <!-- END .document-item-in -->
+            </div> <!-- END .document-item -->
             <div class="document-item document-downloaded col-xl-card d-xl-flex d-none d-xl-block"></div>
             <div class="document-item col-6 col-md-4 col-lg-3 col-xl-card d-flex">
-            <a download target="_blank" href="../upload/iblock/dae/pjryuv8y4mkn2jr2lug5rwjrcbj8048y.pdf" class="document-item-in d-flex flex-column justify-content-between">
-                <div class="document-title">Публичная оферта о заключении договора дистанционных консультационных услуг Vetcity (онлайн-консультирование)</div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="document-size">0.22 Mb</div>
-                    <div class="download-icon"></div>
-                </div>
-                <div class="document-load"></div>
-            </a> <!-- END .document-item-in -->
-        </div> <!-- END .document-item -->
+                <a download target="_blank" href="/upload/iblock/dae/pjryuv8y4mkn2jr2lug5rwjrcbj8048y.pdf"
+                    class="document-item-in d-flex flex-column justify-content-between">
+                    <div class="document-title">Публичная оферта о заключении договора дистанционных консультационных
+                        услуг Vetcity (онлайн-консультирование)</div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="document-size">0.22 Mb</div>
+                        <div class="download-icon"></div>
+                    </div>
+                    <div class="document-load"></div>
+                </a> <!-- END .document-item-in -->
+            </div> <!-- END .document-item -->
             <div class="document-item col-6 col-md-4 col-lg-3 col-xl-card d-flex">
-            <a download target="_blank" href="../upload/iblock/b36/n0nmoxhdjm1p731eaztu2iz4gk84d1hu.pdf" class="document-item-in d-flex flex-column justify-content-between">
-                <div class="document-title">Правила оказания дистанционных консультационных услуг Vetcity (онлайн консультирование)</div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="document-size">0.21 Mb</div>
-                    <div class="download-icon"></div>
-                </div>
-                <div class="document-load"></div>
-            </a> <!-- END .document-item-in -->
-        </div> <!-- END .document-item -->
-            </div> <!-- END .row -->
+                <a download target="_blank" href="/upload/iblock/b36/n0nmoxhdjm1p731eaztu2iz4gk84d1hu.pdf"
+                    class="document-item-in d-flex flex-column justify-content-between">
+                    <div class="document-title">Правила оказания дистанционных консультационных услуг Vetcity (онлайн
+                        консультирование)</div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="document-size">0.21 Mb</div>
+                        <div class="download-icon"></div>
+                    </div>
+                    <div class="document-load"></div>
+                </a> <!-- END .document-item-in -->
+            </div> <!-- END .document-item -->
+        </div> <!-- END .row -->
     </div> <!-- END .container -->
 </div> <!-- END .about-documents -->
-
-
-        <footer>  <!-- START footer -->
-            <div class="container smaller-container text-white">
-                <div class="footer-top">
-                    <div class="row">
-                        <div class="col-12 col-xl-7">
-                            <div class="row">
-                                <div class="footer-menu col-12 col-md-6 order-md-2">
-                                    
-<ul class="list-unstyled">
-
-			<li class="text-center text-md-left"><a href="../index.html"><h4>Главная</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="index.html" class="selected"><h4>О нас</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="../services/index.html"><h4>Услуги</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="../doctors/index.html"><h4>Наши врачи</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="../services/spetspredlozheniya/index.html"><h4>Спецпредложения</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="../knowledge-base/index.html"><h4>База знаний</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="../vacancy/index.html"><h4>Вакансии</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="../contacts/index.html"><h4>Контакты</h4></a></li>
-		
-
-</ul>
-                                </div>
-                                <div class="footer-contacts col-12 col-md-6 order-md-1">
-                                    <div class="footer-heart d-none d-md-block"></div>
-                                    <div class="footer-address">
-                                        <div class="row footer-contact">
-                                            <div class="col-6 col-md-12">
-                                                <div class="text-grey">Адрес:</div>
-<div>
-    <a href="}../contacts/index.html">Москва, Зубарев<br>
-        переулок, д. 7</a>
-</div>                                            </div>
-                                            <div class="col-6 col-md-12">
-                                                <div class="text-grey">Телефон:</div>
-                                                <div><a href="tel:+74951268290">
-                                                    +7 495 126-82-90</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <div class="non-stop"></div>
-<div>
-    Работаем<br>
-    Круглосуточно
-</div>                                        </div>
-                                    </div>   <!-- END .footer-address -->
-                                </div>   <!-- END .footer-contacts -->
-                            </div>   <!-- END .row -->
-                        </div>   <!-- END .col-12.col-xl-7 -->
-                        <div class="footer-connect col-12 col-xl-5 d-xl-flex justify-content-xl-between align-items-xl-end flex-xl-column">
-                            <div class="footer-subscribe">
-                                <div class="form-subscribe">
-                                        <div class="form-subscribe js-subscribe-container">
-    <h4 class="text-black">Подпишитесь на нашу<br> рассылку:</h4>
-	<form class="js-subscribe-form" action='https://vet.city/ajax/subscribe.php'>
-        <input type="hidden" name="action" value="subscribe">
-        <input type="hidden" name="mailingListId" value="1" />
-        <div class="form-group d-flex">
-            <input type="email" name="email" value="" class="form-control" placeholder="Ваш email" required>
-            <span class="form-group-btn">
-                <button class="btn btn-blue" name="OK" type="submit" value="">Подписаться</button>
-            </span>
-        </div>
-	</form>
-</div>
-                                </div>
-                            </div>
-                            <div class="footer-social d-flex justify-content-between align-items-center">
-                                <div class="footer-heart d-block d-md-none"></div>
-                                <div class="footer-social-links">
-                                    
-                                    <a href="https://vk.com/public188120292" target="_blank" class="footer-vk"></a>
-                                    <a href="https://t.me/vetcityclinic" target="_blank" class="footer-tg"></a>
-                                </div>
-                            </div>    <!-- END .footer-social -->
-                        </div>   <!-- END .footer-connect -->
-                    </div>   <!-- END .row -->
-                </div>   <!-- END .footer-top -->
-                <div class="footer-bottom d-flex flex-column flex-lg-row justify-content-lg-between">
-                    <a href="https://skam.team" target="_blank" class="design text-uppercase text-right order-lg-2">designed by</a>
-                    <div class="copyright text-center text-lg-left order-lg-1">
-                        2022&nbsp;© ООО «Вет Сити Центр»                    </div>
-                </div>   <!-- END .footer-bottom -->
-            </div>    <!-- END .container.smaller-container -->
-        </footer>   <!-- END footer -->
-</div>
-<!-- To detect which environment we are in -->
-<div id="environment-xs" class="d-sm-none"></div>
-<div id="environment-sm" class="d-none d-sm-block d-md-none"></div>
-<div id="environment-md" class="d-none d-md-block d-lg-none"></div>
-<div id="environment-lg" class="d-none d-lg-block d-xl-none"></div>
-<div id="environment-xl" class="d-none d-xl-block"></div>
-
-
-<div id="c625c42e83ad11">
-    <div class="modal fade js-callback-modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <form action="index.html" class="text-left needs-validation js-calltouch-form" novalidate>
-                    <div class="modal-header">
-                        <div class="modal-title">Форма обратного звонка</div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="alert alert-danger js-error" style="display: none;"></div>
-                        <div class="input-mb">
-                            <div class="form-group position-relative">
-                                <label>Телефон</label>
-                                <input type="tel" class="form-control js-phone" placeholder="Телефон" required>
-                            </div>
-                        </div>
-                        <div class="input-mb">
-                            <div class="form-group position-relative">
-                                <label>Ваше имя</label>
-                                <input type="text" class="form-control js-name" placeholder="Ваше имя" required
-                                >
-                            </div>
-                        </div>
-                        <div class="form-check check-accept">
-                            <input class="form-check-input" type="checkbox" name="ACCEPT_CALLTOUCH" value="Y" id="ACCEPT_CALLTOUCH" required="required">
-                                                        <label class="form-check-label" for="ACCEPT_CALLTOUCH">
-                                                            Я согласен с 
-                                                            <a href="{% static '/upload/iblock/1bf/hb7nrqz69iwrbs22pmo7r7tjpkpp8n5t.pdf' %}" target="_blank">условиями обработки персональных данных</a>, 
-                                                            <a href="{% static '/upload/iblock/f3c/zav8cy135l7bzg11beyg7w33wpr1rxkg.pdf' %}" target="_blank">правилами оказания онлайн-консультирования</a> и 
-                                                            <a href="{% static '/upload/iblock/9b6/judzjq4rc3gtsyh6q6ghaccggl3nusq7.pdf' %}" target="_blank">условиями договора-оферты на оказание услуг</a></label>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <button type="submit" class="btn btn-modal btn-blue">Заказать звонок</button>
-                        <i class="icon icon-heart"></i>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade show js-callback-success-modal" tabindex="-1" role="dialog" aria-modal="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="text-left needs-validation">
-                    <div class="modal-header">
-                        <div class="modal-title">Спасибо!</div>
-                    </div>
-                    <div class="modal-body"></div>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a href="../index.html" class="btn btn-modal btn-blue">Перейти на главную</a>
-                        <i class="icon icon-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script type="text/javascript" src="{% static '/templates/vetcity/js/jquery-3.6.0.min.js%3F162694166289503' %}"></script>
-<script type="text/javascript" src="{% static '/templates/vetcity/js/popper.min.js%3F162694166221009' %}"></script>
-<script type="text/javascript" src="{% static '/templates/vetcity/js/bootstrap.bundle.min.js%3F162694166284384' %}"></script>
-<script type="text/javascript" src="{% static '/templates/vetcity/js/scrollreveal.js%3F162694166246205' %}"></script>
-<script type="text/javascript" src="{% static '/templates/vetcity/js/jquery.fancybox.min.js%3F162694166268265' %}"></script>
-<script type="text/javascript" src="{% static '/templates/vetcity/js/owl.carousel.min.js%3F162694166244348'%}"></script>
-<script type="text/javascript" src="{% static '/templates/vetcity/js/bootstrap-select.min.js%3F162694166257752' %}"></script>
-<script type="text/javascript" src="{% static '/templates/vetcity/js/jquery.inputmask.min.js%3F162694166293838' %}"></script>
-<script type="text/javascript" src="{% static '/templates/vetcity/js/moment.min.js%3F162869081858862' %}"></script>
-<script type="text/javascript" src="{% static '/templates/vetcity/js/jquery.validate.min.js%3F163177822424430' %}"></script>
-<script type="text/javascript" src="{% static '/templates/vetcity/js/jquery.highlight.js%3F16345471064079' %}"></script>
-<script type="text/javascript" src="{% static '/templates/vetcity/js/main.js%3F16353386316990' %}"></script>
-<script type="text/javascript" src="https://vet.city/bitrix/components/bitrix/search.title/script.js?16267702349847' %}"></script>
-<script type="text/javascript" src="{% static '/components/wlcomponents/subscribe/templates/.default/script.js%3F1626941662299' %}"></script>
-<script type="text/javascript" src="{% static '/components/wlcomponents/calltouch/templates/.default/script.js%3F16484523923457' %}"></script>
-
-
-</body>
-</html>
+{% endblock %}

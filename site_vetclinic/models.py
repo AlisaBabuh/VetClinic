@@ -21,6 +21,7 @@ class GroupService(models.Model):
     name = models.CharField(max_length=70)
     #Связь с таблицей СПЕЦИАЛЬНОСТЬ 
     #speciality = models.ForeignKey(Speciality, on_delete=CASCADE)
+    photo = models.ImageField()
 
     def __str__(self):
         return self.name

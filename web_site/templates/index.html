@@ -1,1141 +1,577 @@
+{% extends 'base.html' %}
 {% load static %}
-<!doctype html>
-<html lang="ru">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#1B1B29" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1B1B29" media="(prefers-color-scheme: dark)">
-
-    <title>Круглосуточная ветеринарная клиника Vet.City</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <meta name="description" content="Vet.city оказывает полный спектр ветеринарных услуг от диагностики до лечения, а также медицинского сопровождения питомцев любого вида, веса и возраста в течение всей жизни." />
-    <!-- Доделать!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-    <link href="{% static '/templates/vetcity/css/jquery.fancybox.min.css%3F162694166212795.css' %}" type="text/css"
-        data-template-style="true" rel="stylesheet" />
-    <link href="{% static '/templates/vetcity/css/bootstrap.min.css%3F1626941662161415.css' %}" type="text/css"
-        data-template-style="true" rel="stylesheet" />
-    <link href="{% static '/templates/vetcity/css/owl.carousel.min.css%3F16269416623356.css' %}" type="text/css"
-        data-template-style="true" rel="stylesheet" />
-    <link href="{% static '/templates/vetcity/css/owl.theme.default.min.css%3F16269416621018.css' %}" type="text/css"
-        data-template-style="true" rel="stylesheet" />
-    <link href="{% static '/templates/vetcity/css/main.css' %}" type="text/css" data-template-style="true"
-        rel="stylesheet" />
-    <link href="{% static '/templates/vetcity/css/bootstrap-select.min.css%3F162694166211832.css' %}" type="text/css"
-        data-template-style="true" rel="stylesheet" />
-    <link href="{% static '/templates/vetcity/css/modal-window.css%3F16317782243928.css' %}" type="text/css"
-        data-template-style="true" rel="stylesheet" />
-    <link href="{% static '/templates/vetcity/css/style_secondary.css%3F163177822419507.css' %}" type="text/css"
-        data-template-style="true" rel="stylesheet" />
-    <link href="{% static '/templates/vetcity/css/custom.css%3F164845239236922.css' %}" type="text/css" data-template-style="true"
-        rel="stylesheet" />
-    <link href="{% static '/templates/.default/components/bitrix/menu/top/style.css%3F1628592705625.css' %}" type="text/css"
-        data-template-style="true" rel="stylesheet" />
-    <link href="{% static '/templates/.default/components/bitrix/search.title/.default/style.css%3F16285927052108.css' %}"
-        type="text/css" data-template-style="true" rel="stylesheet" />
-    <link href="{% static '/templates/.default/components/bitrix/menu/footer/style.css%3F1628592705625.css' %}" type="text/css"
-        data-template-style="true" rel="stylesheet" />
-    <link rel="preload" as="image"
-        href="{% static '/upload/resize_cache/iblock/775/1000_1000_0/bah9epwka7ejnhct8aw2zuder1ge6ezo.webp' %}" />
-    <link rel="preload" as="image"
-        href="{% static '/upload/resize_cache/iblock/c5a/1000_1000_0/kkefkez9tj24h9cwc4mcpgpeea41x0rw.webp' %}" />
-    <link rel="preload" as="image"
-        href="{% static '/upload/resize_cache/iblock/c5a/1000_1000_0/kkefkez9tj24h9cwc4mcpgpeea41x0rw.webp' %}" />
-    <link rel="preload" as="image"
-        href="{% static '/upload/resize_cache/iblock/180/1000_1000_0/p3hqzqtoivgmm1ez2rpw0zes26z204fg.webp' %}" />
-
-    <div class="has-overflow-hidden">
-        <div class="main-nav">
-            <!-- START .main-nav-->
-            <div class="nav-container d-xl-flex flex-xl-column">
-                <div class="nav-in order-xl-2 navbar-list">
-                    <a href="index.html" class="logo"></a>
-                    <div class="d-none d-xl-block head-navbar">Меню</div>
-                    <div class="main-nav-items">
-
-                        <ul class="list-unstyled">
-                            <div class="navbar-social-links">
-
-                                <a target="_blank" href="https://vk.com/public188120292" class="footer-vk"></a>
-                                <a target="_blank" href="https://t.me/vetcityclinic" class="footer-tg"></a>
-                            </div>
-                            <li class="item-left-outside"><a href="index.html" class="selected">Главная</a></li>
-
-                            <li><a href="about/index.html">О нас</a></li>
-                            <li><a href="services/index.html">Услуги</a></li>
-                            <li><a href="doctors/index.html">Наши врачи</a></li>
-                            <li><a href="services/spetspredlozheniya/index.html">Спецпредложения</a></li>
-                            <li><a href="knowledge-base/index.html">База знаний</a></li>
-                            <li><a href="vacancy/index.html">Вакансии</a></li>
-                            <li><a href="contacts/index.html">Контакты</a></li>
-                        </ul>
-                    </div> <!-- END .main-nav-items -->
-                </div> <!-- END .nav-in -->
-                <div class="order-xl-1 navbar-contacts d-xl-flex">
-                    <div class="nav-in">
-                        <a href="tel:+74951268290" class="main-nav-contact">
-                            +7 495 126-82-90 </a>
-                    </div>
-                    <div class="nav-in">
-                        <a href="index.html#" class="main-nav-address">
-                            Москва, Зубарев пер., д. 7 </a>
-                    </div>
-                </div>
-                <div class="nav-in-bottom">
-                    <div class="main-nav-booking backgr-blue text-white d-flex justify-content-between flex-xl-column">
-                        <div class="logo-in d-none d-xl-block"></div>
-                        <div>Широкий спектр<br>
-                            ветеринарных услуг<br>
-                            и специалистов<br>
-                            круглосуточно
-                        </div> <a href="index.html#calltouch"
-                            class="btn btn-white align-self-end align-self-xl-start js-btn-callback">Записаться</a>
-                    </div> <!-- END .main-nav-booking -->
-                </div> <!-- END .nav-in-bottom -->
-            </div> <!-- END .container -->
-        </div> <!-- END .main-nav-->
-
-        <div class="navbar" id="fixed-menu">
-            <!-- START .navbar -->
-            <div class="container navbar-container">
-                <div class="d-flex justify-content-between navbar-in">
-
-                    <div id="title-search" class="d-flex justify-content-between">
-                        <form action="https://vet.city/search/" class="form-inline position-relative">
-                            <input id="title-search-input" class="form-control" name="q" type="text" autocomplete="off"
-                                placeholder="Поиск" aria-label="Search" onfocus="startFocus()" onblur="stopFocus()">
-                            <button type="submit" class="submit"></button>
-                        </form>
-                        <input name="s" type="hidden" value="Поиск" />
-
-                        <a class="btn btn-nav-book text-white js-btn-callback" href="index.html#">Запись</a>
-                    </div>
-
-
-                    <div class="d-block d-xl-none">
-                        <a href="tel:+7 495 126-82-90" class="btn btn-blue btn-mob-call">позвонить</a>
-                    </div>
-                    <div class="d-none d-xl-block text-white d-xl-flex align-items-xl-center">
-                        <div class="nav-non-stop">
-                            Круглосуточно </div>
-                        <div><a href="tel:+74951268290" class="nav-phone">
-                                +7 495 126-82-90 </a></div>
-                        <div><a href="contacts/index.html" class="nav-address">
-                                Москва, Зубарев пер., д. 7 </a></div>
-                    </div>
-                </div> <!-- END .navbar-in -->
-            </div> <!-- END.container -->
-        </div> <!-- END .navbar -->
-        <div class="main-header main-page">
-            <!-- START .main-header -->
-            <div class="container backgr-white roundy">
-                <div class="d-flex">
-                    <div class="d-flex flex-column main-part">
-                        <a href="index.html" class="logo-main"></a>
-                        <div class="main-address text-md-center">
-                            <h1>Круглосуточная ветеринарная клиника</h1>
-                            <br class="d-md-block">
-                            <a href="contacts/index.html" class="text-blue">Зубарев пер., д. 7</a>
-                        </div>
-                    </div>
-                    <a href="javascript:void(0);" class="hamburger"></a>
-                </div>
-                <img alt="vetcity" class="main-header-logo"
-                    src="{% static '/templates/vetcity/img/icons/vetcity_logo_main_block.svg' %}" />
-            </div> <!-- END .container  -->
-        </div> <!-- END .main-header-->
-        <div class="slider-header">
-            <!-- START .slider-header -->
-            <div class="container container-for-mob">
-                <div class="owl-carousel owl-theme">
-                    <div
-                        class="header-owl-slider roundy backgr-blue text-white d-flex flex-column justify-content-between">
-                        <div class="header-owl-slider-description-wrapper">
-                            <h2>Check Up <br>
-                                (комплексная диагностика)</h2>
-                            <div class="header-owl-slider-description d-none d-lg-block">Комплексное
-                                экспресс-обследование <br>
-                                вашего питомца. Услуга доступна <br>
-                                только в будни.</div>
-                        </div>
-                        <div class="contacted  d-flex flex-row">
-
-                            <a href="services/spetspredlozheniya/check-up-kompleksnaya-diagnostika/index.html"
-                                class="btn btn-white">Подробнее</a>
-                        </div>
-
-                        <img class="img-promotion"
-                            src="{% static '/upload/resize_cache/iblock/775/1000_1000_0/bah9epwka7ejnhct8aw2zuder1ge6ezo.webp' %}" />
-                    </div>
-                    <div
-                        class="header-owl-slider roundy backgr-blue text-white d-flex flex-column justify-content-between">
-                        <div class="header-owl-slider-description-wrapper">
-                            <h2>Check Up онкологический<br>(комплексная диагностика)</h2>
-                            <div class="header-owl-slider-description d-none d-lg-block">Ранняя диагностика повышает
-                                <br>
-                                шансы на выздоровление!<br>
-                                Запишите питомца на онкологический <br>
-                                чекап. Рекомендуется для животных <br>
-                                старше пяти лет.<br>
-                            </div>
-                        </div>
-                        <div class="contacted  d-flex flex-row">
-
-                            <a href="services/spetspredlozheniya/check-up-onkologicheskiy-kompleksnaya-diagnostika/index.html"
-                                class="btn btn-white">Подробнее</a>
-                        </div>
-
-                        <img class="img-promotion"
-                            src="{% static '/upload/resize_cache/iblock/c5a/1000_1000_0/kkefkez9tj24h9cwc4mcpgpeea41x0rw.webp' %}" />
-                    </div>
-                    <div
-                        class="header-owl-slider roundy backgr-blue text-white d-flex flex-column justify-content-between">
-                        <div class="header-owl-slider-description-wrapper">
-                            <h2>Инфекционная<br>безопасность</h2>
-                            <div class="header-owl-slider-description d-none d-lg-block">Рекомендации для профилактики
-                                распространения <br>
-                                вирусного лейкоза и иммунодефицита кошек</div>
-                        </div>
-                        <div class="contacted  d-flex flex-row">
-                            <a href="pages/infektsionnaya-bezopasnost/index.html" class="btn btn-white">Подробнее</a>
-                        </div>
-
-                        <img class="img-promotion"
-                            src="{% static '/upload/resize_cache/iblock/5d9/1000_1000_0/nzevo2hm0xliiv8vot41j7yo97bg0mc0.webp' %}"
-                            #CHTO ETO??????????????????????????????????????????????????????????????????????????????????????????
-                            onerror="this.onerror=null; this.src='/{% static '' %}/upload/resize_cache/iblock/aaf/1000_1000_0/fql33j1r18fysdncmw447nauc7m2mum0.png'" />
-                    </div>
-                    <div
-                        class="header-owl-slider roundy backgr-blue text-white d-flex flex-column justify-content-between">
-                        <div class="header-owl-slider-description-wrapper">
-                            <h2>Изменение<br>режима работы</h2>
-                            <div class="header-owl-slider-description d-none d-lg-block">В целях предупреждения
-                                распространения <br> коронавирусной инфекции (COVID-19)</div>
-                        </div>
-                        <div class="contacted  d-flex flex-row">
-                            <a href="pages/izmenenie-rezhima-raboty/index.html" class="btn btn-white">Подробнее</a>
-                        </div>
-
-                        <img class="img-promotion"
-                            src="{% static '/upload/resize_cache/iblock/180/1000_1000_0/p3hqzqtoivgmm1ez2rpw0zes26z204fg.webp' %}" />
-                    </div>
-                </div> <!-- END .owl-carousel.owl-theme -->
-            </div> <!-- END .container.container-for-mob-->
-        </div> <!-- END .slider-header -->
-        <div class="about-us">
-            <!-- START .about-us -->
-            <div class="container roundy">
-                <div class="about-us-in backgr-white col-12 col-xl-6 float-right">
-                    <p class="text-black">
-                        <span class="text-blue">Мы — </span><br>
-                        современный<br>
-                        ветеринарный<br>
-                        госпиталь<br class="d-none d-xl-block">
-                        с полным<br>
-                        спектром<br class="d-none d-xl-block">
-                        услуг
-                    </p>
-                    <div class="about-us-bottom d-flex justify-content-between">
-                        <a href="about/index.html" class="backgr-blue text-white">О нас</a>
-                        <div class="img-logo d-lg-none align-self-end"></div>
-                        <div class="d-none d-lg-block text-right">
-                            Мы внимательны к животным<br>
-                            и людям </div>
-                    </div>
-                </div> <!-- END .about-us-in.backgr-white-->
-            </div> <!-- END .container.roundy -->
-        </div> <!-- END .about-us -->
-
-        <div class="services">
-            <!-- START .services -->
-            <div class="container roundy backgr-white">
-                <h3 class="text-center">Услуги</h3>
-                <div class="services-box">
-                    <div class="row">
-                        <div class="services-card col-12 col-md-6 ">
-                            <a href="services/khirurgiya/index.html" class="with-backgr d-flex flex-column backgr-grey">
-                                <h2>Хирургия</h2>
-                                <div class="card-sub-text align-self-start">147 услуг </div>
-                                <img src="{% static '/upload/resize_cache/iblock/0f9/1500_1000_0/bfp6kyb31di73tfykw20dp5imkd2nmgx.webp' %}"
-                                    loading="lazy" />
-                            </a>
-                        </div> <!-- END .services-card -->
-
-                        <div class="services-card col-12 col-md-6 col-xl-3">
-                            <a href="services/terapiya/index.html" class="with-backgr d-flex flex-column ">
-                                <h2>Терапия</h2>
-                                <div class="card-sub-text align-self-start">51 услуга </div>
-                                <img src="{% static '' %}/upload/resize_cache/iblock/b00/1500_1000_0/yh99bjkdefu634ilsew4kv0x7tckh10m.webp"
-                                    loading="lazy" />
-                            </a>
-                        </div> <!-- END .services-card -->
-
-                        <div
-                            class="services-card-text col-12 col-md-6 col-xl-3 d-xl-flex flex-xl-column justify-content-xl-center">
-                            <div class="text-right">
-                                Мы стремимся обеспечивать<br>
-                                высокий уровень<br>
-                                профессиональной ветеринарной<br>
-                                помощи, повышать качество<br>
-                                жизни животных и развивать<br>
-                                культуру ответственного<br>
-                                отношения к ним. </div>
-                        </div>
-                        <div
-                            class="services-card-text col-12 col-md-6 col-xl-3 d-none d-md-flex flex-column justify-content-xl-center">
-                            <div class="text-left second-block">
-                                Врачи и специалисты<br>
-                                высочайшей квалификации </div>
-                        </div>
-                        <div class="services-card col-12 col-md-6 ">
-                            <a href="services/vizualnaya-diagnostika/index.html"
-                                class="with-backgr d-flex flex-column ">
-                                <h2>Визуальная диагностика</h2>
-                                <div class="card-sub-text align-self-start">31 услуга </div>
-                                <div class="text-right text-xl-left mt-auto card-txt-inner">
-                                    <span style="color: #ffffff;">УЗИ</span><br>
-                                    <span style="color: #ffffff;">
-                                        Рентген</span><br>
-                                    <span style="color: #ffffff;">
-                                        КТ</span>
-                                </div>
-                                <img src="{% static '/upload/resize_cache/iblock/a2d/1500_1000_0/fnma1ii2h18wvqarc6kfybjo27v93fho.webp' %}"
-                                    loading="lazy" />
-                            </a>
-                        </div> <!-- END .services-card -->
-
-                        <div class="services-card col-12 col-md-6 col-xl-3">
-                            <a href="services/laboratoriya/index.html" class="with-backgr d-flex flex-column ">
-                                <h2>Лаборатория</h2>
-                                <div class="card-sub-text align-self-start">335 услуг </div>
-                                <img src="{% static '/upload/resize_cache/iblock/f7a/1500_1000_0/7saabrblv996v3l2rab779zcnvzt8mpa.webp' %}"
-                                    loading="lazy" />
-                            </a>
-                        </div> <!-- END .services-card -->
-
-                        <div class="services-card col-12 col-md-6 col-xl-3">
-                            <a href="services/statsionar/index.html" class="with-backgr d-flex flex-column ">
-                                <h2>Стационар</h2>
-                                <div class="card-sub-text align-self-start">2 услуги </div>
-                                <img src="{% static '/upload/resize_cache/iblock/576/1500_1000_0/ezfc5ktgnoi3sha2kf3tq16xtjdj4ikg.webp' %}"
-                                    loading="lazy" />
-                            </a>
-                        </div> <!-- END .services-card -->
-
-                        <div class="services-card col-12 col-md-6 col-xl-3">
-                            <a href="services/kardiologiya/index.html"
-                                class="with-backgr d-flex flex-column backgr-grey">
-                                <h2>Кардиология</h2>
-                                <div class="card-sub-text align-self-start">14 услуг </div>
-                                <img src="{% static '/upload/resize_cache/iblock/935/1500_1000_0/24p2oojoazmbq3j5riikqnlfeog41t4s.webp' %}"
-                                    loading="lazy" />
-                            </a>
-                        </div> <!-- END .services-card -->
-
-                        <a class="services-card-text services-booking text-white d-flex col-12 col-md-6 col-xl-3 js-btn-callback"
-                            href="index.html#calltouch">
-                            <div class="backgr-blue">
-                                <div class="logo-in"></div>
-                                <div>
-                                    Широкий спектр ветеринарных услуг и специалистов круглосуточно </div>
-                                <span class="btn btn-white btn-whitery">Записаться</span>
-                            </div>
-                        </a>
-                        <div
-                            class="services-card-text col-12 col-md-6 col-xl-3 d-none d-md-flex flex-xl-column justify-content-xl-center">
-                            <div class="text-right">
-                                Наши сотрудники<br>
-                                досконально знают свое<br>
-                                дело, увлечены своей<br>
-                                профессией и постоянно<br>
-                                совершенствуются. </div>
-                        </div>
-                        <div
-                            class="services-card-text col-12 col-md-6 col-xl-3 d-flex flex-column justify-content-xl-center">
-                            <div class="text-left second-block">
-                                Мы считаем, что лечение<br>
-                                должно проходить без лишнего<br>
-                                стресса и создаем условия для<br>
-                                того, чтобы всем было<br>
-                                комфортно. </div>
-                        </div>
-                        <div class="services-card col-12 col-md-6 col-xl-3">
-                            <a href="services/onkologiya/index.html" class="with-backgr d-flex flex-column ">
-                                <h2>Онкология</h2>
-                                <div class="card-sub-text align-self-start">9 услуг </div>
-                                <img src="{% static '/upload/resize_cache/iblock/a91/1500_1000_0/ax59q921qhebe9vde016o6s2yifke6o5.webp' %}"
-                                    loading="lazy" />
-                            </a>
-                        </div> <!-- END .services-card -->
-
-                        <div class="services-card col-12 col-md-6 col-xl-3">
-                            <a href="services/nevrologiya/index.html" class="with-backgr d-flex flex-column ">
-                                <h2>Неврология</h2>
-                                <div class="card-sub-text align-self-start">6 услуг </div>
-                                <img src="{% static '/upload/resize_cache/iblock/34c/1500_1000_0/10des21ea3s028489b52gth56xbry177.webp' %}"
-                                    loading="lazy" />
-                            </a>
-                        </div> <!-- END .services-card -->
-
-                        <div class="services-card col-12 col-md-6 col-xl-3">
-                            <a href="services/anesteziologiya/index.html" class="with-backgr d-flex flex-column ">
-                                <h2>Анестезиология</h2>
-                                <div class="card-sub-text align-self-start">4 услуги </div>
-                                <img src="{% static '/upload/resize_cache/iblock/7ce/1500_1000_0/kykyqpp3n15rgsmpap3caihe70ek1maq.webp' %}"
-                                    loading="lazy" />
-                            </a>
-                        </div> <!-- END .services-card -->
-
-                        <div class="services-card col-12 col-md-6 col-xl-3">
-                            <a href="services/ekzotologiya/index.html"
-                                class="with-backgr d-flex flex-column backgr-grey">
-                                <h2>Экзотология</h2>
-                                <div class="card-sub-text align-self-start">97 услуг </div>
-                                <img src="{% static '/upload/resize_cache/iblock/3d6/1500_1000_0/s5usil9j75ueh5a6i4z9r5grq1fi4npf.jpg' %}"
-                                    loading="lazy" />
-                            </a>
-                        </div> <!-- END .services-card -->
-
-                        <div class="services-card col-12 col-md-6 col-xl-3">
-                            <a href="services/oftalmologiya/index.html"
-                                class="with-backgr d-flex flex-column backgr-grey">
-                                <h2>Офтальмология</h2>
-                                <div class="card-sub-text align-self-start">46 услуг </div>
-                                <img src="{% static '/upload/resize_cache/iblock/937/1500_1000_0/xwclwni3z4vsf4e24sh2rdsr06x5ku6c.webp' %}"
-                                    loading="lazy" />
-                            </a>
-                        </div> <!-- END .services-card -->
-
-                        <div class="services-card col-12 col-md-6 col-xl-3">
-                            <a href="services/stomatologiya/index.html" class="with-backgr d-flex flex-column ">
-                                <h2>Стоматология</h2>
-                                <div class="card-sub-text align-self-start">49 услуг </div>
-                                <img src="{% static '/upload/resize_cache/iblock/e78/1500_1000_0/uja17vrvfkxgnl6ovzs8c0c9kh0vy0fe.webp' %}"
-                                    loading="lazy" />
-                            </a>
-                        </div> <!-- END .services-card -->
-
-                        <a href="services/index.html" class="services-card col-12 col-md-6 col-xl-3">
-                            <div class="blue-border">
-                                <h2>Все<br>услуги<br>клиники</h2>
-                                <span class="btn-show"></span>
-                            </div> <!-- END .blue-border -->
-                        </a> <!-- END .services-card -->
-                    </div> <!-- END .row -->
-                </div> <!-- END .services-box -->
-            </div> <!-- END .container.roundy.backgr-white -->
-        </div> <!-- END .services -->
-
-        <div class="deals-team">
-            <!-- START .deals-team -->
-            <div class="container container-for-mob d-md-flex justify-content-between">
-                <div class="deals text-white d-md-flex flex-md-row">
-                    <div class="owl-carousel owl-theme">
-                        <div class="deals-owl-slider white roundy d-flex flex-column justify-content-end">
-                            <div class="deals-white-container">
-                                <h4>Заботимся <br>о каждом</h4>
-                                <img src="{% static '/templates/vetcity/img/icons/vet_heart.png' %}" class="deals-heart"
-                                    alt="Заботимся &lt;br&gt;о каждом" />
-                            </div>
-                            <img class="background"
-                                src="{% static '/upload/resize_cache/iblock/932/1000_1000_0/qhmat5kkv4djqrr295vb9vctv7iledk2.webp' %}"
-                                loading="lazy" />
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="team deals roundy d-xl-flex flex-xl-column justify-content-xl-stretch align-items-xl-stretch">
-                    <div class="owl-carousel owl-theme">
-                        <a href="doctors/keydunov-oleg-igorevich/index.html"
-                            class="d-flex flex-column justify-content-end text-black">
-                            <div class="backgr-white team-about">
-                                <h5>Кейдунов<br>Олег Игоревич</h5>
-                                <div>Заведующий отделением стоматологии</div>
-                            </div>
-                            <img class="background"
-                                src="{% static '/upload/resize_cache/iblock/4f1/1000_1000_0/mh9q9znvzzsf5npufsp734hsx4h74m1r.webp' %}"
-                                loading="lazy" />
-                        </a>
-                        <a href="doctors/makarova-anna-valerevna/index.html"
-                            class="d-flex flex-column justify-content-end text-black">
-                            <div class="backgr-white team-about">
-                                <h5>Макарова<br>Анна Валерьевна</h5>
-                                <div>Главный врач</div>
-                            </div>
-                            <img class="background"
-                                src="{% static '/upload/resize_cache/iblock/b28/1000_1000_0/4gv2hgdanc5egucpkrqb5qehy8gzc28n.jpg' %}"
-                                loading="lazy" />
-                        </a>
-                        <a href="doctors/bogomolova-mariya-sergeevna/index.html"
-                            class="d-flex flex-column justify-content-end text-black">
-                            <div class="backgr-white team-about">
-                                <h5>Богомолова<br>Мария Сергеевна</h5>
-                                <div>Заведующий инфекционным стационаром</div>
-                            </div>
-                            <img class="background"
-                                src="{% static '/upload/resize_cache/iblock/99a/1000_1000_0/a3kcqibiejwtxpux8v6jqpyrs2jps43v.jpg' %}"
-                                loading="lazy" />
-                        </a>
-                        <a href="doctors/dyulger-pyetr-georgievich/index.html"
-                            class="d-flex flex-column justify-content-end text-black">
-                            <div class="backgr-white team-about">
-                                <h5>Дюльгер<br>Пётр Георгиевич</h5>
-                                <div>Заведующий хирургическим отделением</div>
-                            </div>
-                            <img class="background"
-                                src="{% static '/upload/resize_cache/iblock/f62/1000_1000_0/4uokgp784ej6kax5gxm35c7a9frcm3fi.jpg' %}"
-                                loading="lazy" />
-                        </a>
-                        <div class="doctors-last-item">
-                            <h4 class="text-center">Наши врачи</h4>
-                            <div class="doctors-last-item-wrap">
-                                <div class="doctors-last-item-text">В <span class="vet_heart"></span> Vetcity сотрудники
-                                    досконально знают свое дело, увлечены своей профессией и постоянно совершенствуются.
-                                </div>
-                                <div class="doctors-last-item-bottom-text">Мы собрали команду единомышленников, готовых
-                                    расти профессионально и обеспечивать высокий уровень помощи пациентам любого вида, с
-                                    заболеваниями любой сложности.</div>
-                            </div>
-                            <button class="btn btn-blue" onclick="location.href='/doctors/'">Все врачи Vetcity</a>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- END .container.container-for-mob -->
-        </div> <!-- END .container.container-for-mob -->
-    </div> <!-- END .deals-team -->
-
-    <div class="checkup">
-        <!-- START .team.roundy -->
-        <div class="container roundy backgr-blue text-white">
-            <h4 class="text-center">Это важно!</h4>
-            <div class="checkup-text d-flex flex-column flex-md-row align-items-md-end justify-content-between">
-                <div class="big30 text-center">30</div>
-                <div class="checkup-animal checkup-dogs active">
-                    <img src="{% static '/upload/iblock/1f1/4bzs58lsghtjukxqanlrdy0ckbn7s0l3.webp' %}" loading="lazy" />
-                </div>
-                <div class="checkup-animal checkup-cats ">
-                    <img src="{% static '/upload/iblock/922/kze0a9r3rrwrcymi1bhzgkmg037iq3wg.webp' %}" loading="lazy" />
-                </div>
-                <h2 class="text-right">— признаков<br>
-                    того, что вам<br>
-                    нужно показать<br>
-                    питомца<br>
-                    ветеринару
-                </h2>
+{% block content %}
+<div class="main-header main-page">
+    <!-- START .main-header -->
+    <div class="container roundy" style="background-color: #e8e3df">
+        <div class="main-part" style="background-image: url(/media/VetCareMain_page-0001.jpg); 
+            background-repeat: no-repeat; 
+            
+            background-position: 50% 40%;
+            background-size: cover">
+            <div class="main-address text-md-center">
+                <h1>Круглосуточная ветеринарная клиника</h1>
+                <br class="d-md-block">
+                <a href="contacts" class="text-blue">Улица Лесная, дом 3</a>
             </div>
+        </div>
+        <a href="javascript:void(0);" class="hamburger"></a>
+    </div> <!-- END .container  -->
+</div> <!-- END .main-header-->
 
-            <div class="checkup-toggle-box">
-                <a href="javascript:void(0);">
-                    <div class="checkbox-toggle-content d-flex justify-content-between">
-                        <div class="checkbox-toggle"></div>
-                        <span class="slider-control-item active text-center flex-fill" data-show="#content-dogs"
-                            data-animal="dogs">Сигналы у собак</span>
-                        <span class="slider-control-item  text-center flex-fill" data-show="#content-cats"
-                            data-animal="cats">Сигналы у кошек</span>
+<div class="about-us">
+    <!-- START .about-us -->
+    <div class="container roundy">
+        <div class="about-us-in backgr-white col-12 col-xl-6 float-right">
+            <p class="text-black">
+                <span class="text-blue">Наши ценности — </span><br>
+                здоровье животных<br>
+                время и комфорт клиентов<br>
+                качество и безопасность услуг<br class="d-none d-xl-block">
+                порядочность и ответственность<br class="d-none d-xl-block">
+            </p>
+            <div class="about-us-bottom d-flex justify-content-between">
+                <a href="about" class="backgr-blue text-white">Подробнее</a>
+                <div class="img-logo d-lg-none align-self-end"></div>
+                <div class="d-none d-lg-block text-right">
+                    Мы обеспечиваем здоровье<br>
+                    и долголетие </div>
+            </div>
+        </div> <!-- END .about-us-in.backgr-white-->
+    </div> <!-- END .container.roundy -->
+</div> <!-- END .about-us -->
+
+<div class="services">
+    <!-- START .services -->
+    <div class="container roundy" style="background-color: #e8e3df;
+        background-image: url(/media/VetCareMain_page-0001.jpg); 
+         
+            
+        background-position: 50% -9%;
+      
+    ">
+    <div class="main-address text-md-center">
+        <h3 class="text-center">Услуги</h3>
+        <div class="services-box">
+            <div class="row">
+                {% for group_service in group_services %}
+                <div class="services-card col-12 col-md-6 ">
+                    <a href="/services/{{group_service.pk}}" class="with-backgr d-flex flex-column backgr-grey"
+                        style="background-image: url('/media/{{group_service.photo}}');">
+                        <h2>{{group_service.name}}</h2>
+                    </a>
+                </div> <!-- END .services-card -->
+                {% endfor %}
+
+                <a class="services-card-text services-booking text-white d-flex col-12 col-md-6 col-xl-3 js-btn-callback"
+                    href="/login#calltouch">
+                    <div class="backgr-blue">
+                        <div class="text-right">
+                            Мы стремимся обеспечивать<br>
+                            высокий уровень<br>
+                            профессиональной ветеринарной<br>
+                            помощи, повышать качество<br>
+                            жизни животных и развивать<br>
+                            культуру ответственного<br>
+                            отношения к ним. </div>
+                        <span class="btn btn-white btn-whitery">Записаться на прием</span>
                     </div>
                 </a>
-            </div>
-            <div class="checkup-cards-whole">
-                <div id="content-dogs" style="">
-                    <div id="cmp625c1aefbf885">
-                        <div class="checkup-cards text-black">
-                            <div class="row row-checkup js-items">
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_651765591_105">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Судороги</div>
-                                            <img src="{% static '/upload/iblock/e57/ppzcw55637vmo96n6ltw8tw6gtt0dp2w.svg' %}"
-                                                alt="Судороги" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Судороги</div>
-                                            <div>Если конечности питомца непроизвольно дергаются, он теряет сознание и
-                                                способность передвигаться, причину приступа выяснит терапевт, кардиолог
-                                                или невролог</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_651765591_104">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Чешется</div>
-                                            <img src="{% static '/upload/iblock/49f/rycez3c2q3upsmgynmg173ch2y355rx5.svg' %}"
-                                                alt="Чешется" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Чешется</div>
-                                            <div>Частый или непрекращающийся зуд — повод обратиться к дерматологу</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_651765591_103">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Жажда</div>
-                                            <img src="{% static '/upload/iblock/082/dv3543seou0q7hm3zmt06eq90b45nmnx.svg' %}"
-                                                alt="Жажда" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Жажда</div>
-                                            <div>Если животное не может утолить жажду и постоянно просит пить, запишите
-                                                его на прием к эндокринологу</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_651765591_102">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Обильное мочеиспускание</div>
-                                            <img src="{% static '/upload/iblock/868/dx1bk96sxv6ys0ko5aqs4b7ziolksarh.svg' %}"
-                                                alt="Обильное мочеиспускание" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Обильное мочеиспускание</div>
-                                            <div>Если питомец мочится часто и обильно, покажите его терапевту или
-                                                эндокринологу</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_651765591_101">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Отеки</div>
-                                            <img src="{% static '/upload/iblock/933/c27vf5xydgnr3ay51gkb8saykz1bmyzg.svg' %}"
-                                                alt="Отеки" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Отеки</div>
-                                            <div>Если животное съело что-то неподходящее или после введения препаратов,
-                                                повод обратиться к терапевту</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_651765591_100">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Высокая температура</div>
-                                            <img src="{% static '/upload/iblock/572/gcy3qcu90ljfdqsklov55vugo6uq1yzo.svg' %}"
-                                                alt="Высокая температура" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Высокая температура</div>
-                                            <div>Температура выше 39 у собак, повод обратиться к терапевту</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_651765591_99">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Проглотил инородный предмет</div>
-                                            <img src="{% static '/upload/iblock/9a7/13rncv40fydejhu6cpws1csv3d9usmap.svg' %}"
-                                                alt="Проглотил инородный предмет" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Проглотил инородный предмет</div>
-                                            <div>Если питомец проглотил инородный предмет, как можно скорее отвезите его
-                                                хирургу</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_651765591_98">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Синюшность слизистых</div>
-                                            <img src="{% static '/upload/iblock/505/ex4ahmw0zylm3r4hmnr344f60xy3az44.svg' %}"
-                                                alt="Синюшность слизистых" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Синюшность слизистых</div>
-                                            <div>Появление синюшности/бледности слизистых — повод показать питомца
-                                                терапевту</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_651765591_97">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Необычные выделения</div>
-                                            <img src="{% static '/upload/iblock/798/jbcjkeea3thhl336emrwg53tlr72cnp1.svg' %}"
-                                                alt="Необычные выделения" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Необычные выделения</div>
-                                            <div>При появлении необычных выделений из носа, рта, глаз и/или половых
-                                                органов, покажите питомца терапевту или офтальмологу</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_651765591_96">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Похудел</div>
-                                            <img src="{% static '/upload/iblock/c7c/rwbpx1mc8f44ektfgu4y7r8p1rfvo0m4.svg' %}"
-                                                alt="Похудел" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Похудел</div>
-                                            <div>Резкое похудение животного — повод обратиться к терапевту, онкологу или
-                                                эндокринологу</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
+               
+                <a href="/services" class="services-card col-12 col-md-6 col-xl-3">
+                    <div class="blue-border">
+                        <h2>Все<br>услуги<br>клиники</h2>
+                        <span class="btn-show"></span>
+                    </div> <!-- END .blue-border -->
+                </a> <!-- END .services-card -->
+            </div> <!-- END .row -->
+        </div> <!-- END .services-box -->
+    </div> <!-- END .container.roundy.backgr-white -->
+</div> <!-- END .services -->
 
-                            </div>
-                        </div>
-                        <div class="btn-box-more">
-                            <div class="btn btn-white js-show-more">Показать еще</div>
-                        </div> <!-- END .btn-box-more-->
+
+
+
+<div class="deals-team">
+    <!-- START .deals-team -->
+    <div class="container container-for-mob d-md-flex justify-content-between">
+        <div class="deals text-white d-md-flex flex-md-row">
+            <div class="owl-carousel owl-theme">
+                <div class="deals-owl-slider white roundy d-flex flex-column justify-content-end" 
+                style="background-image: url(/media/index2.jpg); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center">
+                    <div class="deals-white-container">
+                        <h4> Наши врачи - это высококлассные специалисты, <br>
+                            имеющие многолетний опыт в сфере профилактики и лечения, <br>
+                            поэтому могут правильно и быстро поставить диагноз больному животному <br>
+                            и своевременно назначить необходимое лечение
+                        </h4>
                     </div>
 
+                    
                 </div>
-                <div id="content-cats" style="display: none;">
-                    <div id="cmp625c1aefc2a98">
-                        <div class="checkup-cards text-black">
-                            <div class="row row-checkup js-items">
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_1373509569_135">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Судороги</div>
-                                            <img src="{% static '/upload/iblock/bcb/pclds39rwlz6l80h0o9961v2xte33oa2.svg' %}"
-                                                alt="Судороги" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Судороги</div>
-                                            <div>Если конечности питомца непроизвольно дергаются, он теряет сознание и
-                                                способность передвигаться, причину приступа выяснит терапевт, кардиолог
-                                                или невролог</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_1373509569_134">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Чешется</div>
-                                            <img src="{% static '/upload/iblock/3ad/ewgrenzy531m1wrg5lv2p9nyl31uesjr.svg' %}"
-                                                alt="Чешется" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Чешется</div>
-                                            <div>Частый или непрекращающийся зуд — повод обратиться к дерматологу</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_1373509569_133">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Жажда</div>
-                                            <img src="{% static '/upload/iblock/17c/ilqgv8my7cpuc2lpwpbcder5xy5oki1c.svg' %}"
-                                                alt="Жажда" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Жажда</div>
-                                            <div>Если животное не может утолить жажду и постоянно просит пить, запишите
-                                                его на прием к эндокринологу</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_1373509569_132">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Обильное мочеиспускание</div>
-                                            <img src="{% static '/upload/iblock/c38/mgakbf1jr0z2xcj4ksaoq02xzxvwxzau.svg' %}"
-                                                alt="Обильное мочеиспускание" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Обильное мочеиспускание</div>
-                                            <div>Если питомец мочится часто и обильно, покажите его терапевту или
-                                                эндокринологу</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_1373509569_131">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Отеки</div>
-                                            <img src="{% static '/upload/iblock/680/sg7ot03p4qjw55sqtwmhtcguy4iygz8i.svg' %}"
-                                                alt="Отеки" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Отеки</div>
-                                            <div>Если животное съело что-то неподходящее или после введения препаратов,
-                                                повод обратиться к терапевту</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_1373509569_130">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Высокая температура</div>
-                                            <img src="{% static '/upload/iblock/a10/bt2fb2by60mms1cmznuf8rpdxpix7aij.svg' %}"
-                                                alt="Высокая температура" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Высокая температура</div>
-                                            <div>Температура выше 39,5 у кошек, повод обратиться к терапевту</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_1373509569_129">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Проглотил инородный предмет</div>
-                                            <img src="{% static '/upload/iblock/c30/nor4d00iqkffq8evch8j1t48d6rczafx.svg' %}"
-                                                alt="Проглотил инородный предмет" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Проглотил инородный предмет</div>
-                                            <div>Если питомец проглотил инородный предмет, как можно скорее отвезите его
-                                                хирургу</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_1373509569_128">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Синюшность слизистых</div>
-                                            <img src="{% static '/upload/iblock/c64/68w35effa7l54cl40r7jnt3pf97v1re8.svg' %}"
-                                                alt="Синюшность слизистых" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Синюшность слизистых</div>
-                                            <div>Появление синюшности/бледности слизистых — повод показать питомца
-                                                терапевту</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_1373509569_127">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Необычные выделения</div>
-                                            <img src="{% static '/upload/iblock/9bc/4fdnip06t43wwjs45g40xkjlm2ubw98u.svg' %}"
-                                                alt="Необычные выделения" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Необычные выделения</div>
-                                            <div>При появлении необычных выделений из носа, рта, глаз и/или половых
-                                                органов, покажите питомца терапевту или офтальмологу</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
-                                <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
-                                    id="bx_1373509569_126">
-                                    <div class="checkup-card-inner d-flex flex-column justify-content-between">
-                                        <div class="checkup-card-in d-flex flex-column justify-content-between">
-                                            <div>Похудел</div>
-                                            <img src="{% static '/upload/iblock/b1f/r22swipkzovn7rqmd6314x5wl6tirs9y.svg' %}"
-                                                alt="Похудел" loading="lazy">
-                                        </div>
-                                        <div
-                                            class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
-                                            <div>Похудел</div>
-                                            <div>Резкое похудение животного — повод обратиться к терапевту, онкологу или
-                                                эндокринологу</div>
-                                            <a href="index.html#calltouch"
-                                                class="btn btn-blue btn-book js-btn-callback">Записаться</a>
-                                        </div>
-                                    </div> <!-- END .checkup-card-inner -->
-                                </div> <!-- END .checkup-card -->
 
-                            </div>
-                        </div>
-                        <div class="btn-box-more">
-                            <div class="btn btn-white js-show-more">Показать еще</div>
-                        </div> <!-- END .btn-box-more-->
-                    </div>
-
-                </div>
-            </div>
-        </div> <!-- END .checkup-cards-whole-->
-    </div> <!-- END .checkup -->
-
-    <footer>
-        <!-- START footer -->
-        <div class="container smaller-container text-white">
-            <div class="footer-top">
-                <div class="row">
-                    <div class="col-12 col-xl-7">
-                        <div class="row">
-                            <div class="footer-menu col-12 col-md-6 order-md-2">
-
-                                <ul class="list-unstyled">
-
-                                    <li class="text-center text-md-left"><a href="index.html" class="selected">
-                                            <h4>Главная</h4>
-                                        </a></li>
-
-                                    <li class="text-center text-md-left"><a href="about/index.html">
-                                            <h4>О нас</h4>
-                                        </a></li>
-
-                                    <li class="text-center text-md-left"><a href="services/index.html">
-                                            <h4>Услуги</h4>
-                                        </a></li>
-
-                                    <li class="text-center text-md-left"><a href="doctors/index.html">
-                                            <h4>Наши врачи</h4>
-                                        </a></li>
-
-                                    <li class="text-center text-md-left"><a
-                                            href="services/spetspredlozheniya/index.html">
-                                            <h4>Спецпредложения</h4>
-                                        </a></li>
-
-                                    <li class="text-center text-md-left"><a href="knowledge-base/index.html">
-                                            <h4>База знаний</h4>
-                                        </a></li>
-
-                                    <li class="text-center text-md-left"><a href="vacancy/index.html">
-                                            <h4>Вакансии</h4>
-                                        </a></li>
-
-                                    <li class="text-center text-md-left"><a href="contacts/index.html">
-                                            <h4>Контакты</h4>
-                                        </a></li>
-
-
-                                </ul>
-                            </div>
-                            <div class="footer-contacts col-12 col-md-6 order-md-1">
-                                <div class="footer-heart d-none d-md-block"></div>
-                                <div class="footer-address">
-                                    <div class="row footer-contact">
-                                        <div class="col-6 col-md-12">
-                                            <div class="text-grey">Адрес:</div>
-                                            <div>
-                                                <a href="contacts/index.html">Москва, Зубарев<br>
-                                                    переулок, д. 7</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-md-12">
-                                            <div class="text-grey">Телефон:</div>
-                                            <div><a href="tel:+74951268290">
-                                                    +7 495 126-82-90</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-row align-items-center">
-                                        <div class="non-stop"></div>
-                                        <div>
-                                            Работаем<br>
-                                            Круглосуточно
-                                        </div>
-                                    </div>
-                                </div> <!-- END .footer-address -->
-                            </div> <!-- END .footer-contacts -->
-                        </div> <!-- END .row -->
-                    </div> <!-- END .col-12.col-xl-7 -->
-                    <div
-                        class="footer-connect col-12 col-xl-5 d-xl-flex justify-content-xl-between align-items-xl-end flex-xl-column">
-                        <div class="footer-subscribe">
-                            <div class="form-subscribe">
-                                <div class="form-subscribe js-subscribe-container">
-                                    <h4 class="text-black">Подпишитесь на нашу<br> рассылку:</h4>
-                                    <form class="js-subscribe-form" action='https://vet.city/ajax/subscribe.php'>
-                                        <input type="hidden" name="action" value="subscribe">
-                                        <input type="hidden" name="mailingListId" value="1" />
-                                        <div class="form-group d-flex">
-                                            <input type="email" name="email" value="" class="form-control"
-                                                placeholder="Ваш email" required>
-                                            <span class="form-group-btn">
-                                                <button class="btn btn-blue" name="OK" type="submit"
-                                                    value="">Подписаться</button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="footer-social d-flex justify-content-between align-items-center">
-                            <div class="footer-heart d-block d-md-none"></div>
-                            <div class="footer-social-links">
-
-                                <a href="https://vk.com/public188120292" target="_blank" class="footer-vk"></a>
-                                <a href="https://t.me/vetcityclinic" target="_blank" class="footer-tg"></a>
-                            </div>
-                        </div> <!-- END .footer-social -->
-                    </div> <!-- END .footer-connect -->
-                </div> <!-- END .row -->
-            </div> <!-- END .footer-top -->
-            <div class="footer-bottom d-flex flex-column flex-lg-row justify-content-lg-between">
-                <a href="https://skam.team" target="_blank" class="design text-uppercase text-right order-lg-2">designed
-                    by</a>
-                <div class="copyright text-center text-lg-left order-lg-1">
-                    2022&nbsp;© ООО «Вет Сити Центр» </div>
-            </div> <!-- END .footer-bottom -->
-        </div> <!-- END .container.smaller-container -->
-    </footer> <!-- END footer -->
-    </div>
-    <!-- To detect which environment we are in -->
-    <div id="environment-xs" class="d-sm-none"></div>
-    <div id="environment-sm" class="d-none d-sm-block d-md-none"></div>
-    <div id="environment-md" class="d-none d-md-block d-lg-none"></div>
-    <div id="environment-lg" class="d-none d-lg-block d-xl-none"></div>
-    <div id="environment-xl" class="d-none d-xl-block"></div>
-
-
-    <div id="c625c42e7e14b3">
-        <div class="modal fade js-callback-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <form action="index.html" class="text-left needs-validation js-calltouch-form" novalidate>
-                        <div class="modal-header">
-                            <div class="modal-title">Форма обратного звонка</div>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="alert alert-danger js-error" style="display: none;"></div>
-                            <div class="input-mb">
-                                <div class="form-group position-relative">
-                                    <label>Телефон</label>
-                                    <input type="tel" class="form-control js-phone" placeholder="Телефон" required>
-                                </div>
-                            </div>
-                            <div class="input-mb">
-                                <div class="form-group position-relative">
-                                    <label>Ваше имя</label>
-                                    <input type="text" class="form-control js-name" placeholder="Ваше имя" required>
-                                </div>
-                            </div>
-                            <div class="form-check check-accept">
-                                <input class="form-check-input" type="checkbox" name="ACCEPT_CALLTOUCH" value="Y"
-                                    id="ACCEPT_CALLTOUCH" required="required">
-                                <label class="form-check-label" for="ACCEPT_CALLTOUCH">Я согласен с <a
-                                        href="{% static '/upload/iblock/1bf/hb7nrqz69iwrbs22pmo7r7tjpkpp8n5t.pdf' %}"
-                                        target="_blank">условиями обработки персональных данных</a>, <a
-                                        href="{% static '/upload/iblock/f3c/zav8cy135l7bzg11beyg7w33wpr1rxkg.pdf' %}"
-                                        target="_blank">правилами оказания онлайн-консультирования</a> и <a
-                                        href="{% static '/upload/iblock/9b6/judzjq4rc3gtsyh6q6ghaccggl3nusq7.pdf' %}"
-                                        target="_blank">условиями договора-оферты на оказание услуг</a></label>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button type="submit" class="btn btn-modal btn-blue">Заказать звонок</button>
-                            <i class="icon icon-heart"></i>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
-
-        <div class="modal fade show js-callback-success-modal" tabindex="-1" role="dialog" aria-modal="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="text-left needs-validation">
-                        <div class="modal-header">
-                            <div class="modal-title">Спасибо!</div>
-                        </div>
-                        <div class="modal-body"></div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a href="index.html" class="btn btn-modal btn-blue">Перейти на главную</a>
-                            <i class="icon icon-heart"></i>
-                        </div>
+        <div class="team deals roundy d-xl-flex flex-xl-column justify-content-xl-stretch align-items-xl-stretch">
+            <div class="owl-carousel owl-theme">
+                {% for doctor in doctors %}
+                <a href="/doctors" class="d-flex flex-column justify-content-end text-black">
+                    <div class="backgr-white team-about">
+                        <h5> {{doctor.first_name}}</h5>
+                        <div>Заведующий отделением терапии</div>
                     </div>
+                    <img class="background"
+                        src="{% static '/upload/resize_cache/iblock/4f1/1000_1000_0/mh9q9znvzzsf5npufsp734hsx4h74m1r.webp' %}"
+                        loading="lazy" />
+                </a>
+                {% endfor %}
+                
+                <div class="doctors-last-item">
+                    <h4 class="text-center">Наши врачи</h4>
+                    <div class="doctors-last-item-wrap">
+                        <div class="doctors-last-item-text">В <span class="vet_heart"></span> Vetcity сотрудники
+                            досконально знают свое дело, увлечены своей профессией и постоянно совершенствуются.
+                        </div>
+                         <div class="doctors-last-item-bottom-text">Мы собрали команду единомышленников, готовых
+                            расти профессионально и обеспечивать высокий уровень помощи пациентам любого вида, с
+                            заболеваниями любой сложности.</div> 
+                    </div>
+                    <button class="btn btn-blue" onclick="location.href='/doctors/'">Все врачи Vetcity</a>
                 </div>
             </div>
+         
         </div>
-    </div>
-    <script type="text/javascript" src="{% static '/templates/vetcity/js/jquery-3.6.0.min.js%3F162694166289503' %}"></script>
-    <script type="text/javascript" src="{% static '/templates/vetcity/js/popper.min.js%3F162694166221009' %}"></script>
-    <script type="text/javascript" src="{% static '/templates/vetcity/js/bootstrap.bundle.min.js%3F162694166284384' %}"></script>
-    <script type="text/javascript" src="{% static '/templates/vetcity/js/scrollreveal.js%3F162694166246205' %}"></script>
-    <script type="text/javascript" src="{% static '/templates/vetcity/js/jquery.fancybox.min.js%3F162694166268265' %}"></script>
-    <script type="text/javascript" src="{% static '/templates/vetcity/js/owl.carousel.min.js%3F162694166244348' %}"></script>
-    <script type="text/javascript" src="{% static '/templates/vetcity/js/bootstrap-select.min.js%3F162694166257752' %}"></script>
-    <script type="text/javascript" src="{% static '/templates/vetcity/js/jquery.inputmask.min.js%3F162694166293838' %}"></script>
-    <script type="text/javascript" src="{% static '/templates/vetcity/js/moment.min.js%3F162869081858862' %}"></script>
-    <script type="text/javascript" src="{% static '/templates/vetcity/js/jquery.validate.min.js%3F163177822424430' %}"></script>
-    <script type="text/javascript" src="{% static '/templates/vetcity/js/jquery.highlight.js%3F16345471064079' %}"></script>
-    <script type="text/javascript" src="{% static '/templates/vetcity/js/main.js%3F16353386316990' %}"></script>
-    <script type="text/javascript"
-        src="https://vet.city/bitrix/components/bitrix/search.title/script.js?16267702349847"></script>
-    <script type="text/javascript"
-        src="{% static '/components/wlcomponents/subscribe/templates/.default/script.js%3F1626941662299' %}"></script>
-    <script type="text/javascript"
-        src="{% static '/components/wlcomponents/calltouch/templates/.default/script.js%3F16484523923457' %}"></script>
-    <script type="text/javascript"
-        src="{% static '/templates/.default/components/bitrix/news.list/symptoms-list/script.js%3F1628592705850' %}"></script>
-    <script type="text/javascript"
-        src="{% static '/components/wlcomponents/form.result.new/templates/main/script.js%3F16317782243046' %}"></script>
+    </div> <!-- END .container.container-for-mob -->
+</div> <!-- END .container.container-for-mob -->
+</div> <!-- END .deals-team -->
 
+<div class="checkup">
+    <!-- START .team.roundy -->
+    <div class="container roundy backgr-blue text-white">
+        <h4 class="text-center">Интересные факты!</h4>
+        <div class="checkup-text d-flex flex-column flex-md-row align-items-md-end justify-content-between">
+            <div class="big30 text-center">30</div>
+            <div class="checkup-animal checkup-dogs active">
+                <img src="{% static '/upload/iblock/1f1/4bzs58lsghtjukxqanlrdy0ckbn7s0l3.webp' %}" loading="lazy" />
+            </div>
+            <div class="checkup-animal checkup-cats ">
+                <img src="{% static '/upload/iblock/922/kze0a9r3rrwrcymi1bhzgkmg037iq3wg.webp' %}" loading="lazy" />
+            </div>
+            <h2 class="text-right"> Невероятные<br>
+                факты<br>
+                о домашних<br>
+                питомцах
+            </h2>
+        </div>
 
-    </body>
+        <!-- <div class="checkup-toggle-box">
+        <a href="javascript:void(0);">
+            <div class="checkbox-toggle-content d-flex justify-content-between">
+                <div class="checkbox-toggle"></div>
+                <span class="slider-control-item active text-center flex-fill" data-show="#content-dogs"
+                    data-animal="dogs">Сигналы у собак</span>
+                <span class="slider-control-item  text-center flex-fill" data-show="#content-cats"
+                    data-animal="cats">Сигналы у кошек</span>
+            </div>
+        </a>
+    </div> -->
+        <div class="checkup-cards-whole">
+            <div id="content-dogs" style="">
+                <div id="cmp625c1aefbf885">
+                    <div class="checkup-cards text-black">
+                        <div class="row row-checkup js-items">
+                            <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                                id="bx_651765591_105">
+                                <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                    <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                        <div>Поле зрения кроликов – почти 360 градусов</div>
+                                        <img src="{% static '/upload/iblock/e57/ppzcw55637vmo96n6ltw8tw6gtt0dp2w.svg' %}"
+                                            alt="Судороги" loading="lazy">
+                                    </div>
+                                    <div
+                                        class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                        <div>Немного о кроликах</div>
+                                        <div>Не так просто подкрасться к кролику, ведь он видит, что происходит сбоку,
+                                            сзади и над ним даже без поворота головы. Но удивительно то,
+                                            что при таких способностях у животного есть «слепое пятно» обзора прямо
+                                            перед мордочкой.</div>
+                                        <!--<a href="//#calltouch"
+                                        class="btn btn-blue btn-book js-btn-callback">Записаться</a> -->
+                                    </div>
+                                </div> <!-- END .checkup-card-inner -->
+                            </div> <!-- END .checkup-card -->
+                            <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                                id="bx_651765591_104">
+                                <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                    <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                        <div>Попугаи единственные могут есть ногами</div>
+                                        <img src="{% static '/upload/iblock/49f/rycez3c2q3upsmgynmg173ch2y355rx5.svg' %}"
+                                            alt="Чешется" loading="lazy">
+                                    </div>
+                                    <div
+                                        class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                        <div>Немного о попугаях</div>
+                                        <div>Ноги у попугая схожи с человеческими руками – они могут на них не только
+                                            передвигаться,
+                                            но еще и собирать предметы и подносить еду до клюва. Ни одна другая птица на
+                                            это не способна.</div>
 
-</html>
+                                    </div>
+                                </div> <!-- END .checkup-card-inner -->
+                            </div> <!-- END .checkup-card -->
+                            <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                                id="bx_651765591_103">
+                                <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                    <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                        <div>Половину дня кошки тратят на уход за собой</div>
+                                        <img src="{% static '/upload/iblock/082/dv3543seou0q7hm3zmt06eq90b45nmnx.svg' %}"
+                                            alt="Жажда" loading="lazy">
+                                    </div>
+                                    <div
+                                        class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                        <div>Немного о кошках</div>
+                                        <div>Кошки тратят на "умывание" 50% своего времени, и делают это, чтобы ослабить
+                                            свой запах и избежать нападения хищников.
+                                            Также, это стимулирует кровообращение, и животное всегда остается сухим и
+                                            теплым.</div>
+
+                                    </div>
+                                </div> <!-- END .checkup-card-inner -->
+                            </div> <!-- END .checkup-card -->
+                            <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                                id="bx_651765591_102">
+                                <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                    <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                        <div>Попугай – самое древнее домашнее животное</div>
+                                        <img src="{% static '/upload/iblock/868/dx1bk96sxv6ys0ko5aqs4b7ziolksarh.svg' %}"
+                                            alt="Обильное мочеиспускание" loading="lazy">
+                                    </div>
+                                    <div
+                                        class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                        <div>Немного о попугаях</div>
+                                        <div>В качестве домашних питомцев попугаев стали использовать еще древние
+                                            египтяне, а позднее – индейцы и китайцы.
+                                            В Европе они появились уже в 300 году до н.э, причем жили только у знатных
+                                            людей.</div>
+
+                                    </div>
+                                </div> <!-- END .checkup-card-inner -->
+                            </div> <!-- END .checkup-card -->
+                            <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                                id="bx_651765591_101">
+                                <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                    <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                        <div>Дети лучше читают в компании собак</div>
+                                        <img src="{% static '/upload/iblock/933/c27vf5xydgnr3ay51gkb8saykz1bmyzg.svg' %}"
+                                            alt="Отеки" loading="lazy">
+                                    </div>
+                                    <div
+                                        class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                        <div>Немного о собаках</div>
+                                        <div>Если ребенок испытывают трудности с чтением, то ему нужна собака! Она
+                                            помогает юному читателю обрести уверенность в себе,
+                                            потому что не умеет судить, не прерывает чтение замечаниями, а просто
+                                            спокойно и внимательно слушает.</div>
+
+                                    </div>
+                                </div> <!-- END .checkup-card-inner -->
+                            </div> <!-- END .checkup-card -->
+                            <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                                id="bx_651765591_100">
+                                <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                    <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                        <div>У собак удивительные носы</div>
+                                        <img src="{% static '/upload/iblock/572/gcy3qcu90ljfdqsklov55vugo6uq1yzo.svg' %}"
+                                            alt="Высокая температура" loading="lazy">
+                                    </div>
+                                    <div
+                                        class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                        <div>Немного о собаках</div>
+                                        <div>Отпечаток собачьего носа так же уникален, как и отпечатки человеческих
+                                            пальцев.</div>
+
+                                    </div>
+                                </div> <!-- END .checkup-card-inner -->
+                            </div> <!-- END .checkup-card -->
+                            <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                                id="bx_651765591_99">
+                                <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                    <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                        <div>Зачем кошки мяукают</div>
+                                        <img src="{% static '/upload/iblock/9a7/13rncv40fydejhu6cpws1csv3d9usmap.svg' %}"
+                                            alt="Проглотил инородный предмет" loading="lazy">
+                                    </div>
+                                    <div
+                                        class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                        <div>Немного о кошках</div>
+                                        <div>Домашние кошки мяукают,
+                                            только когда хотят обратить на себя внимание людей. При общении друг с
+                                            другом они эти звуки не используют.</div>
+
+                                    </div>
+                                </div> <!-- END .checkup-card-inner -->
+                            </div> <!-- END .checkup-card -->
+                            <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                                id="bx_651765591_98">
+                                <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                    <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                        <div>Как правильно держать крыс</div>
+                                        <img src="{% static '/upload/iblock/505/ex4ahmw0zylm3r4hmnr344f60xy3az44.svg' %}"
+                                            alt="Синюшность слизистых" loading="lazy">
+                                    </div>
+                                    <div
+                                        class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                        <div>Немного о крысах</div>
+                                        <div>Такие домашние животные, как крысы — существа очень социальные. Поодиночке
+                                            они чахнут от тоски.
+                                            Их всегда нужно держать хотя бы по двое, как минимум, чтобы у них была
+                                            компания.</div>
+
+                                    </div>
+                                </div> <!-- END .checkup-card-inner -->
+                            </div> <!-- END .checkup-card -->
+                            <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                                id="bx_651765591_97">
+                                <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                    <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                        <div>Обоняние у крыс</div>
+                                        <img src="{% static '/upload/iblock/798/jbcjkeea3thhl336emrwg53tlr72cnp1.svg' %}"
+                                            alt="Необычные выделения" loading="lazy">
+                                    </div>
+                                    <div
+                                        class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                        <div>Немного о крысах</div>
+                                        <div>Обоняние у крыс, и диких, и домашних, настолько острое, что они способны
+                                            унюхать одну миллионную долю яда в пище.</div>
+
+                                    </div>
+                                </div> <!-- END .checkup-card-inner -->
+                            </div> <!-- END .checkup-card -->
+                            <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                                id="bx_651765591_96">
+                                <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                    <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                        <div>Самые долгожители среди питомцев</div>
+                                        <img src="{% static '/upload/iblock/c7c/rwbpx1mc8f44ektfgu4y7r8p1rfvo0m4.svg' %}"
+                                            alt="Похудел" loading="lazy">
+                                    </div>
+                                    <div
+                                        class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                        <div>Немного о черепахах</div>
+                                        <div>Долгожителями среди домашних животных являются черепахи. Они иногда живут
+                                            по несколько сотен лет.
+                                            Так, Чарльз Дарвин,
+                                            создатель теории эволюции, скончался в 1882 году, а его домашняя черепаха
+                                            Гариетта умерла в 2006 году.</div>
+
+                                    </div>
+                                </div> <!-- END .checkup-card-inner -->
+                            </div> <!-- END .checkup-card -->
+
+                        </div>
+                    </div>
+                    <!--<div class="btn-box-more">
+                    <div class="btn btn-white js-show-more">Показать еще</div>
+                </div>  END .btn-box-more-->
+                </div>
+
+            </div>
+            <!--<div id="content-cats" style="display: none;">
+            <div id="cmp625c1aefc2a98">
+                <div class="checkup-cards text-black">
+                    <div class="row row-checkup js-items">
+                        <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_1373509569_135">
+                            <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                    <div>Судороги</div>
+                                    <img src="{% static '/upload/iblock/bcb/pclds39rwlz6l80h0o9961v2xte33oa2.svg' %}"
+                                        alt="Судороги" loading="lazy">
+                                </div>
+                                <div
+                                    class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                    <div>Судороги</div>
+                                    <div>Если конечности питомца непроизвольно дергаются, он теряет сознание и
+                                        способность передвигаться, причину приступа выяснит терапевт, кардиолог
+                                        или невролог</div>
+                                    <a href="//#calltouch"
+                                        class="btn btn-blue btn-book js-btn-callback">Записаться</a>
+                                </div>
+                            </div>  END .checkup-card-inner
+                        </div> END .checkup-card 
+                        <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_1373509569_134">
+                            <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                    <div>Чешется</div>
+                                    <img src="{% static '/upload/iblock/3ad/ewgrenzy531m1wrg5lv2p9nyl31uesjr.svg' %}"
+                                        alt="Чешется" loading="lazy">
+                                </div>
+                                <div
+                                    class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                    <div>Чешется</div>
+                                    <div>Частый или непрекращающийся зуд — повод обратиться к дерматологу</div>
+                                    <a href="//#calltouch"
+                                        class="btn btn-blue btn-book js-btn-callback">Записаться</a>
+                                </div>
+                            </div> END .checkup-card-inner 
+                        </div> END .checkup-card 
+                        <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_1373509569_133">
+                            <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                    <div>Жажда</div>
+                                    <img src="{% static '/upload/iblock/17c/ilqgv8my7cpuc2lpwpbcder5xy5oki1c.svg' %}"
+                                        alt="Жажда" loading="lazy">
+                                </div>
+                                <div
+                                    class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                    <div>Жажда</div>
+                                    <div>Если животное не может утолить жажду и постоянно просит пить, запишите
+                                        его на прием к эндокринологу</div>
+                                    <a href="//#calltouch"
+                                        class="btn btn-blue btn-book js-btn-callback">Записаться</a>
+                                </div>
+                            </div>  END .checkup-card-inner 
+                        </div>  END .checkup-card
+                        <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_1373509569_132">
+                            <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                    <div>Обильное мочеиспускание</div>
+                                    <img src="{% static '/upload/iblock/c38/mgakbf1jr0z2xcj4ksaoq02xzxvwxzau.svg' %}"
+                                        alt="Обильное мочеиспускание" loading="lazy">
+                                </div>
+                                <div
+                                    class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                    <div>Обильное мочеиспускание</div>
+                                    <div>Если питомец мочится часто и обильно, покажите его терапевту или
+                                        эндокринологу</div>
+                                    <a href="//#calltouch"
+                                        class="btn btn-blue btn-book js-btn-callback">Записаться</a>
+                                </div>
+                            </div>  END .checkup-card-inner
+                        </div> END .checkup-card
+                        <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_1373509569_131">
+                            <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                    <div>Отеки</div>
+                                    <img src="{% static '/upload/iblock/680/sg7ot03p4qjw55sqtwmhtcguy4iygz8i.svg' %}"
+                                        alt="Отеки" loading="lazy">
+                                </div>
+                                <div
+                                    class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                    <div>Отеки</div>
+                                    <div>Если животное съело что-то неподходящее или после введения препаратов,
+                                        повод обратиться к терапевту</div>
+                                    <a href="//#calltouch"
+                                        class="btn btn-blue btn-book js-btn-callback">Записаться</a>
+                                </div>
+                            </div>  END .checkup-card-inner
+                        </div>  END .checkup-card
+                        <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_1373509569_130">
+                            <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                    <div>Высокая температура</div>
+                                    <img src="{% static '/upload/iblock/a10/bt2fb2by60mms1cmznuf8rpdxpix7aij.svg' %}"
+                                        alt="Высокая температура" loading="lazy">
+                                </div>
+                                <div
+                                    class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                    <div>Высокая температура</div>
+                                    <div>Температура выше 39,5 у кошек, повод обратиться к терапевту</div>
+                                    <a href="//#calltouch"
+                                        class="btn btn-blue btn-book js-btn-callback">Записаться</a>
+                                </div>
+                            </div>  END .checkup-card-inner 
+                        </div> END .checkup-card 
+                        <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_1373509569_129">
+                            <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                    <div>Проглотил инородный предмет</div>
+                                    <img src="{% static '/upload/iblock/c30/nor4d00iqkffq8evch8j1t48d6rczafx.svg' %}"
+                                        alt="Проглотил инородный предмет" loading="lazy">
+                                </div>
+                                <div
+                                    class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                    <div>Проглотил инородный предмет</div>
+                                    <div>Если питомец проглотил инородный предмет, как можно скорее отвезите его
+                                        хирургу</div>
+                                    <a href="//#calltouch"
+                                        class="btn btn-blue btn-book js-btn-callback">Записаться</a>
+                                </div>
+                            </div>  END .checkup-card-inner 
+                        </div>  END .checkup-card 
+                        <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_1373509569_128">
+                            <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                    <div>Синюшность слизистых</div>
+                                    <img src="{% static '/upload/iblock/c64/68w35effa7l54cl40r7jnt3pf97v1re8.svg' %}"
+                                        alt="Синюшность слизистых" loading="lazy">
+                                </div>
+                                <div
+                                    class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                    <div>Синюшность слизистых</div>
+                                    <div>Появление синюшности/бледности слизистых — повод показать питомца
+                                        терапевту</div>
+                                    <a href="//#calltouch"
+                                        class="btn btn-blue btn-book js-btn-callback">Записаться</a>
+                                </div>
+                            </div>  END .checkup-card-inner 
+                        </div>  END .checkup-card 
+                        <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_1373509569_127">
+                            <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                    <div>Необычные выделения</div>
+                                    <img src="{% static '/upload/iblock/9bc/4fdnip06t43wwjs45g40xkjlm2ubw98u.svg' %}"
+                                        alt="Необычные выделения" loading="lazy">
+                                </div>
+                                <div
+                                    class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                    <div>Необычные выделения</div>
+                                    <div>При появлении необычных выделений из носа, рта, глаз и/или половых
+                                        органов, покажите питомца терапевту или офтальмологу</div>
+                                    <a href="//#calltouch"
+                                        class="btn btn-blue btn-book js-btn-callback">Записаться</a>
+                                </div>
+                            </div>  END .checkup-card-inner 
+                        </div> END .checkup-card 
+                        <div class="checkup-card d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_1373509569_126">
+                            <div class="checkup-card-inner d-flex flex-column justify-content-between">
+                                <div class="checkup-card-in d-flex flex-column justify-content-between">
+                                    <div>Похудел</div>
+                                    <img src="{% static '/upload/iblock/b1f/r22swipkzovn7rqmd6314x5wl6tirs9y.svg' %}"
+                                        alt="Похудел" loading="lazy">
+                                </div>
+                                <div
+                                    class="checkup-card-in-hover card-book-in d-flex flex-column justify-content-between">
+                                    <div>Похудел</div>
+                                    <div>Резкое похудение животного — повод обратиться к терапевту, онкологу или
+                                        эндокринологу</div>
+                                    <a href="//#calltouch"
+                                        class="btn btn-blue btn-book js-btn-callback">Записаться</a>
+                                </div>
+                            </div>  END .checkup-card-inner 
+                        </div>  END .checkup-card
+
+                    </div>
+                </div>
+                <div class="btn-box-more">
+                    <div class="btn btn-white js-show-more">Показать еще</div>
+                </div>  END .btn-box-more
+            </div>
+
+        </div> -->
+        </div>
+    </div> <!-- END .checkup-cards-whole-->
+</div> <!-- END .checkup -->
+{% endblock %}
