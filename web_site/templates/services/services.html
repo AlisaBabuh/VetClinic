@@ -1,123 +1,29 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#1B1B29" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1B1B29" media="(prefers-color-scheme: dark)">
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
-    <title>Услуги ветеринарной клиники vet.city</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="keywords" content="услуги ветеринара" />
-<meta name="description" content="Мы предоставляем своим клиентам весь спектр услуг ветеринара. Наши врачи тщательно соблюдают стандарты цивилизованной ветеринарии, строго следуют регламентам и в любой ситуации ставят интересы пациента на первое место. Наш выбор — современная доказательная медицина, основанная на научном знании." />
-
-
-
-<link href="{% static '../local/templates/vetcity/css/jquery.fancybox.min.css%3F162694166212795.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '../local/templates/vetcity/css/bootstrap.min.css%3F1626941662161415.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '../local/templates/vetcity/css/owl.carousel.min.css%3F16269416623356.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '../local/templates/vetcity/css/owl.theme.default.min.css%3F16269416621018.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '../local/templates/vetcity/css/main.css%3F1634548032121224.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '../local/templates/vetcity/css/bootstrap-select.min.css%3F162694166211832.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '../local/templates/vetcity/css/modal-window.css%3F16317782243928.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '../local/templates/vetcity/css/style_secondary.css%3F163177822419507.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '../local/templates/vetcity/css/custom.css%3F164845239236922.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '../local/templates/.default/components/bitrix/menu/top/style.css%3F1628592705625.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '../local/templates/.default/components/bitrix/search.title/.default/style.css%3F16285927052108.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-<link href="{% static '../local/templates/.default/components/bitrix/menu/footer/style.css%3F1628592705625.css' %}" type="text/css"  data-template-style="true"  rel="stylesheet" />
-
-
-        <div class="has-overflow-hidden">
-            <div class="main-nav"> <!-- START .main-nav-->
-                <div class="nav-container d-xl-flex flex-xl-column">
-                    <div class="nav-in order-xl-2 navbar-list">
-                        <a href="../index.html" class="logo"></a>
-                        <div class="d-none d-xl-block head-navbar">Меню</div>
-                        <div class="main-nav-items">
-                            
-    <ul class="list-unstyled">
-        <div class="navbar-social-links">
-            
-            <a target="_blank" href="https://vk.com/public188120292" class="footer-vk"></a>
-            <a target="_blank" href="https://t.me/vetcityclinic" class="footer-tg"></a>
-        </div>
-                                                                    <li class="item-left-outside"><a href="../index.html">Главная</a></li>
-                                                                                                <li><a href="../about/index.html">О нас</a></li>
-                                                                                                <li><a href="index.html" class="selected">Услуги</a></li>
-                                                                                                <li><a href="../doctors/index.html">Наши врачи</a></li>
-                                                                                                <li><a href="spetspredlozheniya/index.html">Спецпредложения</a></li>
-                                                                                                <li><a href="../knowledge-base/index.html">База знаний</a></li>
-                                                                                                <li><a href="../vacancy/index.html">Вакансии</a></li>
-                                                                                                <li><a href="../contacts/index.html">Контакты</a></li>
-                                        </ul>
-                        </div> <!-- END .main-nav-items -->
-                    </div> <!-- END .nav-in -->
-                    <div class="order-xl-1 navbar-contacts d-xl-flex">
-                        <div class="nav-in">
-                            <a href="tel:+74951268290" class="main-nav-contact">
-                                +7 495 126-82-90                            </a>
-                        </div>
-                        <div class="nav-in">
-                            <a href="index.html#" class="main-nav-address">
-                                Москва, Зубарев пер., д. 7                            </a>
-                        </div>
-                    </div>
-                    <div class="nav-in-bottom">
-                        <div class="main-nav-booking backgr-blue text-white d-flex justify-content-between flex-xl-column">
-                            <div class="logo-in d-none d-xl-block"></div>
-                            <div>Широкий спектр<br>
-    ветеринарных услуг<br>
-    и специалистов<br>
-    круглосуточно
-</div>                            <a href="index.html#calltouch" class="btn btn-white align-self-end align-self-xl-start js-btn-callback">Записаться</a>
-                        </div>  <!-- END .main-nav-booking -->
-                    </div>  <!-- END .nav-in-bottom -->
-                </div>  <!-- END .container -->
-            </div> <!-- END .main-nav-->
-
-            <div class="navbar" id="fixed-menu">  <!-- START .navbar -->
-                <div class="container navbar-container">
-                    <div class="d-flex justify-content-between navbar-in">
-                        
-<div id="title-search" class="d-flex justify-content-between">
-    <form action="https://vet.city/search/" class="form-inline position-relative">
-        <input id="title-search-input" class="form-control" name="q" type="text" autocomplete="off" placeholder="Поиск" aria-label="Search" onfocus="startFocus()" onblur="stopFocus()">
-		<button type="submit" class="submit"></button>
-    </form>
-    <input name="s" type="hidden" value="Поиск" />
-	
-	<a class="btn btn-nav-book text-white js-btn-callback" href="index.html#">Запись</a>
-</div>
-
-
-                        <div class="d-block d-xl-none">
-                            <a href="tel:+7 495 126-82-90" class="btn btn-blue btn-mob-call">позвонить</a>
-                        </div>
-                        <div class="d-none d-xl-block text-white d-xl-flex align-items-xl-center">
-                            <div class="nav-non-stop">
-                                Круглосуточно                            </div>
-                            <div><a href="tel:+74951268290" class="nav-phone">
-                                +7 495 126-82-90                            </a></div>
-                            <div><a href="../contacts/index.html" class="nav-address">
-                                Москва, Зубарев пер., д. 7                            </a></div>
-                        </div>
-                    </div>   <!-- END .navbar-in -->
-                </div>  <!-- END.container -->
-            </div>  <!-- END .navbar -->
-    
 <div class="main-body">
     <!-- START .main-body -->
     <div class="container backgr-white roundy">
         <div class="main-body-header">
             <div class="d-flex justify-content-between">
                 <div class="d-flex flex-column flex-md-row justify-content-between w-100">
-                    <a href="../index.html" class="logo-main"></a>
-                    <nav aria-label="breadcrumb" class="d-none d-xl-block mx-auto"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">Главная</a></li><li class="breadcrumb-item active" aria-current="page">Услуги</li></ol></nav>                </div>
+                    <a href="/" class="logo-main"></a>
+                    <nav aria-label="breadcrumb" class="d-none d-xl-block mx-auto">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Услуги</li>
+                        </ol>
+                    </nav>
+                </div>
                 <a href="javascript:void(0);" class="hamburger"></a>
             </div>
             <h1 class="text-center">Услуги ветеринарной клиники</h1>
             <div class="sub-txt text-center">
-                Мы предоставляем своим клиентам весь спектр услуг ветеринара. Наши врачи тщательно соблюдают стандарты цивилизованной ветеринарии, строго следуют регламентам и в любой ситуации ставят интересы пациента на первое место. Наш выбор — современная доказательная медицина, основанная на научном знании.            </div>
+                Мы предоставляем своим клиентам весь спектр услуг ветеринара. Наши врачи тщательно соблюдают
+                стандарты цивилизованной ветеринарии, строго следуют регламентам и в любой ситуации ставят
+                интересы пациента на первое место. Наш выбор — современная доказательная медицина, основанная на
+                научном знании. </div>
         </div>
 
         <div class="main-body-box for-services-body">
@@ -125,411 +31,124 @@
                 <form class="d-xl-flex justify-content-between js-filter">
                     <div class="search-box">
                         <input id="searchinput" class="form-control js-search" name="q" value="" type="search"
-                               placeholder="Введите что-нибудь для поиска" onfocus=""
-                               aria-label="Search">
+                            placeholder="Введите что-нибудь для поиска" onfocus="" aria-label="Search">
                         <span id="searchclear" class="remove-input">x</span>
                     </div>
                     <div class="dropdown-select">
                         <span class="remove-input">x</span>
                         <select class="selectpicker" id="select-docs" name="serviceSection">
-                            <option selected data-content="<span class='default-select-option'>Выберите направление</span>"></option>
-                                                            <option value="khirurgiya" >Хирургия</option>
-                                                            <option value="terapiya" >Терапия</option>
-                                                            <option value="reanimatsiya" >Реанимация</option>
-                                                            <option value="stomatologiya" >Стоматология</option>
-                                                            <option value="statsionar" >Стационар</option>
-                                                            <option value="vizualnaya-diagnostika" >Визуальная диагностика</option>
-                                                            <option value="laboratoriya" >Лаборатория</option>
-                                                            <option value="anesteziologiya" >Анестезиология</option>
-                                                            <option value="oftalmologiya" >Офтальмология</option>
-                                                            <option value="kardiologiya" >Кардиология</option>
-                                                            <option value="onkologiya" >Онкология</option>
-                                                            <option value="nevrologiya" >Неврология</option>
-                                                            <option value="dermatologiya" >Дерматология</option>
-                                                            <option value="infektsionnoe-otdelenie" >Инфекционное отделение</option>
-                                                            <option value="ortopediya" >Ортопедия</option>
-                                                            <option value="reabilitatsiya" >Реабилитация</option>
-                                                            <option value="ekzotologiya" >Экзотология</option>
-                                                            <option value="endoskopiya" >Эндоскопия</option>
-                                                            <option value="endokrinologiya" >Эндокринология</option>
-                                                            <option value="kardiokhirurgiya" >Кардиохирургия</option>
-                                                    </select>
+                            <option selected
+                                data-content="<span class='default-select-option'>Выберите направление</span>">
+                            </option>
+                            <option value="khirurgiya">Хирургия</option>
+                            <option value="terapiya">Терапия</option>
+                            <option value="reanimatsiya">Реанимация</option>
+                            <option value="stomatologiya">Стоматология</option>
+                            <option value="statsionar">Стационар</option>
+                            <option value="vizualnaya-diagnostika">Визуальная диагностика</option>
+                            <option value="laboratoriya">Лаборатория</option>
+                            <option value="anesteziologiya">Анестезиология</option>
+                            <option value="oftalmologiya">Офтальмология</option>
+                            <option value="kardiologiya">Кардиология</option>
+                            <option value="onkologiya">Онкология</option>
+                            <option value="nevrologiya">Неврология</option>
+                            <option value="dermatologiya">Дерматология</option>
+                            <option value="infektsionnoe-otdelenie">Инфекционное отделение</option>
+                            <option value="ortopediya">Ортопедия</option>
+                            <option value="reabilitatsiya">Реабилитация</option>
+                            <option value="ekzotologiya">Экзотология</option>
+                            <option value="endoskopiya">Эндоскопия</option>
+                            <option value="endokrinologiya">Эндокринология</option>
+                            <option value="kardiokhirurgiya">Кардиохирургия</option>
+                        </select>
                     </div>
                 </form>
             </div> <!-- END.search-select-box -->
             <h2 class="detail-info-heading text-center">Отделения</h2>
             <div class="js-items">
-                                <div class="services"><!-- START .services -->
-    <div class="services-box for-two-sliders">
-        <div class="row">
-                                            <div class="services-card col-12 col-md-6 ">
-                    <a href="khirurgiya/index.html" class="with-backgr d-flex flex-column backgr-grey" style="background-image: url('../upload/resize_cache/iblock/0f9/1500_750_0/bfp6kyb31di73tfykw20dp5imkd2nmgx.webp');">
-                        <h2>Хирургия</h2>
-                        <div class="card-sub-text align-self-start">147 услуг </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="terapiya/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/b00/1500_750_0/yh99bjkdefu634ilsew4kv0x7tckh10m.webp');">
-                        <h2>Терапия</h2>
-                        <div class="card-sub-text align-self-start">51 услуга </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="reanimatsiya/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/629/1500_750_0/5pyeg2gy99irucdx57s5eftneya194fi.webp');">
-                        <h2>Реанимация</h2>
-                        <div class="card-sub-text align-self-start">2 услуги </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="stomatologiya/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/e78/1500_750_0/uja17vrvfkxgnl6ovzs8c0c9kh0vy0fe.webp');">
-                        <h2>Стоматология</h2>
-                        <div class="card-sub-text align-self-start">49 услуг </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="statsionar/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/576/1500_750_0/ezfc5ktgnoi3sha2kf3tq16xtjdj4ikg.webp');">
-                        <h2>Стационар</h2>
-                        <div class="card-sub-text align-self-start">2 услуги </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 ">
-                    <a href="vizualnaya-diagnostika/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/a2d/1500_750_0/fnma1ii2h18wvqarc6kfybjo27v93fho.webp');">
-                        <h2>Визуальная диагностика</h2>
-                        <div class="card-sub-text align-self-start">31 услуга </div>
-                                                    <div class="text-right text-xl-left mt-auto card-txt-inner">
-                                <span style="color: #ffffff;">УЗИ</span><br>
- <span style="color: #ffffff;">
-Рентген</span><br>
- <span style="color: #ffffff;">
-КТ</span>                            </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 ">
-                    <a href="laboratoriya/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/f09/1500_750_0/r1cey3wjvxv9lvq6nuzyqdvnnoirty82.webp');">
-                        <h2>Лаборатория</h2>
-                        <div class="card-sub-text align-self-start">335 услуг </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="anesteziologiya/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/7ce/1500_750_0/kykyqpp3n15rgsmpap3caihe70ek1maq.webp');">
-                        <h2>Анестезиология</h2>
-                        <div class="card-sub-text align-self-start">4 услуги </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="oftalmologiya/index.html" class="with-backgr d-flex flex-column backgr-grey" style="background-image: url('../upload/resize_cache/iblock/937/1500_750_0/xwclwni3z4vsf4e24sh2rdsr06x5ku6c.webp');">
-                        <h2>Офтальмология</h2>
-                        <div class="card-sub-text align-self-start">46 услуг </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="kardiologiya/index.html" class="with-backgr d-flex flex-column backgr-grey" style="background-image: url('../upload/resize_cache/iblock/935/1500_750_0/24p2oojoazmbq3j5riikqnlfeog41t4s.webp');">
-                        <h2>Кардиология</h2>
-                        <div class="card-sub-text align-self-start">14 услуг </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="onkologiya/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/a91/1500_750_0/ax59q921qhebe9vde016o6s2yifke6o5.webp');">
-                        <h2>Онкология</h2>
-                        <div class="card-sub-text align-self-start">9 услуг </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 ">
-                    <a href="nevrologiya/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/34c/1500_750_0/10des21ea3s028489b52gth56xbry177.webp');">
-                        <h2>Неврология</h2>
-                        <div class="card-sub-text align-self-start">6 услуг </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="dermatologiya/index.html" class="with-backgr d-flex flex-column backgr-grey" style="background-image: url('../upload/resize_cache/iblock/d76/1500_750_0/2v4t451eqjc680nx0khlgkhjxesss7ds.webp');">
-                        <h2>Дерматология</h2>
-                        <div class="card-sub-text align-self-start">2 услуги </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="infektsionnoe-otdelenie/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/bb5/1500_750_0/ozd5wm8dm3aiowmph6117e6t2dnrvekp.webp');">
-                        <h2>Инфекционное отделение</h2>
-                        <div class="card-sub-text align-self-start">2 услуги </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="ortopediya/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/c9c/1500_750_0/q638zwmd9v47dgfaoubzbshmh2i7eay2.webp');">
-                        <h2>Ортопедия</h2>
-                        <div class="card-sub-text align-self-start">47 услуг </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="reabilitatsiya/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/574/1500_750_0/5t5t3yef3f153jp7f6y6euofmgix23u4.webp');">
-                        <h2>Реабилитация</h2>
-                        <div class="card-sub-text align-self-start">13 услуг </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="ekzotologiya/index.html" class="with-backgr d-flex flex-column backgr-grey" style="background-image: url('../upload/resize_cache/iblock/3d6/1500_750_0/s5usil9j75ueh5a6i4z9r5grq1fi4npf.jpg');">
-                        <h2>Экзотология</h2>
-                        <div class="card-sub-text align-self-start">97 услуг </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="endoskopiya/index.html" class="with-backgr d-flex flex-column backgr-grey" style="background-image: url('../upload/resize_cache/iblock/b16/1500_750_0/s2mm6ym7a6lrtnmxpqsj29gnebcd7qmt.webp');">
-                        <h2>Эндоскопия</h2>
-                        <div class="card-sub-text align-self-start">47 услуг </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="endokrinologiya/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/59b/1500_750_0/n2dssv6wares6oqut2vki95a1eiunsge.webp');">
-                        <h2>Эндокринология</h2>
-                        <div class="card-sub-text align-self-start">2 услуги </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                                            <div class="services-card col-12 col-md-6 col-xl-3">
-                    <a href="kardiokhirurgiya/index.html" class="with-backgr d-flex flex-column " style="background-image: url('../upload/resize_cache/iblock/b59/1500_750_0/wrxm56mq1e8tftczrvjmyrfane88jsi8.jpeg');">
-                        <h2>Кардиохирургия</h2>
-                        <div class="card-sub-text align-self-start">9 услуг </div>
-                                            </a>
-                </div> <!-- END .services-card -->
-                    </div> <!-- END .row -->
-    </div> <!-- END .services-box -->
-</div> <!-- END .services -->                            </div>
+                <div class="services">
+                    <!-- START .services -->
+                    <div class="services-box for-two-sliders">
+                        <div class="row">
+                            {% for group_service in object_list %}
+                            <div class="services-card col-12 col-md-6 col-xl-3">
+                                <a href="/services/{{group_service.pk}}" class="with-backgr d-flex flex-column "
+                                    style="background-image: url('/media/{{group_service.photo}}');">
+                                    <h2> {{group_service.name}}</h2>
+
+                                </a>
+                            </div>
+                            {% endfor %}
+
+                        </div> <!-- END .row -->
+                    </div> <!-- END .services-box -->
+                </div> <!-- END .services -->
+            </div>
         </div>
     </div>
 </div>
-<div class="deals-team">  <!-- START .deals-team -->
+<div class="deals-team">
+    <!-- START .deals-team -->
     <div class="container container-for-mob d-md-flex">
         <div class="deals text-white d-md-flex flex-md-row">
-                        <div class="owl-carousel owl-theme">
-                        <div class="deals-owl-slider white roundy d-flex flex-column justify-content-end">
-                <div class="deals-white-container">
-                    <h4>Заботимся <br>о каждом</h4>
-                                                                <img src="../local/templates/vetcity/img/icons/vet_heart.png" class="deals-heart" alt="Заботимся &lt;br&gt;о каждом"/>
-                                    </div>
-                <img class="background" src="../upload/resize_cache/iblock/932/1000_1000_0/qhmat5kkv4djqrr295vb9vctv7iledk2.webp" loading="lazy" />
-            </div>
-    </div>
-        </div>
-        <div class="deals black-carousel text-black d-md-flex flex-md-row">
-                        <div class="owl-carousel owl-theme">
-        <div class="deals-owl-slider roundy d-flex flex-column justify-content-end" style="background-image: url('../upload/resize_cache/iblock/a77/1000_1000_0/n13ak6577y3t3mbtp7bkezl3ajz196yx.jpeg');">
-        <div class="deals-white-container">
-            <h4>Популярные услуги</h4>
-            <p>Прием врача хирурга</p>
-            <a class="btn btn-blue btn-small" href="konsultatsiya/priem-vracha-khirurga/index.html">Подробнее</a>
-        </div>
-    </div>
-        <div class="deals-owl-slider roundy d-flex flex-column justify-content-end" style="background-image: url('../upload/resize_cache/iblock/329/1000_1000_0/btj294ys46fi6nil4dlpjnekoqzpzwm3.jpeg');">
-        <div class="deals-white-container">
-            <h4>Популярные услуги</h4>
-            <p>Вакцинация</p>
-            <a class="btn btn-blue btn-small" href="protsedury/vaktsinatsiya/index.html">Подробнее</a>
-        </div>
-    </div>
-        <div class="deals-owl-slider roundy d-flex flex-column justify-content-end" style="background-image: url('../upload/resize_cache/iblock/401/1000_1000_0/tz9hpcovuh3dfu09a1wwjppbdaf8pnfi.jpeg');">
-        <div class="deals-white-container">
-            <h4>Популярные услуги</h4>
-            <p>Ультразвуковое исследование органов брюшной полости</p>
-            <a class="btn btn-blue btn-small" href="uzi/ultrazvukovoe-issledovanie-organov-bryushnoy-polosti/index.html">Подробнее</a>
-        </div>
-    </div>
-        <div class="deals-owl-slider roundy d-flex flex-column justify-content-end" style="background-image: url('../upload/resize_cache/iblock/fd7/1000_1000_0/pzzbyhf4afnokw5kigjlcjkkwv9ywmln.jpeg');">
-        <div class="deals-white-container">
-            <h4>Популярные услуги</h4>
-            <p>Рентгенограмма, 1 снимок</p>
-            <a class="btn btn-blue btn-small" href="rentgenografiya/rentgenogramma-1-snimok/index.html">Подробнее</a>
-        </div>
-    </div>
-        <div class="deals-owl-slider roundy d-flex flex-column justify-content-end" style="background-image: url('../upload/resize_cache/iblock/358/1000_1000_0/jnrlp10d7uyu1e4gv0jrnoe691xw3u4r.jpeg');">
-        <div class="deals-white-container">
-            <h4>Популярные услуги</h4>
-            <p>Прием врача терапевта</p>
-            <a class="btn btn-blue btn-small" href="konsultatsiya/priem-vracha-terapevta/index.html">Подробнее</a>
-        </div>
-    </div>
-    </div>
-        </div>  <!-- END .deals.black-carousel-->
-    </div>  <!-- END .container.container-for-mob -->
-</div>  <!-- END .deals-team -->
-        <footer>  <!-- START footer -->
-            <div class="container smaller-container text-white">
-                <div class="footer-top">
-                    <div class="row">
-                        <div class="col-12 col-xl-7">
-                            <div class="row">
-                                <div class="footer-menu col-12 col-md-6 order-md-2">
-                                    
-<ul class="list-unstyled">
-
-			<li class="text-center text-md-left"><a href="../index.html"><h4>Главная</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="../about/index.html"><h4>О нас</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="index.html" class="selected"><h4>Услуги</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="../doctors/index.html"><h4>Наши врачи</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="spetspredlozheniya/index.html"><h4>Спецпредложения</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="../knowledge-base/index.html"><h4>База знаний</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="../vacancy/index.html"><h4>Вакансии</h4></a></li>
-		
-			<li class="text-center text-md-left"><a href="../contacts/index.html"><h4>Контакты</h4></a></li>
-		
-
-</ul>
-                                </div>
-                                <div class="footer-contacts col-12 col-md-6 order-md-1">
-                                    <div class="footer-heart d-none d-md-block"></div>
-                                    <div class="footer-address">
-                                        <div class="row footer-contact">
-                                            <div class="col-6 col-md-12">
-                                                <div class="text-grey">Адрес:</div>
-<div>
-    <a href="../contacts/index.html">Москва, Зубарев<br>
-        переулок, д. 7</a>
-</div>                                            </div>
-                                            <div class="col-6 col-md-12">
-                                                <div class="text-grey">Телефон:</div>
-                                                <div><a href="tel:+74951268290">
-                                                    +7 495 126-82-90</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <div class="non-stop"></div>
-<div>
-    Работаем<br>
-    Круглосуточно
-</div>                                        </div>
-                                    </div>   <!-- END .footer-address -->
-                                </div>   <!-- END .footer-contacts -->
-                            </div>   <!-- END .row -->
-                        </div>   <!-- END .col-12.col-xl-7 -->
-                        <div class="footer-connect col-12 col-xl-5 d-xl-flex justify-content-xl-between align-items-xl-end flex-xl-column">
-                            <div class="footer-subscribe">
-                                <div class="form-subscribe">
-                                        <div class="form-subscribe js-subscribe-container">
-    <h4 class="text-black">Подпишитесь на нашу<br> рассылку:</h4>
-	<form class="js-subscribe-form" action='https://vet.city/ajax/subscribe.php'>
-        <input type="hidden" name="action" value="subscribe">
-        <input type="hidden" name="mailingListId" value="1" />
-        <div class="form-group d-flex">
-            <input type="email" name="email" value="" class="form-control" placeholder="Ваш email" required>
-            <span class="form-group-btn">
-                <button class="btn btn-blue" name="OK" type="submit" value="">Подписаться</button>
-            </span>
-        </div>
-	</form>
-</div>
-                                </div>
-                            </div>
-                            <div class="footer-social d-flex justify-content-between align-items-center">
-                                <div class="footer-heart d-block d-md-none"></div>
-                                <div class="footer-social-links">
-                                    
-                                    <a href="https://vk.com/public188120292" target="_blank" class="footer-vk"></a>
-                                    <a href="https://t.me/vetcityclinic" target="_blank" class="footer-tg"></a>
-                                </div>
-                            </div>    <!-- END .footer-social -->
-                        </div>   <!-- END .footer-connect -->
-                    </div>   <!-- END .row -->
-                </div>   <!-- END .footer-top -->
-                <div class="footer-bottom d-flex flex-column flex-lg-row justify-content-lg-between">
-                    <a href="https://skam.team" target="_blank" class="design text-uppercase text-right order-lg-2">designed by</a>
-                    <div class="copyright text-center text-lg-left order-lg-1">
-                        2022&nbsp;© ООО «Вет Сити Центр»                    </div>
-                </div>   <!-- END .footer-bottom -->
-            </div>    <!-- END .container.smaller-container -->
-        </footer>   <!-- END footer -->
-</div>
-<!-- To detect which environment we are in -->
-<div id="environment-xs" class="d-sm-none"></div>
-<div id="environment-sm" class="d-none d-sm-block d-md-none"></div>
-<div id="environment-md" class="d-none d-md-block d-lg-none"></div>
-<div id="environment-lg" class="d-none d-lg-block d-xl-none"></div>
-<div id="environment-xl" class="d-none d-xl-block"></div>
-
-
-<div id="c625c42e8630d5">
-    <div class="modal fade js-callback-modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <form action="index.html" class="text-left needs-validation js-calltouch-form" novalidate>
-                    <div class="modal-header">
-                        <div class="modal-title">Форма обратного звонка</div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            <div class="owl-carousel owl-theme">
+                <div class="deals-owl-slider white roundy d-flex flex-column justify-content-end">
+                    <div class="deals-white-container">
+                        <h4>Заботимся <br>о каждом</h4>
+                        <img src="/templates/vetcity/img/icons/vet_heart.png" class="deals-heart"
+                            alt="Заботимся &lt;br&gt;о каждом" />
                     </div>
-                    <div class="modal-body">
-                        <div class="alert alert-danger js-error" style="display: none;"></div>
-                        <div class="input-mb">
-                            <div class="form-group position-relative">
-                                <label>Телефон</label>
-                                <input type="tel" class="form-control js-phone" placeholder="Телефон" required>
-                            </div>
-                        </div>
-                        <div class="input-mb">
-                            <div class="form-group position-relative">
-                                <label>Ваше имя</label>
-                                <input type="text" class="form-control js-name" placeholder="Ваше имя" required
-                                >
-                            </div>
-                        </div>
-                        <div class="form-check check-accept">
-                            <input class="form-check-input" type="checkbox" name="ACCEPT_CALLTOUCH" value="Y" id="ACCEPT_CALLTOUCH" required="required">
-                                                        <label class="form-check-label" for="ACCEPT_CALLTOUCH">Я согласен с <a href="../upload/iblock/1bf/hb7nrqz69iwrbs22pmo7r7tjpkpp8n5t.pdf" target="_blank">условиями обработки персональных данных</a>, <a href="../upload/iblock/f3c/zav8cy135l7bzg11beyg7w33wpr1rxkg.pdf" target="_blank">правилами оказания онлайн-консультирования</a> и <a href="../upload/iblock/9b6/judzjq4rc3gtsyh6q6ghaccggl3nusq7.pdf" target="_blank">условиями договора-оферты на оказание услуг</a></label>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <button type="submit" class="btn btn-modal btn-blue">Заказать звонок</button>
-                        <i class="icon icon-heart"></i>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade show js-callback-success-modal" tabindex="-1" role="dialog" aria-modal="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="text-left needs-validation">
-                    <div class="modal-header">
-                        <div class="modal-title">Спасибо!</div>
-                    </div>
-                    <div class="modal-body"></div>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a href="../index.html" class="btn btn-modal btn-blue">Перейти на главную</a>
-                        <i class="icon icon-heart"></i>
-                    </div>
+                    <img class="background"
+                        src="/upload/resize_cache/iblock/932/1000_1000_0/qhmat5kkv4djqrr295vb9vctv7iledk2.webp"
+                        loading="lazy" />
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<script type="text/javascript">if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess==='object'){for(let i in mess) {BX.message[i]=mess[i];} return true;}};</script>
-<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script><script type="text/javascript" src="https://vet.city/bitrix/js/main/core/core.js?1626770294564343"></script><script>BX.setJSList(['/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/core/core_promise.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/loadext/loadext.js','/bitrix/js/main/loadext/extension.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/includes/js/includes.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/ui/polyfill/closest/js/closest.js','/bitrix/js/main/polyfill/fill/main.polyfill.fill.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/core/core.js','/bitrix/js/main/polyfill/intersectionobserver/js/intersectionobserver.js','/bitrix/js/main/lazyload/dist/lazyload.bundle.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/parambag/dist/parambag.bundle.js']);
-BX.setCSSList(['/bitrix/js/main/lazyload/dist/lazyload.bundle.css','/bitrix/js/main/parambag/dist/parambag.bundle.css']);</script>
-<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','UTF_MODE':'Y','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1650213608','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'d629a8251e9f159b20287bacedcb585a'});</script><script type="text/javascript" src="../local/templates/vetcity/js/jquery-3.6.0.min.js%3F162694166289503"></script>
-<script type="text/javascript" src="{% static '../local/templates/vetcity/js/popper.min.js%3F162694166221009' %}"></script>
-<script type="text/javascript" src="{% static '../local/templates/vetcity/js/bootstrap.bundle.min.js%3F162694166284384' %}"></script>
-<script type="text/javascript" src="{% static '../local/templates/vetcity/js/scrollreveal.js%3F162694166246205' %}"></script>
-<script type="text/javascript" src="{% static '../local/templates/vetcity/js/jquery.fancybox.min.js%3F162694166268265' %}"></script>
-<script type="text/javascript" src="{% static '../local/templates/vetcity/js/owl.carousel.min.js%3F162694166244348' %}"></script>
-<script type="text/javascript" src="{% static '../local/templates/vetcity/js/bootstrap-select.min.js%3F162694166257752' %}"></script>
-<script type="text/javascript" src="{% static '../local/templates/vetcity/js/jquery.inputmask.min.js%3F162694166293838' %}"></script>
-<script type="text/javascript" src="{% static '../local/templates/vetcity/js/moment.min.js%3F162869081858862' %}"></script>
-<script type="text/javascript" src="{% static '../local/templates/vetcity/js/jquery.validate.min.js%3F163177822424430' %}"></script>
-<script type="text/javascript" src="{% static '../local/templates/vetcity/js/jquery.highlight.js%3F16345471064079' %}"></script>
-<script type="text/javascript" src="{% static '../local/templates/vetcity/js/main.js%3F16353386316990' %}"></script>
-<script type="text/javascript" src="{% static 'https://vet.city/bitrix/components/bitrix/search.title/script.js?16267702349847' %}"></script>
-<script type="text/javascript" src="{% static '../local/components/wlcomponents/subscribe/templates/.default/script.js%3F1626941662299' %}"></script>
-<script type="text/javascript" src="{% static '../local/components/wlcomponents/calltouch/templates/.default/script.js%3F16484523923457' %}"></script>
-<script type="text/javascript" src="{% static '../local/templates/.default/components/bitrix/news/services/script.js%3F1629726021922' %}"></script>
-
-</script><script>
-    new callbackModalComponent({
-        componentID: 'c625c42e8630d5',
-        form_id: 'vet_city'
-    })
-</script>
-
-</body>
-</html>
+        <div class="deals black-carousel text-black d-md-flex flex-md-row">
+            <div class="owl-carousel owl-theme">
+                <div class="deals-owl-slider roundy d-flex flex-column justify-content-end"
+                    style="background-image: url('/upload/resize_cache/iblock/a77/1000_1000_0/n13ak6577y3t3mbtp7bkezl3ajz196yx.jpeg');">
+                    <div class="deals-white-container">
+                        <h4>Популярные услуги</h4>
+                        <p>Прием врача хирурга</p>
+                        <a class="btn btn-blue btn-small" href="konsultatsiya/priem-vracha-khirurga/">Подробнее</a>
+                    </div>
+                </div>
+                <div class="deals-owl-slider roundy d-flex flex-column justify-content-end"
+                    style="background-image: url('/upload/resize_cache/iblock/329/1000_1000_0/btj294ys46fi6nil4dlpjnekoqzpzwm3.jpeg');">
+                    <div class="deals-white-container">
+                        <h4>Популярные услуги</h4>
+                        <p>Вакцинация</p>
+                        <a class="btn btn-blue btn-small" href="protsedury/vaktsinatsiya/">Подробнее</a>
+                    </div>
+                </div>
+                <div class="deals-owl-slider roundy d-flex flex-column justify-content-end"
+                    style="background-image: url('/upload/resize_cache/iblock/401/1000_1000_0/tz9hpcovuh3dfu09a1wwjppbdaf8pnfi.jpeg');">
+                    <div class="deals-white-container">
+                        <h4>Популярные услуги</h4>
+                        <p>Ультразвуковое исследование органов брюшной полости</p>
+                        <a class="btn btn-blue btn-small"
+                            href="uzi/ultrazvukovoe-issledovanie-organov-bryushnoy-polosti/">Подробнее</a>
+                    </div>
+                </div>
+                <div class="deals-owl-slider roundy d-flex flex-column justify-content-end"
+                    style="background-image: url('/upload/resize_cache/iblock/fd7/1000_1000_0/pzzbyhf4afnokw5kigjlcjkkwv9ywmln.jpeg');">
+                    <div class="deals-white-container">
+                        <h4>Популярные услуги</h4>
+                        <p>Рентгенограмма, 1 снимок</p>
+                        <a class="btn btn-blue btn-small" href="rentgenografiya/rentgenogramma-1-snimok/">Подробнее</a>
+                    </div>
+                </div>
+                <div class="deals-owl-slider roundy d-flex flex-column justify-content-end"
+                    style="background-image: url('/upload/resize_cache/iblock/358/1000_1000_0/jnrlp10d7uyu1e4gv0jrnoe691xw3u4r.jpeg');">
+                    <div class="deals-white-container">
+                        <h4>Популярные услуги</h4>
+                        <p>Прием врача терапевта</p>
+                        <a class="btn btn-blue btn-small" href="konsultatsiya/priem-vracha-terapevta/">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- END .deals.black-carousel-->
+    </div> <!-- END .container.container-for-mob -->
+</div> <!-- END .deals-team -->
+{% endblock %}

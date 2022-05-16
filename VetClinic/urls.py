@@ -22,8 +22,10 @@ from web_site.views import (
     DoctorTemplate,
     ServicesTemplate,
     ContactsTemplate,
+    ServiceTemplate,
+    Authentication,
 )
-from personal_area.views import user_login
+from personal_area.views import user_login, register, LkHome, LkItem, LkDoctors, Calendar, LkUser, LkPet
 from VetClinic import settings
 
 
@@ -34,9 +36,17 @@ urlpatterns = [
     path('doctors/', DoctorsTemplate.as_view(), name='doctors'),
     path('doctors/<int:pk>/', DoctorTemplate.as_view(), name='doctors-detail'),
     path('services/', ServicesTemplate.as_view(), name='services'),
+    path('services/<int:pk>/', ServiceTemplate.as_view(), name='services-detail'),
     path('contacts/', ContactsTemplate.as_view(), name='contacts'),
-    path('login/', user_login, name='login')
-    
+    path('login/', user_login, name='login'),
+    path('authentication/login', Authentication.as_view(), name='login'),
+    path('registration/', register, name='register'),
+    path('lk/group_services/', LkHome.as_view(), name='lkhome'),
+    path('lk/services/<int:pk>/', LkItem.as_view(), name='lkitem'),
+    path('lk/doctors/<int:pk>/', LkDoctors.as_view(), name='lkdocotrs'),
+    path('lk/calendar/', Calendar.as_view(), name='calendar'),
+    path('lk/user/', LkUser.as_view(), name='user'),
+    path('lk/pet/', LkPet.as_view(), name='pet'),
 ]
 
 if settings.DEBUG:

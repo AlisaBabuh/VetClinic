@@ -1,0 +1,66 @@
+{% extends 'lkbase.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0"> Страница выбора отделений</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+            
+          <ol class="breadcrumb float-sm-right">
+            <button type="button" class="btn btn-block btn-primary btn-sm" onclick="location.href='/lk/services/{{group_service.pk}}'">Назад</button>
+            <li class="breadcrumb-item"><a href="/#">Главная страница</a></li>
+            <li class="breadcrumb-item"><a href="/user#">О Вас</a></li>
+            <li class="breadcrumb-item"><a href="/pet#">О питомце</a></li>
+            <li class="breadcrumb-item active">Отделения</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+<!-- Main content -->
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+         
+          <div class="card-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+
+                  <th>Название отделения</th>
+                  <th style="width: 100px"></th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for group_service in object_list %}
+                <tr>
+                  <td>{{group_service.name}}</td>
+                  <td><button type="button" class="btn btn-block btn-primary btn-sm" onclick="location.href='/lk/services/{{group_service.pk}}'">Выбрать</button></td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+
+        
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}

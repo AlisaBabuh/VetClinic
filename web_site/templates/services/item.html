@@ -1,0 +1,234 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="main-body">
+    <!-- START .main-body -->
+    <div class="container backgr-white roundy">
+        <div class="main-body-header for-inner-page">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex flex-column flex-md-row justify-content-between w-100">
+                    <a href="../../index.html" class="logo-main"></a>
+                    <nav aria-label="breadcrumb" class="d-none d-xl-block mx-auto">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../../index.html">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="../index.html">Услуги</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Терапия</li>
+                        </ol>
+                    </nav>
+                </div>
+                <a href="javascript:void(0);" class="hamburger"></a>
+            </div>
+            <h1 class="text-center smaller-header">Терапия</h1>
+            <div class="search-select-box d-xl-flex justify-content-between">
+                <div class="details-search">
+                    <div class="text-light-grey details-question">Что это такое?</div>
+                    <p>Систематические действия по лечению и профилактике заболеваний</p>
+                </div>
+            </div> <!-- END .search-select-box  -->
+        </div> <!-- END .main-body-header  -->
+    </div> <!-- END .container  -->
+</div> <!-- END .main-main-body-->
+<div class="category-services with-margin-bottom">
+    <!-- START .category-services -->
+    <div class="container backgr-white roundy">
+        <div class="block-bordered-btn">
+            <div class="block-with-border-bottom">
+                <div class="body-inner">
+                    <h2 class="detail-info-heading text-center">Категория услуг</h2>
+
+                    <div id="search-categories">
+                        <div class="search-category">
+                            <div id="search-category-0" class="js-search-category-item">
+
+                                <div class="search-category-in">
+                                    {% for service in services %}
+                                    <div
+                                        class="search-category-item d-flex flex-column flex-xl-row flex-xl-wrap order-xl-1 align-items-xl-center">
+                                        <div class="search-category-item-title">
+                                            {{service.name}}
+                                        </div>
+                                        <div class="search-category-item-text order-xl-3" id="collapse827"
+                                            aria-labelledby="heading827">
+                                            <div class="text-container">
+                                                <p><strong>В стоимость услуги включено:</strong></p>
+                                                Сбор данных истории жизни и болезни, термометрия, аускультация,
+                                                пальпация, осмотр ротовой полости, ушных раковин, кожных
+                                                покровов, взвешивание. Постановка предварительного и
+                                                дифференциальных диагнозов. Выработка тактики дальнейшего
+                                                обследования и лечения животного.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="search-category-item-buttons order-xl-2 d-flex align-items-center">
+                                            <a href="index.html#calltouch"
+                                                class="btn btn-blue js-btn-callback">Записаться</a>
+                                            <div class="search-category-item-price text-nowrap">3 000 ₽</div>
+                                        </div>
+                                    </div> <!-- END .search-category-item -->
+                                    {% endfor %}
+                                </div> <!-- END .search-category-in -->
+
+                            </div> <!-- END #search-category-0 -->
+
+
+                            <div class="text-center for-download">
+                                <a href="../price/index.html" target="_blank" class="btn btn-blue btn-download">Скачать
+                                    полный прайс</a>
+                            </div>
+                        </div> <!-- END .search-category -->
+                        <div class="text-center">
+                            <a href="javascript:;" class="btn btn-white js-toggle-services-visibility"
+                                onclick="toggleAccordeonState(this)" data-name-show="Показать все"
+                                data-name-hide="Свернуть все" aria-expanded="false">Показать все</a>
+                            <a href="index.html#" class="hidden js-show-all-items" data-toggle="collapse"
+                                aria-expanded="false" data-target=".js-search-category-item"
+                                aria-controls="search-category-0 search-category-1 search-category-2"></a>
+                        </div>
+                    </div> <!-- END #search-categories  -->
+                </div> <!-- END .body-inner -->
+            </div> <!-- END .block-with-border-bottom -->
+        </div><!-- .block-bordered-btn  -->
+    </div> <!-- END .container  -->
+</div> <!-- END .category-services -->
+
+<div class="block-with-docs" id="cmp625c431770a04">
+    <!-- START .block-with-docs -->
+    <div class="container backgr-white roundy">
+        <div class="block-bordered-btn">
+            <div class="block-with-border-bottom">
+                <h2 class="detail-info-heading text-center">Врачи</h2>
+                <div class="body-inner">
+                    <div class="row row-cards js-items">
+
+                        <div class="card-doc d-flex flex-column col-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_3218110189_478">
+                            <a href="/doctors/olga-anatolevna-glebova/index.html"
+                                class="card-doc-in backgr-dgrey d-flex align-items-end"
+                                style="background-image: url(/upload/resize_cache/iblock/d27/1000_1000_0/g0g02gos3grj3rklw4nav47m2funmb0m.jpg)">
+                                <div class="card-doc-txt">
+                                    <h5>Глебова Ольга Анатольевна</h5>
+                                    <div class="card-doc-txt-in">Ветеринарный врач - цитолог</div>
+                                </div>
+                            </a> <!-- END .card-doc-in -->
+                        </div> <!-- END .card-doc -->
+
+
+                        <div class="card-doc d-flex flex-column col-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_3218110189_3144">
+                            <a href="/doctors/ovcharenko-ekaterina-sergeevna/index.html"
+                                class="card-doc-in backgr-dgrey d-flex align-items-end"
+                                style="background-image: url(/upload/iblock/108/ffbjtij2x7iyyucb4shgv2ido3gkldtn.jpg)">
+                                <div class="card-doc-txt">
+                                    <h5>Овчаренко Екатерина Сергеевна</h5>
+                                    <div class="card-doc-txt-in">Врач - лаборант</div>
+                                </div>
+                            </a> <!-- END .card-doc-in -->
+                        </div> <!-- END .card-doc -->
+
+
+                        <div class="card-doc d-flex flex-column col-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_3218110189_696">
+                            <a href="/doctors/egorova-ekaterina-aleksandrovna/index.html"
+                                class="card-doc-in backgr-dgrey d-flex align-items-end"
+                                style="background-image: url(/upload/iblock/34d/lmu00zv36b5g1eevb0zcgm5e7641bgaz.jpg)">
+                                <div class="card-doc-txt">
+                                    <h5>Егорова Екатерина Александровна</h5>
+                                    <div class="card-doc-txt-in">Врач - лаборант</div>
+                                </div>
+                            </a> <!-- END .card-doc-in -->
+                        </div> <!-- END .card-doc -->
+
+
+                        <div class="card-doc d-flex flex-column col-6 col-md-4 col-lg-3 col-xl-card"
+                            id="bx_3218110189_694">
+                            <a href="/doctors/filchenko-sofya-dmitrievna/index.html"
+                                class="card-doc-in backgr-dgrey d-flex align-items-end"
+                                style="background-image: url(/upload/iblock/7c8/jz756sm3e04e4nxzwjxtilxc9bi1udu3.jpg)">
+                                <div class="card-doc-txt">
+                                    <h5>Фильченко Софья Дмитриевна</h5>
+                                    <div class="card-doc-txt-in">Врач - лаборант</div>
+                                </div>
+                            </a> <!-- END .card-doc-in -->
+                        </div> <!-- END .card-doc -->
+
+                        <div class="card-doc d-flex flex-column col-12 col-md-4 col-lg-3 col-xl-card">
+                            <div class="doctors-blue-enroll">
+                                <img src="{% static '/templates/vetcity/img/vetcity-heart-white.svg' %}"
+                                    loading="lazy" />
+                                <p>Ветеринарный<br>госпиталь с широким спектром услуг<br>и специалистов</p>
+                                <a href="index.html#calltouch" class="btn btn-small js-btn-callback">Записаться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- END .body-inner -->
+            </div> <!-- END .block-with-border-bottom -->
+            <div class="btn-box-more">
+                <div class="btn btn-white js-show-more">Показать еще</div>
+            </div> <!-- END .btn-box-more-->
+        </div> <!-- END .for-doctors -->
+    </div> <!-- END .container -->
+</div> <!-- END .block-with-docs -->
+
+
+
+
+<div class="articles-block">
+    <!-- START .articles-block -->
+    <div class="container backgr-white roundy">
+        <div class="block-bordered-btn">
+            <div class="block-with-border-bottom">
+                <div class="articles">
+                    <h2 class="detail-info-heading text-center">Статьи</h2>
+                    <div class="knowledge-wrap">
+                        <div class="row js-items">
+                            <div class="knowledge-item col-6 col-sm-4 col-md-3 col-xl-card" id="bx_651765591_">
+                                <a href="/knowledge-base/articles/aktivnaya-sobaka-/index.html"
+                                    class="knowledge-item-in">
+                                    <div class="knowledge-item-picture"
+                                        style="background-image: url('/upload/resize_cache/iblock/ffe/570_340_0/00u8ph71vsr4ytio1fvyrb58ujdvznj4.jpg');">
+                                    </div>
+                                    <div class="knowledge-item-text">Активная собака</div>
+                                </a>
+                            </div> <!-- END .knowledge-item -->
+                            <div class="knowledge-item col-6 col-sm-4 col-md-3 col-xl-card" id="bx_651765591_">
+                                <a href="/knowledge-base/articles/sobaka-boitsya-vody/index.html"
+                                    class="knowledge-item-in">
+                                    <div class="knowledge-item-picture"
+                                        style="background-image: url('/upload/resize_cache/iblock/00b/570_340_0/om78uhjzjbv70oqug4kupbz30zr1ilon.jpg');">
+                                    </div>
+                                    <div class="knowledge-item-text">Собака боится воды</div>
+                                </a>
+                            </div> <!-- END .knowledge-item -->
+                            <div class="knowledge-item col-6 col-sm-4 col-md-3 col-xl-card" id="bx_651765591_">
+                                <a href="/knowledge-base/articles/obuchenie/index.html" class="knowledge-item-in">
+                                    <div class="knowledge-item-picture"
+                                        style="background-image: url('/upload/resize_cache/iblock/5e2/570_340_0/0fdgcxg0w8oe4w93ki6291wvheta72xw.webp');">
+                                    </div>
+                                    <div class="knowledge-item-text">Обучение щенков</div>
+                                </a>
+                            </div> <!-- END .knowledge-item -->
+                            <div class="knowledge-item col-6 col-sm-4 col-md-3 col-xl-card" id="bx_651765591_">
+                                <a href="/knowledge-base/articles/lizhetsya/index.html" class="knowledge-item-in">
+                                    <div class="knowledge-item-picture"
+                                        style="background-image: url('/upload/resize_cache/iblock/246/570_340_0/ugk1d1ny88v2ovjoqpe9xfb1cv9lo2hb.jpg');">
+                                    </div>
+                                    <div class="knowledge-item-text">Почему мой питомец лижется?</div>
+                                </a>
+                            </div> <!-- END .knowledge-item -->
+                            <a href="/knowledge-base/articles/index.html"
+                                class="knowledge-item col-12 col-sm-8 col-md-6 col-xl-card knowledge-item-picture">
+                                <div class="blue-border show-more-articles">
+                                    <p>Все<br>материалы<br>базы<br>знаний</p>
+                                    <span class="btn-show"></span>
+                                </div>
+                            </a>
+                        </div> <!-- END .row  -->
+                    </div> <!-- END .knowledge-wrap  -->
+                </div> <!-- END .articles  -->
+            </div> <!-- END .block-with-border-bottom -->
+        </div> <!-- END .block-bordered-btn -->
+    </div> <!-- END .container.backgr-white.roundy-->
+</div> <!-- END .articles-block  -->
+
+{% endblock %}

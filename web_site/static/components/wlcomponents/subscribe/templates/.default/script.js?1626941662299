@@ -1,8 +1,0 @@
-$(document).ready(function (){
-    $('.js-subscribe-container').on('submit', '.js-subscribe-form', function (){
-        $.post($(this).attr('action'), $(this).serialize(), function (response){
-            $('.js-subscribe-container').html(response);
-        })
-        return false;
-    })
-})
